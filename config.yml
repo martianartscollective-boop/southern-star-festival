@@ -1,0 +1,137 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# This is the ONLY place edits are saved to — no separate database.
+# Every "Publish" here commits straight to your site's content.json.
+local_backend: false
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - file: "content.json"
+        label: "Southern Star Festival — All Content"
+        name: "content"
+        fields:
+          - label: "Hero (top banner)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Presented-by line", name: "presents", widget: "string"}
+              - {label: "Festival name", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
+              - {label: "Date", name: "date", widget: "string"}
+              - {label: "Venue name", name: "venue", widget: "string"}
+              - {label: "City/State", name: "city", widget: "string"}
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Small headline above the paragraph", name: "kicker", widget: "string"}
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: {label: "Paragraph", name: "text", widget: "text"}
+              - label: "Stats row (e.g. '20+ BBQ teams')"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Number/word", name: "value", widget: "string"}
+                  - {label: "Label underneath", name: "label", widget: "string"}
+              - {label: "Photo", name: "photo", widget: "image"}
+
+          - label: "Lineup Slots"
+            name: "lineup"
+            widget: "list"
+            summary: "{{slot}} — {{name}}"
+            fields:
+              - {label: "Slot (e.g. 'Headliner · Main Stage')", name: "slot", widget: "string"}
+              - {label: "Artist name (or 'Announcing Soon')", name: "name", widget: "string"}
+
+          - {label: "Note under the lineup grid", name: "lineupNote", widget: "string"}
+
+          - label: "Day-Of Schedule"
+            name: "schedule"
+            widget: "list"
+            summary: "{{time}} — {{title}}"
+            fields:
+              - {label: "Time", name: "time", widget: "string"}
+              - {label: "What's happening", name: "title", widget: "string"}
+              - {label: "Details", name: "desc", widget: "string"}
+
+          - label: "BBQ Cook-Off Section"
+            name: "bbq"
+            widget: "object"
+            fields:
+              - label: "Slideshow photos"
+                name: "slides"
+                widget: "list"
+                summary: "{{caption}}"
+                fields:
+                  - {label: "Photo", name: "img", widget: "image"}
+                  - {label: "Caption", name: "caption", widget: "string"}
+              - {label: "YouTube video ID (the part after 'watch?v=')", name: "videoId", widget: "string"}
+              - {label: "Cook-off box title", name: "cookoffTitle", widget: "string"}
+              - {label: "Cook-off box text", name: "cookoffText", widget: "text"}
+
+          - label: "Tickets"
+            name: "tickets"
+            widget: "list"
+            summary: "{{name}} — {{price}}"
+            fields:
+              - {label: "Ticket name", name: "name", widget: "string"}
+              - {label: "Price (e.g. '$45' or 'Free')", name: "price", widget: "string"}
+              - {label: "Unit (e.g. '/person', leave blank if none)", name: "unit", widget: "string", required: false}
+              - {label: "Description", name: "desc", widget: "text"}
+              - {label: "Button text", name: "cta", widget: "string"}
+              - {label: "Highlight this card (VIP-style)?", name: "featured", widget: "boolean", default: false}
+
+          - label: "Ticket Checkout (Universe)"
+            name: "universe"
+            widget: "object"
+            fields:
+              - label: "Universe widget embed code"
+                name: "embedCode"
+                widget: "text"
+                required: false
+                hint: "In Universe: My Events → your event → 'Embeddable Widgets' → pick the Ticket Widget → click Copy. Paste the whole block of code here, exactly as copied. Leave blank until your event is set up."
+              - label: "Universe event page link (backup)"
+                name: "eventUrl"
+                widget: "string"
+                required: false
+                hint: "Your public universe.com event link. If you haven't got the embed code yet, filling this in shows a 'Buy Tickets on Universe' button instead."
+              - label: "Fee note under the checkout"
+                name: "feeNote"
+                widget: "text"
+                required: false
+
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - {label: "Venue name", name: "title", widget: "string"}
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Map search text (e.g. 'Maxwell, TX')", name: "mapQuery", widget: "string"}
+
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - {label: "Question", name: "q", widget: "string"}
+              - {label: "Answer", name: "a", widget: "text"}
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Tagline under the festival name", name: "tagline", widget: "string"}
+              - {label: "Fine print", name: "note", widget: "text"}

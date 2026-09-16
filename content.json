@@ -1,0 +1,192 @@
+{
+  "hero": {
+    "presents": "Cheatham Street Music Foundation Presents",
+    "title": "SOUTHERN STAR",
+    "subtitle": "Texas Country Festival & BBQ Cook-Off",
+    "date": "May 8",
+    "venue": "Southern Star Farms",
+    "city": "Maxwell, TX"
+  },
+  "about": {
+    "kicker": "A day built around good music and good smoke",
+    "paragraphs": [
+      "Southern Star Festival brings live country music and a full-blown BBQ cook-off together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of bands, a backyard-to-blue-ribbon smoker competition, and food and drink from local vendors all day long.",
+      "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."
+    ],
+    "stats": [
+      {
+        "value": "1",
+        "label": "Day of music"
+      },
+      {
+        "value": "20+",
+        "label": "BBQ teams competing"
+      },
+      {
+        "value": "3",
+        "label": "Stages & tents"
+      },
+      {
+        "value": "All",
+        "label": "Ages welcome"
+      }
+    ],
+    "photo": "https://images.pexels.com/photos/6950716/pexels-photo-6950716.jpeg?auto=compress&cs=tinysrgb&w=900"
+  },
+  "lineup": [
+    {
+      "slot": "Headliner · Main Stage",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Evening Set · Main Stage",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Afternoon · Barn Stage",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Midday · Barn Stage",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Morning · Porch Stage",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Local Showcase",
+      "name": "Announcing Soon"
+    }
+  ],
+  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
+  "schedule": [
+    {
+      "time": "10:00 AM",
+      "title": "Gates open",
+      "desc": "Cook-off teams fire up smokers, vendor row opens"
+    },
+    {
+      "time": "11:00 AM",
+      "title": "Porch Stage kicks off",
+      "desc": "Local acoustic sets"
+    },
+    {
+      "time": "1:00 PM",
+      "title": "BBQ cook-off judging begins",
+      "desc": "Categories: brisket, ribs, sausage, chicken"
+    },
+    {
+      "time": "3:00 PM",
+      "title": "Barn Stage sets",
+      "desc": "Back-to-back country acts"
+    },
+    {
+      "time": "5:30 PM",
+      "title": "Cook-off awards",
+      "desc": "Grand champion announced on Main Stage"
+    },
+    {
+      "time": "6:30 PM",
+      "title": "Main Stage headliners",
+      "desc": "Sunset sets through closing"
+    },
+    {
+      "time": "10:00 PM",
+      "title": "Gates close",
+      "desc": "Safe travels, y'all"
+    }
+  ],
+  "bbq": {
+    "slides": [
+      {
+        "img": "https://images.pexels.com/photos/6950716/pexels-photo-6950716.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "Friends gather around the smoker"
+      },
+      {
+        "img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "Ribs going low and slow"
+      },
+      {
+        "img": "https://images.pexels.com/photos/7416284/pexels-photo-7416284.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "Pitmasters at work"
+      },
+      {
+        "img": "https://images.pexels.com/photos/94440/pexels-photo-94440.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "Straight off the grill"
+      },
+      {
+        "img": "https://images.pexels.com/photos/263133/pexels-photo-263133.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "The whole crowd shows up for this"
+      }
+    ],
+    "videoId": "9F2c-vZKVls",
+    "cookoffTitle": "Want to compete?",
+    "cookoffText": "Team entries are open through April 24. $150 per team includes your cook site, water, and a shot at grand champion. Categories: brisket, ribs, sausage, and chicken."
+  },
+  "tickets": [
+    {
+      "name": "General Admission",
+      "price": "$45",
+      "unit": "/person",
+      "desc": "All-day access to every stage, the cook-off tasting area, and vendor row. Lawn seating — bring a chair or blanket.",
+      "cta": "Buy Tickets",
+      "featured": false
+    },
+    {
+      "name": "VIP",
+      "price": "$95",
+      "unit": "/person",
+      "desc": "Everything in GA, plus shaded viewing near Main Stage, a dedicated bar, early entry at 9 AM, and a BBQ tasting flight from the cook-off judges' table.",
+      "cta": "Buy Tickets",
+      "featured": true
+    },
+    {
+      "name": "Kids (12 & Under)",
+      "price": "Free",
+      "unit": "",
+      "desc": "Free with a paying adult. Kids' area open all day with games and shade near the Porch Stage.",
+      "cta": "Reserve Spot",
+      "featured": false
+    }
+  ],
+  "location": {
+    "title": "Southern Star Farms",
+    "paragraphs": [
+      "Maxwell, TX — about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. Free parking on-site, with shuttle service running from the overflow lot every 15 minutes starting at 9 AM.",
+      "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
+    ],
+    "mapQuery": "Maxwell, TX"
+  },
+  "faq": [
+    {
+      "q": "Is this a rain-or-shine event?",
+      "a": "Yes. The festival runs rain or shine — the cook-off tents and Barn Stage are covered, and Main Stage has a canopy roof."
+    },
+    {
+      "q": "Can I bring my own cooler or drinks?",
+      "a": "Outside food, drinks, and coolers aren't allowed, but there's plenty of food and drink from vendors and the cook-off tasting area all day."
+    },
+    {
+      "q": "Are pets allowed?",
+      "a": "Service animals only. It gets crowded and hot, and we want every pup safe at home."
+    },
+    {
+      "q": "How do I enter the BBQ cook-off?",
+      "a": "Head to the BBQ Cook-Off section above for entry details, or email cookoff@southernstarfestival.com to reserve your team's spot."
+    },
+    {
+      "q": "Is parking free?",
+      "a": "Yes, on-site parking is free, with a shuttle running from the overflow lot starting at 9 AM."
+    }
+  ],
+  "footer": {
+    "tagline": "Maxwell, TX · May 8",
+    "note": "A Cheatham Street Music Foundation event."
+  },
+  "universe": {
+    "embedCode": "",
+    "eventUrl": "",
+    "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
+  }
+}
