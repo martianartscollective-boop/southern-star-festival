@@ -1,54 +1,117 @@
 # Southern Star Festival — Setup Guide
 
-This site is now split into two pieces:
+## Read this first: what went wrong last time
 
-- `index.html` — the page itself (design, layout, code). You won't touch this again.
-- `content.json` — all the actual words, prices, photos, and lineup slots. This is what you'll edit, through a friendly form at `yoursite.com/admin` — not by opening the file.
+Two things broke the last deploy, and both are easy to avoid:
 
-Nobody visiting your normal site will ever see a login button. `/admin` isn't linked from anywhere — you just have to remember the URL, and it requires an account that only you can create (see step 4).
+**1. The `admin` folder got flattened.** When files were uploaded to GitHub, the two files inside `admin/` landed loose in the main folder instead. That made the admin panel's loader become your homepage — so visitors saw a blank screen instead of the festival site. Step 3 below has the fix.
 
-## One-time setup (about 20 minutes)
+**2. Netlify had a build command it shouldn't have.** Something put `cecil build` in the build settings. Your site has nothing to build — it's plain files that just get served. The included `netlify.toml` now overrides that automatically, but Step 6 has you clear it out properly too.
 
-**1. Put this folder on GitHub (free)**
-- Create a free account at github.com if you don't have one.
-- Create a new repository (e.g. "southern-star-festival") and upload every file in this folder, keeping the `admin` folder intact.
+## What the files do
 
-**2. Connect it to Netlify (free)**
-- Create a free account at netlify.com.
-- Click "Add new site" → "Import an existing project" → connect your GitHub account → choose your new repository → Deploy.
-- In a minute or two you'll get a working `something.netlify.app` link — click it to confirm the site loads.
+| File | What it is |
+|---|---|
+| `index.html` | The festival website itself. You won't need to touch this. |
+| `content.json` | All your words, prices, photos, lineup. Edited through `/admin`, not by hand. |
+| `admin/index.html` | Loads the editor. **Must stay inside the `admin` folder.** |
+| `admin/config.yml` | Tells the editor which fields to show you. **Must stay inside `admin`.** |
+| `netlify.toml` | Tells Netlify not to try building anything. Prevents the error above. |
 
-**3. Point your existing domain at it**
-- In Netlify: Site settings → Domain management → Add a domain → enter your domain.
-- Netlify will show you 1–2 DNS records to add. Go to wherever you bought your domain (GoDaddy, Namecheap, etc.), find DNS settings, and add those records.
-- This can take up to a few hours to fully switch over, but usually it's much faster.
+---
 
-**4. Turn on the private admin login**
-- In Netlify: Site settings → Identity → click "Enable Identity."
-- Under Registration, set it to **"Invite only"** — this is the important part. It means no one can create their own account; only people you personally invite can ever log in.
-- Scroll to Services → Git Gateway → click "Enable Git Gateway." (This is what lets the admin panel save your edits back to the site automatically.)
-- Go to Identity → Invite users → enter your own email address. You'll get an email — click the link, set a password.
+## Setup
 
-**5. Start editing**
-- Go to `yourdomain.com/admin`
-- Log in with the account you just made
-- Edit any text, swap any photo, drag lineup/ticket/schedule items to reorder them, then hit **Publish**
-- Your live site updates within about a minute — no re-uploading anything, and no need to come back to Claude for routine changes
+### Step 1 — Create a free GitHub account
+Go to github.com and sign up. GitHub just stores your website's files.
 
-## Setting up ticket sales (Universe)
+### Step 2 — Create a repository
+Click the green **New** button. Name it `southern-star-festival`. Leave the rest default and click **Create repository**.
 
-Do this whenever you're ready — the site works fine before tickets go on sale.
+### Step 3 — Upload the files (the important part)
 
-**1.** Create a free account at universe.com and set up your Southern Star Festival event, adding your ticket types (General Admission, VIP, Kids) with their prices.
+Unzip the download first. Then upload in **two separate rounds** so the folder survives:
 
-**2.** In Universe, go to **My Events** → your event → **Embeddable Widgets** in the left menu. Choose the **Ticket Widget** (it shows all your ticket types right on your page), customize the button color/text if you want, then click **Copy**.
+**Round 1 — the loose files:**
+1. On your repo page, click **Add file → Upload files**
+2. Drag in ONLY these four: `index.html`, `content.json`, `netlify.toml`, `README.md`
+3. Click **Commit changes**
 
-**3.** Go to `yourdomain.com/admin`, find the **Ticket Checkout (Universe)** section, and paste that code into **"Universe widget embed code."** Hit Publish. Your checkout is now live on your own site — buyers never get redirected away.
+**Round 2 — the admin folder:**
+1. Click **Add file → Create new file**
+2. In the filename box, type exactly: `admin/index.html` — typing the `/` creates the folder automatically
+3. Open `admin/index.html` from your unzipped download in Notepad/TextEdit, copy everything, paste it into the big box
+4. Click **Commit changes**
+5. Repeat for the second file: **Add file → Create new file**, name it `admin/config.yml`, paste in the contents of `admin/config.yml`, commit
 
-**Note on fees:** Universe charges a per-ticket service fee on paid tickets (free tickets are free to process, so your Kids tickets cost nothing). You can choose in Universe's settings whether to pass that fee to buyers or absorb it into your ticket price. Since Cheatham Street Music Foundation is a nonprofit, contact Universe directly — they offer discounted rates for registered charities.
+**Check your work:** your repo should show a folder named `admin` alongside the loose files. If you see `config.yml` sitting loose in the main list, the flattening happened again — delete it and redo Round 2.
 
-## A few notes
+### Step 4 — Create a free Netlify account
+Go to netlify.com and click **Sign up with GitHub** — this links them automatically.
 
-- If you ever want to invite a second person to help edit (a co-organizer, etc.), just repeat step 4's invite for their email — no code changes needed.
-- Photos you upload through the admin panel get stored in the `images` folder in your GitHub repo automatically.
-- If you ever want to change the actual design (colors, fonts, layout) rather than the words/photos, that still means editing `index.html` — come back to Claude for that part.
+### Step 5 — Deploy
+Click **Add new site → Import an existing project → Deploy with GitHub**, allow access, pick `southern-star-festival`.
+
+On the settings screen, **leave the build command and publish directory empty.** Click **Deploy**. In a minute you'll get a link like `chipper-narwhal-123.netlify.app` — open it and you should see your festival site with the sunset banner.
+
+### Step 6 — Clear any leftover build settings
+Go to **Site configuration → Build & deploy → Build settings → Configure**. Make sure the build command is empty (or says `echo`) and publish directory is `.` or empty. If `cecil build` or `_site` is in there, delete it and save. The `netlify.toml` already overrides this, but clearing it prevents confusion later.
+
+### Step 7 — Point your domain at it
+**Site configuration → Domain management → Add a domain.** Enter your domain. Netlify shows you 1–2 DNS records — copy them, then log in wherever you bought your domain, find **DNS settings**, and add those records exactly. Takes anywhere from minutes to a few hours to switch over.
+
+### Step 8 — Turn on your private login
+1. **Site configuration → Identity → Enable Identity**
+2. Under **Registration**, set it to **Invite only** — this stops anyone else from making an account
+3. Scroll to **Services → Git Gateway → Enable Git Gateway** — this is what saves your edits back to GitHub
+4. **Identity → Invite users** → enter your own email
+5. Check your inbox, click the link, set a password
+
+### Step 9 — Start editing
+Go to `yourdomain.com/admin` and log in.
+
+---
+
+## Editing your site
+
+Everything happens at `yourdomain.com/admin`. Regular visitors never see a login button anywhere — `/admin` isn't linked from the site, and it's hidden from Google search.
+
+**Text:** click any field, type, click **Publish**. Live in about a minute.
+
+**Photos:** click the image field, then drag a photo in from your computer or click to browse. Works from your phone's photo library too.
+
+**Reordering:** lineup slots, schedule rows, ticket tiers, and slideshow photos all have drag handles — grab and drag to reorder.
+
+**Adding/removing:** each of those lists has an **Add** button and a delete option, so you can add a 7th lineup slot or a camping ticket tier without touching code.
+
+---
+
+## Turning on ticket sales (Universe)
+
+The site works fine before tickets go on sale — it shows a placeholder until you fill this in.
+
+1. Set up your event at universe.com with your ticket types and prices
+2. Go to **My Events → your event → Embeddable Widgets** → pick the **Ticket Widget** → click **Copy**
+3. In `/admin`, find **Ticket Checkout (Universe)** → paste into **"Universe widget embed code"** → **Publish**
+
+Buyers now check out without leaving your site.
+
+**Backup option:** if you have your public Universe event link but not the embed code yet, paste the link into **"Universe event page link"** instead. The site will show a "Buy Tickets on Universe" button until you swap in the real widget.
+
+**On fees:** Universe charges a per-ticket service fee on paid tickets — free tickets cost nothing to process, so your Kids tickets are free either way. In Universe's settings you choose whether buyers pay that fee on top, or you absorb it into your price. Since Cheatham Street Music Foundation is a nonprofit, contact Universe about their registered-charity rates before you launch.
+
+---
+
+## If something looks wrong
+
+**Homepage is blank or shows a login box** — the `admin` folder got flattened. Check your repo: if `config.yml` or a second `index.html` is loose in the main list, delete them and redo Step 3, Round 2.
+
+**Build fails with "command not found"** — a build command is set that shouldn't be. Redo Step 6.
+
+**Edits don't show up** — make sure you clicked **Publish** (not just saved a draft), then wait a minute and refresh. If it still doesn't, check Git Gateway is enabled (Step 8.3).
+
+**Can't log in to /admin** — Identity and Git Gateway both need to be on, and you need to have accepted your own invite email.
+
+## Changing the design
+
+Colors, fonts, and layout live in `index.html`. That one needs a person who writes code — come back to Claude for those. Words, prices, photos, and ordering are all yours through `/admin`.
