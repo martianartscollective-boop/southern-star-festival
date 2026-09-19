@@ -310,6 +310,10 @@
     // BBQ slideshow
     const slideshow = document.getElementById('slideshow');
     const dotsWrap = document.getElementById('slideDots');
+
+    // Remove any old slides before loading the current Admin selection
+    slideshow.querySelectorAll('.slide').forEach(slide => slide.remove());
+    
     data.bbq.slides.forEach((s, i) => {
       const div = document.createElement('div');
       div.className = 'slide' + (i === 0 ? ' active' : '');
