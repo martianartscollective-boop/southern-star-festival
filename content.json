@@ -59,27 +59,19 @@
   },
   "lineup": [
     {
-      "slot": "Headliner · Main Stage",
-      "name": "Announcing Soon"
-    },
-    {
-      "slot": "Evening Set · Main Stage",
-      "name": "Announcing Soon"
-    },
-    {
-      "slot": "Afternoon · Barn Stage",
-      "name": "Announcing Soon"
-    },
-    {
-      "slot": "Midday · Barn Stage",
-      "name": "Announcing Soon"
-    },
-    {
-      "slot": "Morning · Porch Stage",
+      "slot": "Local Showcase",
       "name": "Announcing Soon"
     },
     {
       "slot": "Local Showcase",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Headliner",
+      "name": "Announcing Soon"
+    },
+    {
+      "slot": "Headliner",
       "name": "Announcing Soon"
     }
   ],
@@ -87,7 +79,7 @@
     "slides": [
       {
         "img": "/images/eat.png",
-        "caption": "Friends gather around the smoker"
+        "caption": "Friends eating together"
       },
       {
         "img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200",
@@ -108,12 +100,12 @@
     ],
     "videoId": "9F2c-vZKVls",
     "cookoffTitle": "Want to compete?",
-    "cookoffText": "Team entries are open through April 24. $150 per team includes your cook site, water, and a shot at grand champion. Categories: brisket, ribs, sausage, and chicken."
+    "cookoffText": "Team entries are open through April 24. Entry includes your cook site, water, and a shot at grand champion. Categories: brisket, ribs, sausage, and chicken. Email SouthernStarEventsTx@gmail.com if interested!"
   },
   "location": {
     "title": "Southern Star Farms",
     "paragraphs": [
-      "Maxwell, TX — about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. Free parking on-site, with shuttle service running from the overflow lot every 15 minutes starting at 9 AM.",
+      "Maxwell, TX : about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. $10 parking on-site, with free shuttle service running from the overflow lot every 30 minutes from at 2PM-6PM and shuttle back from 6PM-10PM.",
       "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
     ],
     "mapQuery": "Maxwell, TX"
@@ -121,7 +113,7 @@
   "faq": [
     {
       "q": "Is this a rain-or-shine event?",
-      "a": "Yes. The festival runs rain or shine — the cook-off tents and Barn Stage are covered, and Main Stage has a canopy roof."
+      "a": "Yes. The festival runs rain or shine; the cook-off tents and Barn Stage are covered, and Main Stage has a canopy roof."
     },
     {
       "q": "Can I bring my own cooler or drinks?",
@@ -129,37 +121,32 @@
     },
     {
       "q": "Are pets allowed?",
-      "a": "Service animals only. It gets crowded and hot, and we want every pup safe at home."
+      "a": "Of course! Bring the paw-friends. You're completely responsible for cleaning, feeding, and making sure their safe!"
     },
     {
       "q": "How do I enter the BBQ cook-off?",
-      "a": "Head to the BBQ Cook-Off section above for entry details, or email cookoff@southernstarfestival.com to reserve your team's spot."
+      "a": "Head to the BBQ Cook-Off section above for entry details, or email SouthernStarEventsTx@gmail.com to reserve your team's spot."
     },
     {
-      "q": "Is parking free?",
-      "a": "Yes, on-site parking is free, with a shuttle running from the overflow lot starting at 9 AM."
+      "q": "How much is parking?",
+      "a": "On-site parking is $10, with a free shuttle running from the overflow lot starting at 2 PM."
     }
   ],
   "schedule": [
     {
-      "time": "10:00 AM",
+      "time": "3:00 PM",
       "title": "Gates open",
       "desc": "Cook-off teams fire up smokers, vendor row opens"
     },
     {
-      "time": "11:00 AM",
-      "title": "Porch Stage kicks off",
+      "time": "4:00 PM",
+      "title": "Music kicks off",
       "desc": "Local acoustic sets"
     },
     {
-      "time": "1:00 PM",
+      "time": "5:00 PM",
       "title": "BBQ cook-off judging begins",
       "desc": "Categories: brisket, ribs, sausage, chicken"
-    },
-    {
-      "time": "3:00 PM",
-      "title": "Barn Stage sets",
-      "desc": "Back-to-back country acts"
     },
     {
       "time": "5:30 PM",
@@ -168,7 +155,7 @@
     },
     {
       "time": "6:30 PM",
-      "title": "Main Stage headliners",
+      "title": "Headliners perform",
       "desc": "Sunset sets through closing"
     },
     {
@@ -186,7 +173,7 @@
     "city": "Maxwell, TX"
   },
   "footer": {
-    "tagline": "Maxwell, TX · May 8",
+    "tagline": "Maxwell, TX · May 15",
     "note": "A Cheatham Street Music Foundation event."
   }
 }
