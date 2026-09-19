@@ -1,23 +1,425 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="robots" content="noindex">
-  <title>Southern Star Festival — Content Manager</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Southern Star Festival — Texas Country Festival &amp; BBQ Cook-Off</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rye&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sunset-1:#e8a25a; --sunset-2:#c9713f; --sunset-3:#8a5a72;
+    --dusk-1:#5b4b6f; --dusk-2:#362b46;
+    --gold:#e7b854; --gold-deep:#b8842c;
+    --cream:#f5ead4; --paper:#efe2c8;
+    --maroon:#7a2e37; --maroon-deep:#5c1f27;
+    --teal:#8fd9c4; --ink:#2a1c14; --ink-soft:#4a3527; --focus:#e7b854;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{margin:0;} p{margin:0;} a{color:inherit;} img{max-width:100%;display:block;}
+  :focus-visible{outline:3px solid var(--focus);outline-offset:2px;}
+  .display{font-family:'Rye',serif;}
+  .hero-title{font-family:'Bungee',sans-serif;}
+
+  .tabnav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:3px solid var(--gold);overflow-x:auto;scrollbar-width:none;}
+  .tabnav::-webkit-scrollbar{display:none;}
+  .tabnav-inner{display:flex;min-width:max-content;padding:0 12px;}
+  .tabnav a{text-decoration:none;color:var(--cream);font-size:0.95rem;font-weight:500;padding:16px 18px;white-space:nowrap;border-bottom:3px solid transparent;transition:color .2s ease, border-color .2s ease;}
+  .tabnav a:hover{color:var(--gold);}
+  .tabnav a.active{color:var(--gold);border-color:var(--gold);}
+
+  .hero{position:relative;overflow:hidden;padding:76px 20px 90px;background:radial-gradient(circle at 50% 18%, var(--sunset-1) 0%, var(--sunset-2) 32%, var(--sunset-3) 58%, var(--dusk-1) 78%, var(--dusk-2) 100%);text-align:center;color:var(--cream);}
+  .rays{position:absolute;inset:0;background-image:repeating-conic-gradient(from 0deg at 50% 20%, rgba(245,234,212,0.10) 0deg 9deg, transparent 9deg 18deg);opacity:0.55;pointer-events:none;}
+  .hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;}
+  .presents{font-size:0.85rem;letter-spacing:0.04em;color:var(--cream);opacity:0.85;margin-bottom:22px;}
+  .hero-title{font-size:clamp(2.8rem,9vw,6rem);line-height:0.95;color:var(--gold);-webkit-text-stroke:2px var(--maroon-deep);text-shadow:0 3px 0 var(--maroon-deep), 0 8px 24px rgba(0,0,0,0.35);letter-spacing:1px;margin-bottom:14px;}
+  .hero-sub{font-family:'Rye',serif;font-size:clamp(1.1rem,3vw,1.6rem);color:var(--cream);margin-bottom:18px;}
+  .hero-meta{font-size:1.05rem;font-weight:600;letter-spacing:0.02em;margin-bottom:34px;}
+  .hero-meta .dot{color:var(--gold);margin:0 10px;}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;font-size:1rem;padding:15px 34px;border-radius:3px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--gold);color:var(--maroon-deep);box-shadow:0 6px 0 var(--gold-deep);}
+  .btn-primary:hover{box-shadow:0 8px 0 var(--gold-deep);}
+  .btn-primary:active{transform:translateY(2px);box-shadow:0 3px 0 var(--gold-deep);}
+  .btn-outline{background:transparent;border-color:var(--cream);color:var(--cream);}
+  .bloom{position:absolute;bottom:-10px;width:150px;opacity:0.9;}
+  .bloom.left{left:-10px;} .bloom.right{right:-10px;transform:scaleX(-1);}
+
+  section{padding:72px 20px;}
+  .section-inner{max-width:1080px;margin:0 auto;}
+  .section-head{margin-bottom:36px;text-align:center;}
+  .section-head .display{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--maroon);}
+  .section-head .kicker{display:block;font-size:0.95rem;color:var(--gold-deep);font-weight:600;margin-bottom:6px;}
+  .section-alt{background:var(--paper);}
+
+  .about-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;}
+  .about-text p{margin-bottom:16px;line-height:1.7;color:var(--ink-soft);font-size:1.05rem;}
+  .about-kicker{display:block;font-family:'Rye',serif;font-size:1.6rem;color:var(--maroon);margin-bottom:14px;}
+  .stat-row{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap;}
+  .stat{min-width:110px;}
+  .stat b{display:block;font-family:'Rye',serif;font-size:1.8rem;color:var(--maroon);}
+  .stat span{font-size:0.9rem;color:var(--ink-soft);}
+  .about-photo{border-radius:6px;overflow:hidden;box-shadow:0 14px 30px rgba(90,50,30,0.25);border:6px solid var(--cream);transform:rotate(-1.5deg);}
+
+  .lineup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
+  .lineup-card{background:var(--ink);color:var(--cream);border-radius:6px;padding:30px 20px;text-align:center;border:2px dashed var(--gold);}
+  .lineup-card .slot{font-size:0.8rem;letter-spacing:0.03em;color:var(--gold);margin-bottom:10px;font-weight:600;}
+  .lineup-card .tba{font-family:'Rye',serif;font-size:1.3rem;}
+  .lineup-note{text-align:center;margin-top:26px;color:var(--ink-soft);font-size:0.95rem;}
+
+  .schedule-list{max-width:640px;margin:0 auto;}
+  .schedule-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(122,46,55,0.2);}
+  .schedule-item:last-child{border-bottom:none;}
+  .schedule-time{font-family:'Rye',serif;color:var(--maroon);font-size:1.05rem;}
+  .schedule-what b{display:block;margin-bottom:2px;}
+  .schedule-what span{color:var(--ink-soft);font-size:0.95rem;}
+
+  .bbq-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:stretch;}
+  .slideshow{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 34px rgba(60,30,20,0.3);background:#000;}
+  .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;}
+  .slide.active{opacity:1;}
+  .slide img{width:100%;height:100%;object-fit:cover;}
+  .slide-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(to top, rgba(0,0,0,0.75), transparent);color:var(--cream);font-size:0.9rem;}
+  .slide-dots{position:absolute;bottom:12px;right:16px;display:flex;gap:6px;z-index:3;}
+  .slide-dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;padding:0;}
+  .slide-dots button.active{background:var(--gold);}
+  .bbq-video{border-radius:8px;overflow:hidden;box-shadow:0 16px 34px rgba(60,30,20,0.3);aspect-ratio:16/9;}
+  .bbq-video iframe{width:100%;height:100%;border:0;display:block;}
+  .bbq-side{display:flex;flex-direction:column;gap:20px;}
+  .cookoff-badge{background:var(--maroon);color:var(--cream);border-radius:6px;padding:20px 22px;}
+  .cookoff-badge b{display:block;font-family:'Rye',serif;font-size:1.2rem;margin-bottom:6px;color:var(--gold);}
+  .cookoff-badge p{color:var(--cream);opacity:0.9;font-size:0.95rem;line-height:1.6;}
+
+  .ticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
+  .ticket-card{background:#fff;border-radius:8px;padding:30px 26px;box-shadow:0 10px 26px rgba(90,50,30,0.12);border-top:5px solid var(--gold);display:flex;flex-direction:column;}
+  .ticket-card.featured{border-top-color:var(--maroon);background:var(--ink);color:var(--cream);}
+  .ticket-card.featured .ticket-price{color:var(--gold);}
+  .ticket-card.featured .ticket-desc{color:rgba(245,234,212,0.8);}
+  .ticket-name{font-family:'Rye',serif;font-size:1.3rem;color:var(--maroon);margin-bottom:6px;}
+  .ticket-card.featured .ticket-name{color:var(--gold);}
+  .ticket-price{font-size:2.1rem;font-weight:700;color:var(--maroon);margin-bottom:14px;}
+  .ticket-price span{font-size:0.95rem;font-weight:400;}
+  .ticket-desc{color:var(--ink-soft);font-size:0.95rem;line-height:1.6;margin-bottom:22px;flex-grow:1;}
+  .ticket-card .btn{align-self:flex-start;}
+  .checkout-note{text-align:center;max-width:640px;margin:0 auto 30px;color:var(--ink-soft);font-size:0.95rem;line-height:1.6;}
+  .checkout-note a{color:var(--maroon);font-weight:600;text-decoration:underline;}
+  .checkout-wrap{max-width:720px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 14px 30px rgba(90,50,30,0.18);border:1px solid rgba(122,46,55,0.15);}
+  .checkout-frame{position:relative;overflow:hidden;height:900px;width:100%;background:#fff;}
+  .checkout-frame iframe{position:absolute;border:0;top:0;left:0;bottom:0;right:0;width:100%;height:100%;}
+  .checkout-fallback{display:flex;flex-direction:column;align-items:center;gap:14px;padding:60px 24px;text-align:center;color:var(--ink-soft);}
+  .checkout-fallback b{font-family:'Rye',serif;color:var(--maroon);font-size:1.2rem;}
+  .powered-by{text-align:center;font-size:0.82rem;color:var(--ink-soft);opacity:0.75;margin-top:10px;}
+
+  .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;}
+  .location-info b{display:block;font-family:'Rye',serif;font-size:1.25rem;color:var(--maroon);margin-bottom:8px;}
+  .location-info p{color:var(--ink-soft);line-height:1.7;margin-bottom:18px;}
+  .map-frame{border-radius:8px;overflow:hidden;box-shadow:0 14px 30px rgba(90,50,30,0.2);aspect-ratio:4/3;}
+  .map-frame iframe{width:100%;height:100%;border:0;}
+
+  .faq-list{max-width:720px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(122,46,55,0.2);}
+  .faq-q{width:100%;text-align:left;background:none;border:none;font-family:'Jost',sans-serif;font-size:1.05rem;font-weight:600;color:var(--ink);padding:20px 6px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  .faq-q .icon{font-family:'Rye',serif;color:var(--maroon);font-size:1.3rem;transition:transform .2s ease;}
+  .faq-item.open .icon{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--ink-soft);line-height:1.7;font-size:0.98rem;padding:0 6px;}
+  .faq-item.open .faq-a{padding-bottom:20px;}
+
+  footer{background:var(--dusk-2);color:var(--cream);padding:44px 20px 30px;text-align:center;}
+  footer .display{color:var(--gold);font-size:1.5rem;margin-bottom:10px;}
+  footer .foot-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:18px 0;font-size:0.9rem;}
+  footer .foot-links a{text-decoration:none;opacity:0.85;}
+  footer .foot-links a:hover{opacity:1;color:var(--gold);}
+  footer .fine{font-size:0.8rem;opacity:0.6;margin-top:18px;}
+
+  @media (max-width:760px){
+    .about-grid, .bbq-grid, .location-grid{grid-template-columns:1fr;}
+    .about-photo{order:-1;transform:none;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;} .slide{transition:none;} *{animation-duration:0.01ms !important;}
+  }
+</style>
 </head>
 <body>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", function(user) {
-        if (!user) {
-          window.netlifyIdentity.on("login", function() {
-            document.location.href = "/admin/";
-          });
-        }
+
+<nav class="tabnav" id="tabnav" aria-label="Section navigation">
+  <div class="tabnav-inner">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#lineup">Lineup</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#bbq">BBQ Cook-Off</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#location">Location</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="rays" aria-hidden="true"></div>
+  <svg class="bloom left" viewBox="0 0 100 160" aria-hidden="true">
+    <g fill="#7d6aa8" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
+    <path d="M40 55 L40 160" stroke="#3c6b4f" stroke-width="4" fill="none"/>
+  </svg>
+  <svg class="bloom right" viewBox="0 0 100 160" aria-hidden="true">
+    <g fill="#e592b0" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
+    <path d="M40 55 L40 160" stroke="#3c6b4f" stroke-width="4" fill="none"/>
+  </svg>
+  <div class="hero-content" id="heroContent"></div>
+</header>
+
+<section id="about"><div class="section-inner about-grid" id="aboutContent"></div></section>
+
+<section class="section-alt" id="lineup">
+  <div class="section-inner">
+    <div class="section-head"><span class="kicker">Music all day, three stages</span><h2 class="display">The Lineup</h2></div>
+    <div class="lineup-grid" id="lineupGrid"></div>
+    <p class="lineup-note" id="lineupNote"></p>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="section-inner">
+    <div class="section-head"><span class="kicker">May 8 · Southern Star Farms</span><h2 class="display">Day-Of Schedule</h2></div>
+    <div class="schedule-list" id="scheduleList"></div>
+  </div>
+</section>
+
+<section class="section-alt" id="bbq">
+  <div class="section-inner">
+    <div class="section-head"><span class="kicker">Brisket. Ribs. Bragging rights.</span><h2 class="display">The BBQ Cook-Off</h2></div>
+    <div class="bbq-grid">
+      <div><div class="slideshow" id="slideshow"><div class="slide-dots" id="slideDots"></div></div></div>
+      <div class="bbq-side">
+        <div class="bbq-video" id="bbqVideo"></div>
+        <div class="cookoff-badge" id="cookoffBadge"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tickets">
+  <div class="section-inner">
+    <div class="section-head"><span class="kicker">100% of every ticket goes to the festival — zero platform fees</span><h2 class="display">Tickets</h2></div>
+    <div class="ticket-grid" id="ticketGrid"></div>
+    <p class="checkout-note">Checkout below is powered by <a href="https://www.universe.com/" target="_blank" rel="noopener">Universe</a> — buyers get QR-coded digital tickets by email without ever leaving this page.</p>
+    <div class="checkout-wrap" id="universeCheckout"></div>
+    <p class="powered-by" id="feeNote"></p>
+  </div>
+</section>
+
+<section class="section-alt" id="location">
+  <div class="section-inner location-grid">
+    <div class="location-info" id="locationInfo"></div>
+    <div class="map-frame" id="mapFrame"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-head"><span class="kicker">Good to know</span><h2 class="display">Frequently Asked Questions</h2></div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<footer id="footerContent"></footer>
+
+<!-- Netlify Identity: required so invite-link emails land you logged in at /admin.
+     This does NOT show any login button/UI to regular visitors. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user) {});
+  }
+</script>
+
+<script>
+  // ---- Default content: used instantly, and as a fallback if content.json can't be fetched
+  // (e.g. previewing this file locally by double-clicking it, where the browser blocks local fetches) ----
+  const DEFAULT_CONTENT = {"hero": {"presents": "Cheatham Street Music Foundation Presents", "title": "SOUTHERN STAR", "subtitle": "Texas Country Festival & BBQ Cook-Off", "date": "May 8", "venue": "Southern Star Farms", "city": "Maxwell, TX"}, "about": {"kicker": "A day built around good music and good smoke", "paragraphs": ["Southern Star Festival brings live country music and a full-blown BBQ cook-off together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of bands, a backyard-to-blue-ribbon smoker competition, and food and drink from local vendors all day long.", "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."], "stats": [{"value": "1", "label": "Day of music"}, {"value": "20+", "label": "BBQ teams competing"}, {"value": "3", "label": "Stages & tents"}, {"value": "All", "label": "Ages welcome"}], "photo": "https://images.pexels.com/photos/6950716/pexels-photo-6950716.jpeg?auto=compress&cs=tinysrgb&w=900"}, "lineup": [{"slot": "Headliner · Main Stage", "name": "Announcing Soon"}, {"slot": "Evening Set · Main Stage", "name": "Announcing Soon"}, {"slot": "Afternoon · Barn Stage", "name": "Announcing Soon"}, {"slot": "Midday · Barn Stage", "name": "Announcing Soon"}, {"slot": "Morning · Porch Stage", "name": "Announcing Soon"}, {"slot": "Local Showcase", "name": "Announcing Soon"}], "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.", "schedule": [{"time": "10:00 AM", "title": "Gates open", "desc": "Cook-off teams fire up smokers, vendor row opens"}, {"time": "11:00 AM", "title": "Porch Stage kicks off", "desc": "Local acoustic sets"}, {"time": "1:00 PM", "title": "BBQ cook-off judging begins", "desc": "Categories: brisket, ribs, sausage, chicken"}, {"time": "3:00 PM", "title": "Barn Stage sets", "desc": "Back-to-back country acts"}, {"time": "5:30 PM", "title": "Cook-off awards", "desc": "Grand champion announced on Main Stage"}, {"time": "6:30 PM", "title": "Main Stage headliners", "desc": "Sunset sets through closing"}, {"time": "10:00 PM", "title": "Gates close", "desc": "Safe travels, y'all"}], "bbq": {"slides": [{"img": "https://images.pexels.com/photos/6950716/pexels-photo-6950716.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Friends gather around the smoker"}, {"img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Ribs going low and slow"}, {"img": "https://images.pexels.com/photos/7416284/pexels-photo-7416284.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Pitmasters at work"}, {"img": "https://images.pexels.com/photos/94440/pexels-photo-94440.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Straight off the grill"}, {"img": "https://images.pexels.com/photos/263133/pexels-photo-263133.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "The whole crowd shows up for this"}], "videoId": "9F2c-vZKVls", "cookoffTitle": "Want to compete?", "cookoffText": "Team entries are open through April 24. $150 per team includes your cook site, water, and a shot at grand champion. Categories: brisket, ribs, sausage, and chicken."}, "tickets": [{"name": "General Admission", "price": "$45", "unit": "/person", "desc": "All-day access to every stage, the cook-off tasting area, and vendor row. Lawn seating — bring a chair or blanket.", "cta": "Buy Tickets", "featured": false}, {"name": "VIP", "price": "$95", "unit": "/person", "desc": "Everything in GA, plus shaded viewing near Main Stage, a dedicated bar, early entry at 9 AM, and a BBQ tasting flight from the cook-off judges' table.", "cta": "Buy Tickets", "featured": true}, {"name": "Kids (12 & Under)", "price": "Free", "unit": "", "desc": "Free with a paying adult. Kids' area open all day with games and shade near the Porch Stage.", "cta": "Reserve Spot", "featured": false}], "location": {"title": "Southern Star Farms", "paragraphs": ["Maxwell, TX — about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. Free parking on-site, with shuttle service running from the overflow lot every 15 minutes starting at 9 AM.", "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."], "mapQuery": "Maxwell, TX"}, "faq": [{"q": "Is this a rain-or-shine event?", "a": "Yes. The festival runs rain or shine — the cook-off tents and Barn Stage are covered, and Main Stage has a canopy roof."}, {"q": "Can I bring my own cooler or drinks?", "a": "Outside food, drinks, and coolers aren't allowed, but there's plenty of food and drink from vendors and the cook-off tasting area all day."}, {"q": "Are pets allowed?", "a": "Service animals only. It gets crowded and hot, and we want every pup safe at home."}, {"q": "How do I enter the BBQ cook-off?", "a": "Head to the BBQ Cook-Off section above for entry details, or email cookoff@southernstarfestival.com to reserve your team's spot."}, {"q": "Is parking free?", "a": "Yes, on-site parking is free, with a shuttle running from the overflow lot starting at 9 AM."}], "footer": {"tagline": "Maxwell, TX · May 8", "note": "A Cheatham Street Music Foundation event."}, "universe": {"embedCode": "", "eventUrl": "", "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."}};
+
+  function esc(s){ return (s || '').toString(); }
+
+  function render(data){
+    // Hero
+    document.getElementById('heroContent').innerHTML = `
+      <p class="presents">${esc(data.hero.presents)}</p>
+      <h1 class="hero-title">${esc(data.hero.title)}</h1>
+      <p class="hero-sub">${esc(data.hero.subtitle)}</p>
+      <p class="hero-meta">${esc(data.hero.date)}<span class="dot">★</span>${esc(data.hero.venue)}<span class="dot">★</span>${esc(data.hero.city)}</p>
+      <a href="#tickets" class="btn btn-primary">Get Tickets</a>
+      <a href="#lineup" class="btn btn-outline" style="margin-left:14px;">See Lineup</a>
+    `;
+
+    // About
+    const stats = data.about.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join('');
+    const paras = data.about.paragraphs.map(p => `<p>${esc(p)}</p>`).join('');
+    document.getElementById('aboutContent').innerHTML = `
+      <div class="about-text">
+        <span class="about-kicker">${esc(data.about.kicker)}</span>
+        ${paras}
+        <div class="stat-row">${stats}</div>
+      </div>
+      <div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>
+    `;
+
+    // Lineup
+    document.getElementById('lineupGrid').innerHTML = data.lineup.map(l => `
+      <div class="lineup-card"><div class="slot">${esc(l.slot)}</div><div class="tba">${esc(l.name)}</div></div>
+    `).join('');
+    document.getElementById('lineupNote').textContent = data.lineupNote;
+
+    // Schedule
+    document.getElementById('scheduleList').innerHTML = data.schedule.map(s => `
+      <div class="schedule-item"><div class="schedule-time">${esc(s.time)}</div><div class="schedule-what"><b>${esc(s.title)}</b><span>${esc(s.desc)}</span></div></div>
+    `).join('');
+
+    // BBQ slideshow
+    const slideshow = document.getElementById('slideshow');
+    const dotsWrap = document.getElementById('slideDots');
+    data.bbq.slides.forEach((s, i) => {
+      const div = document.createElement('div');
+      div.className = 'slide' + (i === 0 ? ' active' : '');
+      div.innerHTML = `<img src="${esc(s.img)}" alt="${esc(s.caption)}"><div class="slide-caption">${esc(s.caption)}</div>`;
+      slideshow.insertBefore(div, dotsWrap);
+    });
+    document.getElementById('bbqVideo').innerHTML = `<iframe src="https://www.youtube.com/embed/${esc(data.bbq.videoId)}" title="BBQ festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    document.getElementById('cookoffBadge').innerHTML = `<b>${esc(data.bbq.cookoffTitle)}</b><p>${esc(data.bbq.cookoffText)}</p>`;
+
+    // Tickets
+    document.getElementById('ticketGrid').innerHTML = data.tickets.map(t => `
+      <div class="ticket-card${t.featured ? ' featured' : ''}">
+        <div class="ticket-name">${esc(t.name)}</div>
+        <div class="ticket-price">${esc(t.price)}<span> ${esc(t.unit)}</span></div>
+        <div class="ticket-desc">${esc(t.desc)}</div>
+        <a href="#universeCheckout" class="btn btn-primary">${esc(t.cta)}</a>
+      </div>
+    `).join('');
+
+    // Universe checkout — accepts the full widget embed code (which includes a <script>)
+    const uni = data.universe || {};
+    const checkoutEl = document.getElementById('universeCheckout');
+    if(uni.embedCode && uni.embedCode.trim()){
+      // Universe's widget embed includes a <script> tag. innerHTML won't execute scripts,
+      // so we inject the markup then re-create each script node so the browser runs it.
+      checkoutEl.innerHTML = uni.embedCode;
+      Array.from(checkoutEl.querySelectorAll('script')).forEach(old => {
+        const s = document.createElement('script');
+        Array.from(old.attributes).forEach(a => s.setAttribute(a.name, a.value));
+        s.textContent = old.textContent;
+        old.parentNode.replaceChild(s, old);
       });
+    } else if(uni.eventUrl && uni.eventUrl.trim()){
+      // No embed code yet, but we have the public event link — send buyers straight there.
+      checkoutEl.innerHTML = `
+        <div class="checkout-fallback">
+          <b>Tickets are on sale now</b>
+          <p>Grab your Southern Star Festival tickets on our Universe event page — digital tickets arrive by email right after checkout.</p>
+          <a class="btn btn-primary" href="${esc(uni.eventUrl)}" target="_blank" rel="noopener">Buy Tickets on Universe</a>
+        </div>`;
+    } else {
+      checkoutEl.innerHTML = `
+        <div class="checkout-fallback">
+          <b>Ticket checkout goes here</b>
+          <p>Once your Southern Star Festival event is live on Universe, paste its widget embed code into the "Universe widget embed code" field in the admin panel — this box updates automatically.</p>
+          <a class="btn btn-primary" href="https://www.universe.com/" target="_blank" rel="noopener">Set Up Your Universe Event</a>
+        </div>`;
     }
-  </script>
+    document.getElementById('feeNote').textContent = uni.feeNote || 'Ticketing powered by Universe';
+
+    // Location
+    document.getElementById('locationInfo').innerHTML = `
+      <b>${esc(data.location.title)}</b>
+      ${data.location.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
+      <a href="#" class="btn btn-outline" style="border-color:var(--maroon);color:var(--maroon);">Get Directions</a>
+    `;
+    document.getElementById('mapFrame').innerHTML = `<iframe src="https://maps.google.com/maps?q=${encodeURIComponent(data.location.mapQuery)}&t=&z=11&ie=UTF8&iwloc=&output=embed" title="Map" loading="lazy"></iframe>`;
+
+    // FAQ
+    document.getElementById('faqList').innerHTML = data.faq.map((f, i) => `
+      <div class="faq-item${i === 0 ? ' open' : ''}">
+        <button class="faq-q">${esc(f.q)} <span class="icon">+</span></button>
+        <div class="faq-a"><p>${esc(f.a)}</p></div>
+      </div>
+    `).join('');
+
+    // Footer
+    document.getElementById('footerContent').innerHTML = `
+      <div class="display">Southern Star Festival</div>
+      <p style="opacity:0.85;">${esc(data.footer.tagline)}</p>
+      <div class="foot-links">
+        <a href="#tickets">Tickets</a><a href="#lineup">Lineup</a><a href="#bbq">BBQ Cook-Off</a><a href="#faq">FAQ</a>
+        <a href="#">Instagram</a><a href="#">Facebook</a>
+      </div>
+      <p class="fine">${esc(data.footer.note)}</p>
+    `;
+
+    initInteractions();
+  }
+
+  function initInteractions(){
+    // Scrollspy
+    const navLinks = Array.from(document.querySelectorAll('.tabnav a'));
+    const sections = navLinks.map(l => document.querySelector(l.getAttribute('href')));
+    function onScroll(){
+      let current = sections[0];
+      const y = window.scrollY + 120;
+      sections.forEach(sec => { if(sec && sec.offsetTop <= y) current = sec; });
+      navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current.id));
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    // Slideshow
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const dotsWrap = document.getElementById('slideDots');
+    dotsWrap.innerHTML = '';
+    let current = 0;
+    slides.forEach((_, i) => {
+      const b = document.createElement('button');
+      if(i === 0) b.classList.add('active');
+      b.setAttribute('aria-label', 'Show photo ' + (i+1));
+      b.addEventListener('click', () => showSlide(i));
+      dotsWrap.appendChild(b);
+    });
+    const dots = Array.from(dotsWrap.children);
+    function showSlide(i){
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = i;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    if(slides.length > 1){
+      let auto = setInterval(() => showSlide((current + 1) % slides.length), 4500);
+      const sw = document.getElementById('slideshow');
+      sw.addEventListener('mouseenter', () => clearInterval(auto));
+      sw.addEventListener('mouseleave', () => { auto = setInterval(() => showSlide((current + 1) % slides.length), 4500); });
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      if(item.classList.contains('open')) a.style.maxHeight = a.scrollHeight + 'px';
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-a').style.maxHeight = null; });
+        if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+      });
+    });
+  }
+
+  // Paint immediately with defaults, then try to load the live, CMS-edited content.json
+  render(DEFAULT_CONTENT);
+  fetch('content.json?_=' + Date.now())
+    .then(r => r.ok ? r.json() : null)
+    .then(data => { if(data) render(data); })
+    .catch(() => {});
+</script>
+
 </body>
 </html>
