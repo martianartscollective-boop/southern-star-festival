@@ -16,9 +16,9 @@
     },
     {
       "name": "VIP",
-      "price": "$95",
+      "price": "$120",
       "unit": "/person",
-      "desc": "Everything in GA, plus shaded viewing near Main Stage, a dedicated bar, early entry at 9 AM, and a BBQ tasting flight from the cook-off judges' table.",
+      "desc": "Everything in GA, plus shaded viewing near Main Stage, a dedicated bar, early entry, and a BBQ tasting flight from the cook-off judges' table.",
       "cta": "Buy Tickets",
       "featured": true
     },
@@ -43,12 +43,16 @@
         "label": "Day of music"
       },
       {
-        "value": "20+",
+        "value": "4+",
         "label": "BBQ teams competing"
       },
       {
-        "value": "3",
-        "label": "Stages & tents"
+        "value": "10+ ",
+        "label": "Vendors"
+      },
+      {
+        "value": "1",
+        "label": "Stages"
       },
       {
         "value": "All",
@@ -168,7 +172,7 @@
     "presents": "Cheatham Street Music Foundation Presents",
     "title": "SOUTHERN STAR",
     "subtitle": "Texas Country Festival & BBQ Cook-Off",
-    "date": "May 8",
+    "date": "May 15",
     "venue": "Southern Star Farms",
     "city": "Maxwell, TX"
   },
