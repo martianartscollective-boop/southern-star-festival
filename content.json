@@ -86,20 +86,20 @@
         "caption": "Friends eating together"
       },
       {
-        "img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "caption": "Ribs going low and slow"
-      },
-      {
         "img": "/images/ssf.png",
         "caption": "The Farm"
       },
       {
-        "img": "https://images.pexels.com/photos/94440/pexels-photo-94440.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "caption": "Straight off the grill"
-      },
-      {
         "img": "/images/martian.png",
         "caption": "The whole crowd shows up for this"
+      },
+      {
+        "img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "Ribs going low and slow"
+      },
+      {
+        "img": "https://images.pexels.com/photos/94440/pexels-photo-94440.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "caption": "Straight off the grill"
       }
     ],
     "videoId": "9F2c-vZKVls",
@@ -145,7 +145,7 @@
     {
       "time": "4:00 PM",
       "title": "Music kicks off",
-      "desc": "Local acoustic sets"
+      "desc": "Local talent leading the way"
     },
     {
       "time": "5:00 PM",
