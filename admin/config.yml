@@ -28,11 +28,13 @@ collections:
               - label: "Main Cover Picture"
                 name: "coverImage"
                 widget: "image"
+                required: false
                 hint: "This is the large background picture at the top of the website."
 
               - label: "Mobile / Social Sharing Picture"
                 name: "shareImage"
                 widget: "image"
+                required: false
                 hint: "Image intended for link previews when the website is shared. Note: social platforms may cache an older preview."
 
               - label: "Slideshow Time (seconds)"
