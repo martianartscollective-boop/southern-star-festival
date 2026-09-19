@@ -17,6 +17,36 @@ collections:
         label: "Southern Star Festival — All Content"
         name: "content"
         fields:
+
+          # =========================
+          # WEBSITE SETTINGS
+          # =========================
+          - label: "Website Settings"
+            name: "settings"
+            widget: "object"
+            fields:
+              - label: "Main Cover Picture"
+                name: "coverImage"
+                widget: "image"
+                hint: "This is the large background picture at the top of the website."
+
+              - label: "Mobile / Social Sharing Picture"
+                name: "shareImage"
+                widget: "image"
+                hint: "Image intended for link previews when the website is shared. Note: social platforms may cache an older preview."
+
+              - label: "Slideshow Time (seconds)"
+                name: "slideshowSeconds"
+                widget: "number"
+                value_type: "int"
+                min: 1
+                max: 60
+                default: 5
+                hint: "How many seconds each BBQ slideshow picture stays on screen."
+
+          # =========================
+          # HERO
+          # =========================
           - label: "Hero (top banner)"
             name: "hero"
             widget: "object"
@@ -28,23 +58,32 @@ collections:
               - {label: "Venue name", name: "venue", widget: "string"}
               - {label: "City/State", name: "city", widget: "string"}
 
+          # =========================
+          # ABOUT
+          # =========================
           - label: "About Section"
             name: "about"
             widget: "object"
             fields:
               - {label: "Small headline above the paragraph", name: "kicker", widget: "string"}
+
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 field: {label: "Paragraph", name: "text", widget: "text"}
+
               - label: "Stats row (e.g. '20+ BBQ teams')"
                 name: "stats"
                 widget: "list"
                 fields:
                   - {label: "Number/word", name: "value", widget: "string"}
                   - {label: "Label underneath", name: "label", widget: "string"}
+
               - {label: "Photo", name: "photo", widget: "image"}
 
+          # =========================
+          # LINEUP
+          # =========================
           - label: "Lineup Slots"
             name: "lineup"
             widget: "list"
@@ -55,6 +94,9 @@ collections:
 
           - {label: "Note under the lineup grid", name: "lineupNote", widget: "string"}
 
+          # =========================
+          # SCHEDULE
+          # =========================
           - label: "Day-Of Schedule"
             name: "schedule"
             widget: "list"
@@ -64,6 +106,9 @@ collections:
               - {label: "What's happening", name: "title", widget: "string"}
               - {label: "Details", name: "desc", widget: "string"}
 
+          # =========================
+          # BBQ
+          # =========================
           - label: "BBQ Cook-Off Section"
             name: "bbq"
             widget: "object"
@@ -75,10 +120,14 @@ collections:
                 fields:
                   - {label: "Photo", name: "img", widget: "image"}
                   - {label: "Caption", name: "caption", widget: "string"}
+
               - {label: "YouTube video ID (the part after 'watch?v=')", name: "videoId", widget: "string"}
               - {label: "Cook-off box title", name: "cookoffTitle", widget: "string"}
               - {label: "Cook-off box text", name: "cookoffText", widget: "text"}
 
+          # =========================
+          # TICKETS
+          # =========================
           - label: "Tickets"
             name: "tickets"
             widget: "list"
@@ -91,6 +140,9 @@ collections:
               - {label: "Button text", name: "cta", widget: "string"}
               - {label: "Highlight this card (VIP-style)?", name: "featured", widget: "boolean", default: false}
 
+          # =========================
+          # UNIVERSE CHECKOUT
+          # =========================
           - label: "Ticket Checkout (Universe)"
             name: "universe"
             widget: "object"
@@ -99,28 +151,38 @@ collections:
                 name: "embedCode"
                 widget: "text"
                 required: false
-                hint: "In Universe: My Events → your event → 'Embeddable Widgets' → pick the Ticket Widget → click Copy. Paste the whole block of code here, exactly as copied. Leave blank until your event is set up."
+                hint: "In Universe: My Events → your event → Embeddable Widgets → pick the Ticket Widget → click Copy. Paste the whole block of code here."
+
               - label: "Universe event page link (backup)"
                 name: "eventUrl"
                 widget: "string"
                 required: false
-                hint: "Your public universe.com event link. If you haven't got the embed code yet, filling this in shows a 'Buy Tickets on Universe' button instead."
+                hint: "Your public universe.com event link."
+
               - label: "Fee note under the checkout"
                 name: "feeNote"
                 widget: "text"
                 required: false
 
+          # =========================
+          # LOCATION
+          # =========================
           - label: "Location"
             name: "location"
             widget: "object"
             fields:
               - {label: "Venue name", name: "title", widget: "string"}
+
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 field: {label: "Paragraph", name: "text", widget: "text"}
+
               - {label: "Map search text (e.g. 'Maxwell, TX')", name: "mapQuery", widget: "string"}
 
+          # =========================
+          # FAQ
+          # =========================
           - label: "FAQ"
             name: "faq"
             widget: "list"
@@ -129,6 +191,9 @@ collections:
               - {label: "Question", name: "q", widget: "string"}
               - {label: "Answer", name: "a", widget: "text"}
 
+          # =========================
+          # FOOTER
+          # =========================
           - label: "Footer"
             name: "footer"
             widget: "object"
