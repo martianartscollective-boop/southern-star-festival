@@ -1,4 +1,9 @@
 {
+  "settings": {
+    "coverImage": "/images/ssf.png",
+    "shareImage": "/images/ssf.png",
+    "slideshowSeconds": 5
+  },
   "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "universe": {
     "embedCode": "",
