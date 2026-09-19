@@ -3,7 +3,7 @@
   "settings": {
     "coverImage": "",
     "shareImage": "/images/ssf.png",
-    "slideshowSeconds": 5
+    "slideshowSeconds": 4
   },
   "universe": {
     "embedCode": "",
@@ -48,16 +48,16 @@
         "label": "Day of music"
       },
       {
+        "value": "1",
+        "label": "Stages"
+      },
+      {
         "value": "4+",
         "label": "BBQ teams competing"
       },
       {
         "value": "10+ ",
         "label": "Vendors"
-      },
-      {
-        "value": "1",
-        "label": "Stages"
       },
       {
         "value": "All",
