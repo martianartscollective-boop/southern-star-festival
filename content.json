@@ -143,29 +143,19 @@
   ],
   "schedule": [
     {
-      "time": "3:00 PM",
+      "time": "1:00 PM",
       "title": "Gates open",
       "desc": "Cook-off teams fire up smokers, vendor row opens"
     },
     {
-      "time": "4:00 PM",
-      "title": "Music kicks off",
-      "desc": "Local talent leading the way"
-    },
-    {
-      "time": "5:00 PM",
-      "title": "BBQ cook-off judging begins",
-      "desc": "Categories: brisket, ribs, sausage, chicken"
-    },
-    {
-      "time": "5:30 PM",
-      "title": "Cook-off awards",
-      "desc": "Grand champion announced on Main Stage"
+      "time": "2:00 PM",
+      "title": "Music kicks off & BBQ cook-off judging begins",
+      "desc": "Local talent leading the way Categories: TBD"
     },
     {
       "time": "6:30 PM",
-      "title": "Headliners perform",
-      "desc": "Sunset sets through closing"
+      "title": "Cook-off award ceremony",
+      "desc": "Grand champion announced on Main Stage"
     },
     {
       "time": "10:00 PM",
@@ -177,12 +167,12 @@
     "presents": "Cheatham Street Music Foundation Presents",
     "title": "SOUTHERN STAR",
     "subtitle": "Texas Country Festival & BBQ Cook-Off",
-    "date": "May 15",
+    "date": "May 8",
     "venue": "Southern Star Farms",
     "city": "Maxwell, TX"
   },
   "footer": {
-    "tagline": "Maxwell, TX · May 15",
+    "tagline": "Maxwell, TX · May 8",
     "note": "A Cheatham Street Music Foundation event."
   }
 }
