@@ -1,10 +1,60 @@
 {
-  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
     "coverImage": "",
     "shareImage": "/images/ssf.png",
-    "slideshowSeconds": 4
+    "slideshowSeconds": 5,
+    "colors": {
+      "sunset1": "#e8a25a",
+      "sunset2": "#c9713f",
+      "sunset3": "#8a5a72",
+      "dusk1": "#5b4b6f",
+      "dusk2": "#362b46",
+      "gold": "#e7b854",
+      "goldDeep": "#b8842c",
+      "cream": "#f5ead4",
+      "paper": "#efe2c8",
+      "maroon": "#7a2e37",
+      "maroonDeep": "#5c1f27",
+      "teal": "#8fd9c4",
+      "ink": "#2a1c14",
+      "inkSoft": "#4a3527",
+      "focus": "#e7b854",
+      "surface": "#ffffff",
+      "slideshowBg": "#000000",
+      "flowerLeft": "#7d6aa8",
+      "flowerRight": "#e592b0",
+      "stem": "#3c6b4f",
+      "shadow": "rgba(60,30,20,0.30)",
+      "shadowSoft": "rgba(90,50,30,0.20)",
+      "divider": "rgba(122,46,55,0.20)",
+      "heroTextShadow": "rgba(0,0,0,0.35)",
+      "captionOverlay": "rgba(0,0,0,0.75)",
+      "dotInactive": "rgba(255,255,255,0.50)",
+      "heroOverlayTop": "rgba(54,43,70,0.38)",
+      "heroOverlayBottom": "rgba(54,43,70,0.58)"
+    }
   },
+  "site": {
+    "metaTitle": "Southern Star Festival — Texas Country Festival & BBQ Cook-Off",
+    "metaDescription": "Southern Star Festival — Texas Country Festival & BBQ Cook-Off at Southern Star Farms in Maxwell, TX.",
+    "heroPrimaryButton": "Get Tickets",
+    "heroSecondaryButton": "See Lineup",
+    "lineupKicker": "Music all day",
+    "lineupTitle": "The Lineup",
+    "scheduleKicker": "May 15 · Southern Star Farms",
+    "scheduleTitle": "Day-Of Schedule",
+    "bbqKicker": "Brisket. Ribs. Bragging rights.",
+    "bbqTitle": "The BBQ Cook-Off",
+    "ticketsKicker": "Choose your ticket and join us in Maxwell",
+    "ticketsTitle": "Tickets",
+    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
+    "faqKicker": "Good to know",
+    "faqTitle": "Frequently Asked Questions",
+    "directionsButtonText": "Get Directions",
+    "footerName": "Southern Star Festival"
+  },
+  "socials": [],
+  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "universe": {
     "embedCode": "",
     "eventUrl": "",
@@ -48,16 +98,16 @@
         "label": "Day of music"
       },
       {
-        "value": "1",
-        "label": "Stages"
-      },
-      {
         "value": "4+",
         "label": "BBQ teams competing"
       },
       {
         "value": "10+ ",
         "label": "Vendors"
+      },
+      {
+        "value": "1",
+        "label": "Stages"
       },
       {
         "value": "All",
@@ -143,19 +193,29 @@
   ],
   "schedule": [
     {
-      "time": "1:00 PM",
+      "time": "3:00 PM",
       "title": "Gates open",
       "desc": "Cook-off teams fire up smokers, vendor row opens"
     },
     {
-      "time": "2:00 PM",
-      "title": "Music kicks off & BBQ cook-off judging begins",
-      "desc": "Local talent leading the way Categories: TBD"
+      "time": "4:00 PM",
+      "title": "Music kicks off",
+      "desc": "Local talent leading the way"
+    },
+    {
+      "time": "5:00 PM",
+      "title": "BBQ cook-off judging begins",
+      "desc": "Categories: brisket, ribs, sausage, chicken"
+    },
+    {
+      "time": "5:30 PM",
+      "title": "Cook-off awards",
+      "desc": "Grand champion announced on Main Stage"
     },
     {
       "time": "6:30 PM",
-      "title": "Cook-off award ceremony",
-      "desc": "Grand champion announced on Main Stage"
+      "title": "Headliners perform",
+      "desc": "Sunset sets through closing"
     },
     {
       "time": "10:00 PM",
@@ -165,14 +225,14 @@
   ],
   "hero": {
     "presents": "Cheatham Street Music Foundation Presents",
-    "title": "SOUTHERN STAR FESTIVAL",
-    "subtitle": "Texas Music & BBQ Cookout",
-    "date": "May 8",
+    "title": "SOUTHERN STAR",
+    "subtitle": "Texas Country Festival & BBQ Cook-Off",
+    "date": "May 15",
     "venue": "Southern Star Farms",
     "city": "Maxwell, TX"
   },
   "footer": {
-    "tagline": "Maxwell, TX · May 8",
+    "tagline": "Maxwell, TX · May 15",
     "note": "A Cheatham Street Music Foundation event."
   }
 }
