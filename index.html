@@ -23,6 +23,15 @@
     --cream:#f5ead4; --paper:#efe2c8;
     --maroon:#7a2e37; --maroon-deep:#5c1f27;
     --teal:#8fd9c4; --ink:#2a1c14; --ink-soft:#4a3527; --focus:#e7b854;
+    --surface:#ffffff; --slideshow-bg:#000000;
+    --flower-left:#7d6aa8; --flower-right:#e592b0; --stem:#3c6b4f;
+    --shadow:rgba(60,30,20,0.30); --shadow-soft:rgba(90,50,30,0.20);
+    --divider:rgba(122,46,55,0.20);
+    --hero-text-shadow:rgba(0,0,0,0.35);
+    --caption-overlay:rgba(0,0,0,0.75);
+    --dot-inactive:rgba(255,255,255,0.50);
+    --hero-overlay-top:rgba(54,43,70,0.38);
+    --hero-overlay-bottom:rgba(54,43,70,0.58);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -43,7 +52,7 @@
   .rays{position:absolute;inset:0;background-image:repeating-conic-gradient(from 0deg at 50% 20%, rgba(245,234,212,0.10) 0deg 9deg, transparent 9deg 18deg);opacity:0.55;pointer-events:none;}
   .hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;}
   .presents{font-size:0.85rem;letter-spacing:0.04em;color:var(--cream);opacity:0.85;margin-bottom:22px;}
-  .hero-title{font-size:clamp(2.8rem,9vw,6rem);line-height:0.95;color:var(--gold);-webkit-text-stroke:2px var(--maroon-deep);text-shadow:0 3px 0 var(--maroon-deep), 0 8px 24px rgba(0,0,0,0.35);letter-spacing:1px;margin-bottom:14px;}
+  .hero-title{font-size:clamp(2.8rem,9vw,6rem);line-height:0.95;color:var(--gold);-webkit-text-stroke:2px var(--maroon-deep);text-shadow:0 3px 0 var(--maroon-deep), 0 8px 24px var(--hero-text-shadow);letter-spacing:1px;margin-bottom:14px;}
   .hero-sub{font-family:'Rye',serif;font-size:clamp(1.1rem,3vw,1.6rem);color:var(--cream);margin-bottom:18px;}
   .hero-meta{font-size:1.05rem;font-weight:600;letter-spacing:0.02em;margin-bottom:34px;}
   .hero-meta .dot{color:var(--gold);margin:0 10px;}
@@ -70,7 +79,7 @@
   .stat{min-width:110px;}
   .stat b{display:block;font-family:'Rye',serif;font-size:1.8rem;color:var(--maroon);}
   .stat span{font-size:0.9rem;color:var(--ink-soft);}
-  .about-photo{border-radius:6px;overflow:hidden;box-shadow:0 14px 30px rgba(90,50,30,0.25);border:6px solid var(--cream);transform:rotate(-1.5deg);}
+  .about-photo{border-radius:6px;overflow:hidden;box-shadow:0 14px 30px var(--shadow-soft);border:6px solid var(--cream);transform:rotate(-1.5deg);}
 
   .lineup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
   .lineup-card{background:var(--ink);color:var(--cream);border-radius:6px;padding:30px 20px;text-align:center;border:2px dashed var(--gold);}
@@ -79,20 +88,20 @@
   .lineup-note{text-align:center;margin-top:26px;color:var(--ink-soft);font-size:0.95rem;}
 
   .schedule-list{max-width:640px;margin:0 auto;}
-  .schedule-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(122,46,55,0.2);}
+  .schedule-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--divider);}
   .schedule-item:last-child{border-bottom:none;}
   .schedule-time{font-family:'Rye',serif;color:var(--maroon);font-size:1.05rem;}
   .schedule-what b{display:block;margin-bottom:2px;}
   .schedule-what span{color:var(--ink-soft);font-size:0.95rem;}
 
   .bbq-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:stretch;}
-  .slideshow{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 34px rgba(60,30,20,0.3);background:#000;}
+  .slideshow{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 34px var(--shadow);background:var(--slideshow-bg);}
   .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;}
   .slide.active{opacity:1;}
   .slide img{width:100%;height:100%;object-fit:cover;}
-  .slide-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(to top, rgba(0,0,0,0.75), transparent);color:var(--cream);font-size:0.9rem;}
+  .slide-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(to top, var(--caption-overlay), transparent);color:var(--cream);font-size:0.9rem;}
   .slide-dots{position:absolute;bottom:12px;right:16px;display:flex;gap:6px;z-index:3;}
-  .slide-dots button{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;padding:0;}
+  .slide-dots button{width:9px;height:9px;border-radius:50%;background:var(--dot-inactive);border:none;cursor:pointer;padding:0;}
   .slide-dots button.active{background:var(--gold);}
   .bbq-video{border-radius:8px;overflow:hidden;box-shadow:0 16px 34px rgba(60,30,20,0.3);aspect-ratio:16/9;}
   .bbq-video iframe{width:100%;height:100%;border:0;display:block;}
@@ -102,7 +111,7 @@
   .cookoff-badge p{color:var(--cream);opacity:0.9;font-size:0.95rem;line-height:1.6;}
 
   .ticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
-  .ticket-card{background:#fff;border-radius:8px;padding:30px 26px;box-shadow:0 10px 26px rgba(90,50,30,0.12);border-top:5px solid var(--gold);display:flex;flex-direction:column;}
+  .ticket-card{background:var(--surface);border-radius:8px;padding:30px 26px;box-shadow:0 10px 26px var(--shadow-soft);border-top:5px solid var(--gold);display:flex;flex-direction:column;}
   .ticket-card.featured{border-top-color:var(--maroon);background:var(--ink);color:var(--cream);}
   .ticket-card.featured .ticket-price{color:var(--gold);}
   .ticket-card.featured .ticket-desc{color:rgba(245,234,212,0.8);}
@@ -114,8 +123,8 @@
   .ticket-card .btn{align-self:flex-start;}
   .checkout-note{text-align:center;max-width:640px;margin:0 auto 30px;color:var(--ink-soft);font-size:0.95rem;line-height:1.6;}
   .checkout-note a{color:var(--maroon);font-weight:600;text-decoration:underline;}
-  .checkout-wrap{max-width:720px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 14px 30px rgba(90,50,30,0.18);border:1px solid rgba(122,46,55,0.15);}
-  .checkout-frame{position:relative;overflow:hidden;height:900px;width:100%;background:#fff;}
+  .checkout-wrap{max-width:720px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 14px 30px var(--shadow-soft);border:1px solid var(--divider);}
+  .checkout-frame{position:relative;overflow:hidden;height:900px;width:100%;background:var(--surface);}
   .checkout-frame iframe{position:absolute;border:0;top:0;left:0;bottom:0;right:0;width:100%;height:100%;}
   .checkout-fallback{display:flex;flex-direction:column;align-items:center;gap:14px;padding:60px 24px;text-align:center;color:var(--ink-soft);}
   .checkout-fallback b{font-family:'Rye',serif;color:var(--maroon);font-size:1.2rem;}
@@ -124,11 +133,11 @@
   .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;}
   .location-info b{display:block;font-family:'Rye',serif;font-size:1.25rem;color:var(--maroon);margin-bottom:8px;}
   .location-info p{color:var(--ink-soft);line-height:1.7;margin-bottom:18px;}
-  .map-frame{border-radius:8px;overflow:hidden;box-shadow:0 14px 30px rgba(90,50,30,0.2);aspect-ratio:4/3;}
+  .map-frame{border-radius:8px;overflow:hidden;box-shadow:0 14px 30px var(--shadow-soft);aspect-ratio:4/3;}
   .map-frame iframe{width:100%;height:100%;border:0;}
 
   .faq-list{max-width:720px;margin:0 auto;}
-  .faq-item{border-bottom:1px solid rgba(122,46,55,0.2);}
+  .faq-item{border-bottom:1px solid var(--divider);}
   .faq-q{width:100%;text-align:left;background:none;border:none;font-family:'Jost',sans-serif;font-size:1.05rem;font-weight:600;color:var(--ink);padding:20px 6px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
   .faq-q .icon{font-family:'Rye',serif;color:var(--maroon);font-size:1.3rem;transition:transform .2s ease;}
   .faq-item.open .icon{transform:rotate(45deg);}
@@ -169,12 +178,12 @@
 <header class="hero" id="home">
   <div class="rays" aria-hidden="true"></div>
   <svg class="bloom left" viewBox="0 0 100 160" aria-hidden="true">
-    <g fill="#7d6aa8" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
-    <path d="M40 55 L40 160" stroke="#3c6b4f" stroke-width="4" fill="none"/>
+    <g fill="var(--flower-left)" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
+    <path d="M40 55 L40 160" stroke="var(--stem)" stroke-width="4" fill="none"/>
   </svg>
   <svg class="bloom right" viewBox="0 0 100 160" aria-hidden="true">
-    <g fill="#e592b0" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
-    <path d="M40 55 L40 160" stroke="#3c6b4f" stroke-width="4" fill="none"/>
+    <g fill="var(--flower-right)" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
+    <path d="M40 55 L40 160" stroke="var(--stem)" stroke-width="4" fill="none"/>
   </svg>
   <div class="hero-content" id="heroContent"></div>
 </header>
@@ -183,7 +192,7 @@
 
 <section class="section-alt" id="lineup">
   <div class="section-inner">
-    <div class="section-head"><span class="kicker">Music all day, three stages</span><h2 class="display">The Lineup</h2></div>
+    <div class="section-head"><span class="kicker" id="lineupKicker">Music all day</span><h2 class="display" id="lineupTitle">The Lineup</h2></div>
     <div class="lineup-grid" id="lineupGrid"></div>
     <p class="lineup-note" id="lineupNote"></p>
   </div>
@@ -191,14 +200,14 @@
 
 <section id="schedule">
   <div class="section-inner">
-    <div class="section-head"><span class="kicker">May 8 · Southern Star Farms</span><h2 class="display">Day-Of Schedule</h2></div>
+    <div class="section-head"><span class="kicker" id="scheduleKicker">May 15 · Southern Star Farms</span><h2 class="display" id="scheduleTitle">Day-Of Schedule</h2></div>
     <div class="schedule-list" id="scheduleList"></div>
   </div>
 </section>
 
 <section class="section-alt" id="bbq">
   <div class="section-inner">
-    <div class="section-head"><span class="kicker">Brisket. Ribs. Bragging rights.</span><h2 class="display">The BBQ Cook-Off</h2></div>
+    <div class="section-head"><span class="kicker" id="bbqKicker">Brisket. Ribs. Bragging rights.</span><h2 class="display" id="bbqTitle">The BBQ Cook-Off</h2></div>
     <div class="bbq-grid">
       <div><div class="slideshow" id="slideshow"><div class="slide-dots" id="slideDots"></div></div></div>
       <div class="bbq-side">
@@ -211,9 +220,9 @@
 
 <section id="tickets">
   <div class="section-inner">
-    <div class="section-head"><span class="kicker">100% of every ticket goes to the festival — zero platform fees</span><h2 class="display">Tickets</h2></div>
+    <div class="section-head"><span class="kicker" id="ticketsKicker">Choose your ticket and join us in Maxwell</span><h2 class="display" id="ticketsTitle">Tickets</h2></div>
     <div class="ticket-grid" id="ticketGrid"></div>
-    <p class="checkout-note">Checkout below is powered by <a href="https://www.universe.com/" target="_blank" rel="noopener">Universe</a> — buyers get QR-coded digital tickets by email without ever leaving this page.</p>
+    <p class="checkout-note" id="checkoutNote">Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.</p>
     <div class="checkout-wrap" id="universeCheckout"></div>
     <p class="powered-by" id="feeNote"></p>
   </div>
@@ -228,7 +237,7 @@
 
 <section id="faq">
   <div class="section-inner">
-    <div class="section-head"><span class="kicker">Good to know</span><h2 class="display">Frequently Asked Questions</h2></div>
+    <div class="section-head"><span class="kicker" id="faqKicker">Good to know</span><h2 class="display" id="faqTitle">Frequently Asked Questions</h2></div>
     <div class="faq-list" id="faqList"></div>
   </div>
 </section>
@@ -245,34 +254,90 @@
 </script>
 
 <script>
-  // ---- Default content: used instantly, and as a fallback if content.json can't be fetched
-  // (e.g. previewing this file locally by double-clicking it, where the browser blocks local fetches) ----
-  const DEFAULT_CONTENT = {"settings":{"coverImage":"","shareImage":"/images/ssf.png","slideshowSeconds":5},"hero": {"presents": "Cheatham Street Music Foundation Presents", "title": "SOUTHERN STAR", "subtitle": "Texas Country Festival & BBQ Cook-Off", "date": "May 8", "venue": "Southern Star Farms", "city": "Maxwell, TX"}, "about": {"kicker": "A day built around good music and good smoke", "paragraphs": ["Southern Star Festival brings live country music and a full-blown BBQ cook-off together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of bands, a backyard-to-blue-ribbon smoker competition, and food and drink from local vendors all day long.", "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."], "stats": [{"value": "1", "label": "Day of music"}, {"value": "20+", "label": "BBQ teams competing"}, {"value": "3", "label": "Stages & tents"}, {"value": "All", "label": "Ages welcome"}], "photo": "https://images.pexels.com/photos/6950716/pexels-photo-6950716.jpeg?auto=compress&cs=tinysrgb&w=900"}, "lineup": [{"slot": "Headliner · Main Stage", "name": "Announcing Soon"}, {"slot": "Evening Set · Main Stage", "name": "Announcing Soon"}, {"slot": "Afternoon · Barn Stage", "name": "Announcing Soon"}, {"slot": "Midday · Barn Stage", "name": "Announcing Soon"}, {"slot": "Morning · Porch Stage", "name": "Announcing Soon"}, {"slot": "Local Showcase", "name": "Announcing Soon"}], "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.", "schedule": [{"time": "10:00 AM", "title": "Gates open", "desc": "Cook-off teams fire up smokers, vendor row opens"}, {"time": "11:00 AM", "title": "Porch Stage kicks off", "desc": "Local acoustic sets"}, {"time": "1:00 PM", "title": "BBQ cook-off judging begins", "desc": "Categories: brisket, ribs, sausage, chicken"}, {"time": "3:00 PM", "title": "Barn Stage sets", "desc": "Back-to-back country acts"}, {"time": "5:30 PM", "title": "Cook-off awards", "desc": "Grand champion announced on Main Stage"}, {"time": "6:30 PM", "title": "Main Stage headliners", "desc": "Sunset sets through closing"}, {"time": "10:00 PM", "title": "Gates close", "desc": "Safe travels, y'all"}], "bbq": {"slides": [{"img": "https://images.pexels.com/photos/6950716/pexels-photo-6950716.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Friends gather around the smoker"}, {"img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Ribs going low and slow"}, {"img": "https://images.pexels.com/photos/7416284/pexels-photo-7416284.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Pitmasters at work"}, {"img": "https://images.pexels.com/photos/94440/pexels-photo-94440.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "Straight off the grill"}, {"img": "https://images.pexels.com/photos/263133/pexels-photo-263133.jpeg?auto=compress&cs=tinysrgb&w=1200", "caption": "The whole crowd shows up for this"}], "videoId": "9F2c-vZKVls", "cookoffTitle": "Want to compete?", "cookoffText": "Team entries are open through April 24. $150 per team includes your cook site, water, and a shot at grand champion. Categories: brisket, ribs, sausage, and chicken."}, "tickets": [{"name": "General Admission", "price": "$45", "unit": "/person", "desc": "All-day access to every stage, the cook-off tasting area, and vendor row. Lawn seating — bring a chair or blanket.", "cta": "Buy Tickets", "featured": false}, {"name": "VIP", "price": "$95", "unit": "/person", "desc": "Everything in GA, plus shaded viewing near Main Stage, a dedicated bar, early entry at 9 AM, and a BBQ tasting flight from the cook-off judges' table.", "cta": "Buy Tickets", "featured": true}, {"name": "Kids (12 & Under)", "price": "Free", "unit": "", "desc": "Free with a paying adult. Kids' area open all day with games and shade near the Porch Stage.", "cta": "Reserve Spot", "featured": false}], "location": {"title": "Southern Star Farms", "paragraphs": ["Maxwell, TX — about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. Free parking on-site, with shuttle service running from the overflow lot every 15 minutes starting at 9 AM.", "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."], "mapQuery": "Maxwell, TX"}, "faq": [{"q": "Is this a rain-or-shine event?", "a": "Yes. The festival runs rain or shine — the cook-off tents and Barn Stage are covered, and Main Stage has a canopy roof."}, {"q": "Can I bring my own cooler or drinks?", "a": "Outside food, drinks, and coolers aren't allowed, but there's plenty of food and drink from vendors and the cook-off tasting area all day."}, {"q": "Are pets allowed?", "a": "Service animals only. It gets crowded and hot, and we want every pup safe at home."}, {"q": "How do I enter the BBQ cook-off?", "a": "Head to the BBQ Cook-Off section above for entry details, or email cookoff@southernstarfestival.com to reserve your team's spot."}, {"q": "Is parking free?", "a": "Yes, on-site parking is free, with a shuttle running from the overflow lot starting at 9 AM."}], "footer": {"tagline": "Maxwell, TX · May 8", "note": "A Cheatham Street Music Foundation event."}, "universe": {"embedCode": "", "eventUrl": "", "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."}};
 
-  function esc(s){ return (s || '').toString(); }
+  function esc(s){
+    return (s ?? '').toString().replace(/[&<>"']/g, ch => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[ch]);
+  }
+
+  function safeExternalUrl(value){
+    if(!value) return '#';
+    try{
+      const url = new URL(value, window.location.origin);
+      return ['http:', 'https:', 'mailto:'].includes(url.protocol) ? url.href : '#';
+    }catch(e){
+      return '#';
+    }
+  }
 
   function render(data){
     const settings = data.settings || {};
-    const coverImage = (settings.coverImage || "").trim();
-    const shareImage = settings.shareImage || "/images/ssf.png";
+    const site = data.site || {};
+    const colors = settings.colors || {};
 
-    // Main cover picture:
-    // If Admin has an uploaded cover image, use it.
-    // If the field is blank, restore the original Southern Star sunset gradient.
+    // Apply the Admin-controlled theme palette.
+    const colorMap = {
+      sunset1:'--sunset-1', sunset2:'--sunset-2', sunset3:'--sunset-3',
+      dusk1:'--dusk-1', dusk2:'--dusk-2',
+      gold:'--gold', goldDeep:'--gold-deep',
+      cream:'--cream', paper:'--paper',
+      maroon:'--maroon', maroonDeep:'--maroon-deep',
+      teal:'--teal', ink:'--ink', inkSoft:'--ink-soft', focus:'--focus',
+      surface:'--surface', slideshowBg:'--slideshow-bg',
+      flowerLeft:'--flower-left', flowerRight:'--flower-right', stem:'--stem',
+      shadow:'--shadow', shadowSoft:'--shadow-soft', divider:'--divider',
+      heroTextShadow:'--hero-text-shadow', captionOverlay:'--caption-overlay',
+      dotInactive:'--dot-inactive',
+      heroOverlayTop:'--hero-overlay-top', heroOverlayBottom:'--hero-overlay-bottom'
+    };
+    Object.entries(colorMap).forEach(([key, cssVar]) => {
+      if(colors[key]) document.documentElement.style.setProperty(cssVar, colors[key]);
+    });
+
+    // Site title / description.
+    if(site.metaTitle) document.title = site.metaTitle;
+    const description = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if(description && site.metaDescription) description.setAttribute('content', site.metaDescription);
+    if(ogTitle && site.metaTitle) ogTitle.setAttribute('content', site.metaTitle);
+    if(ogDescription && site.metaDescription) ogDescription.setAttribute('content', site.metaDescription);
+
+    // Main cover picture. Blank = the original Southern Star gradient.
+    const coverImage = (settings.coverImage || '').trim();
     const hero = document.getElementById('home');
-    if (coverImage) {
-      hero.style.backgroundImage = `linear-gradient(rgba(54,43,70,0.38), rgba(54,43,70,0.58)), url("${coverImage}")`;
-    } else {
+    if(coverImage){
+      hero.style.backgroundImage = `linear-gradient(var(--hero-overlay-top), var(--hero-overlay-bottom)), url("${coverImage}")`;
+    }else{
       hero.style.backgroundImage = 'radial-gradient(circle at 50% 18%, var(--sunset-1) 0%, var(--sunset-2) 32%, var(--sunset-3) 58%, var(--dusk-1) 78%, var(--dusk-2) 100%)';
     }
 
-    // Keep browser-side social metadata in sync with the Admin setting.
-    // The static tags in <head> remain the reliable fallback for social crawlers.
+    // Browser-side share image setting. Social apps can cache previews, so the static
+    // <head> value remains the fallback for crawlers that do not execute JavaScript.
+    const shareImage = settings.shareImage || '/images/ssf.png';
     const absoluteShareImage = new URL(shareImage, window.location.origin).href;
     const ogImage = document.querySelector('meta[property="og:image"]');
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if(ogImage) ogImage.setAttribute('content', absoluteShareImage);
     if(twitterImage) twitterImage.setAttribute('content', absoluteShareImage);
+
+    // Admin-editable section headings and buttons.
+    const text = (id, value) => {
+      const el = document.getElementById(id);
+      if(el && value) el.textContent = value;
+    };
+    text('lineupKicker', site.lineupKicker);
+    text('lineupTitle', site.lineupTitle);
+    text('scheduleKicker', site.scheduleKicker || `${data.hero.date} · ${data.hero.venue}`);
+    text('scheduleTitle', site.scheduleTitle);
+    text('bbqKicker', site.bbqKicker);
+    text('bbqTitle', site.bbqTitle);
+    text('ticketsKicker', site.ticketsKicker);
+    text('ticketsTitle', site.ticketsTitle);
+    text('checkoutNote', site.checkoutNote);
+    text('faqKicker', site.faqKicker);
+    text('faqTitle', site.faqTitle);
 
     // Hero
     document.getElementById('heroContent').innerHTML = `
@@ -280,8 +345,8 @@
       <h1 class="hero-title">${esc(data.hero.title)}</h1>
       <p class="hero-sub">${esc(data.hero.subtitle)}</p>
       <p class="hero-meta">${esc(data.hero.date)}<span class="dot">★</span>${esc(data.hero.venue)}<span class="dot">★</span>${esc(data.hero.city)}</p>
-      <a href="#tickets" class="btn btn-primary">Get Tickets</a>
-      <a href="#lineup" class="btn btn-outline" style="margin-left:14px;">See Lineup</a>
+      <a href="#tickets" class="btn btn-primary">${esc(site.heroPrimaryButton || 'Get Tickets')}</a>
+      <a href="#lineup" class="btn btn-outline" style="margin-left:14px;">${esc(site.heroSecondaryButton || 'See Lineup')}</a>
     `;
 
     // About
@@ -310,11 +375,9 @@
     // BBQ slideshow
     const slideshow = document.getElementById('slideshow');
     const dotsWrap = document.getElementById('slideDots');
-
-    // Remove any old slides before loading the current Admin selection
     slideshow.querySelectorAll('.slide').forEach(slide => slide.remove());
-    
-    data.bbq.slides.forEach((s, i) => {
+
+    (data.bbq.slides || []).forEach((s, i) => {
       const div = document.createElement('div');
       div.className = 'slide' + (i === 0 ? ' active' : '');
       div.innerHTML = `<img src="${esc(s.img)}" alt="${esc(s.caption)}"><div class="slide-caption">${esc(s.caption)}</div>`;
@@ -352,7 +415,7 @@
         <div class="checkout-fallback">
           <b>Tickets are on sale now</b>
           <p>Grab your Southern Star Festival tickets on our Universe event page — digital tickets arrive by email right after checkout.</p>
-          <a class="btn btn-primary" href="${esc(uni.eventUrl)}" target="_blank" rel="noopener">Buy Tickets on Universe</a>
+          <a class="btn btn-primary" href="${esc(safeExternalUrl(uni.eventUrl))}" target="_blank" rel="noopener">Buy Tickets on Universe</a>
         </div>`;
     } else {
       checkoutEl.innerHTML = `
@@ -368,7 +431,9 @@
     document.getElementById('locationInfo').innerHTML = `
       <b>${esc(data.location.title)}</b>
       ${data.location.paragraphs.map(p => `<p>${esc(p)}</p>`).join('')}
-      <a href="#" class="btn btn-outline" style="border-color:var(--maroon);color:var(--maroon);">Get Directions</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(data.location.mapQuery)}"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-outline" style="border-color:var(--maroon);color:var(--maroon);">${esc(site.directionsButtonText || 'Get Directions')}</a>
     `;
     document.getElementById('mapFrame').innerHTML = `<iframe src="https://maps.google.com/maps?q=${encodeURIComponent(data.location.mapQuery)}&t=&z=11&ie=UTF8&iwloc=&output=embed" title="Map" loading="lazy"></iframe>`;
 
@@ -382,11 +447,14 @@
 
     // Footer
     document.getElementById('footerContent').innerHTML = `
-      <div class="display">Southern Star Festival</div>
+      <div class="display">${esc(site.footerName || 'Southern Star Festival')}</div>
       <p style="opacity:0.85;">${esc(data.footer.tagline)}</p>
       <div class="foot-links">
         <a href="#tickets">Tickets</a><a href="#lineup">Lineup</a><a href="#bbq">BBQ Cook-Off</a><a href="#faq">FAQ</a>
-        <a href="#">Instagram</a><a href="#">Facebook</a>
+        ${(data.socials || [])
+          .filter(link => link.label && link.url)
+          .map(link => `<a href="${esc(safeExternalUrl(link.url))}" target="_blank" rel="noopener noreferrer">${esc(link.label)}</a>`)
+          .join('')}
       </div>
       <p class="fine">${esc(data.footer.note)}</p>
     `;
@@ -421,11 +489,12 @@
     });
     const dots = Array.from(dotsWrap.children);
     function showSlide(i){
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
+      if(!slides.length) return;
+      if(slides[current]) slides[current].classList.remove('active');
+      if(dots[current]) dots[current].classList.remove('active');
       current = i;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
+      if(slides[current]) slides[current].classList.add('active');
+      if(dots[current]) dots[current].classList.add('active');
     }
     if(slides.length > 1){
       const slideDelay = Math.max(1, Number(slideshowSeconds) || 5) * 1000;
@@ -448,12 +517,21 @@
     });
   }
 
-  // Paint immediately with defaults, then try to load the live, CMS-edited content.json
-  render(DEFAULT_CONTENT);
+  // Load the single source of truth edited through /admin/.
   fetch('content.json?_=' + Date.now())
-    .then(r => r.ok ? r.json() : null)
-    .then(data => { if(data) render(data); })
-    .catch(() => {});
+    .then(r => {
+      if(!r.ok) throw new Error('Could not load content.json');
+      return r.json();
+    })
+    .then(render)
+    .catch(err => {
+      console.error(err);
+      document.getElementById('heroContent').innerHTML = `
+        <p class="presents">Southern Star Festival</p>
+        <h1 class="hero-title">SOUTHERN STAR</h1>
+        <p class="hero-sub">Festival information is temporarily unavailable.</p>
+      `;
+    });
 </script>
 
 </body>
