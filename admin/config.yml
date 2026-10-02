@@ -2,8 +2,6 @@ backend:
   name: git-gateway
   branch: main
 
-# This is the ONLY place edits are saved to — no separate database.
-# Every "Publish" here commits straight to your site's content.json.
 local_backend: false
 
 media_folder: "images"
@@ -18,9 +16,6 @@ collections:
         name: "content"
         fields:
 
-          # =========================
-          # WEBSITE SETTINGS
-          # =========================
           - label: "Website Settings"
             name: "settings"
             widget: "object"
@@ -29,13 +24,13 @@ collections:
                 name: "coverImage"
                 widget: "image"
                 required: false
-                hint: "This is the large background picture at the top of the website."
+                hint: "Optional. Leave blank to use the original orange/purple sunset gradient."
 
               - label: "Mobile / Social Sharing Picture"
                 name: "shareImage"
                 widget: "image"
                 required: false
-                hint: "Image intended for link previews when the website is shared. Note: social platforms may cache an older preview."
+                hint: "Optional. Used as the browser-side sharing image. Some social apps cache link previews."
 
               - label: "Slideshow Time (seconds)"
                 name: "slideshowSeconds"
@@ -46,9 +41,76 @@ collections:
                 default: 5
                 hint: "How many seconds each BBQ slideshow picture stays on screen."
 
-          # =========================
-          # HERO
-          # =========================
+              - label: "Website Colors"
+                name: "colors"
+                widget: "object"
+                collapsed: true
+                hint: "Use hex colors like #e7b854. Fields labeled rgba can also use rgba(0,0,0,0.35). The defaults are the original Southern Star palette."
+                fields:
+                  - {label: "Hero Gradient 1 — Light Orange", name: "sunset1", widget: "string", default: "#e8a25a"}
+                  - {label: "Hero Gradient 2 — Orange", name: "sunset2", widget: "string", default: "#c9713f"}
+                  - {label: "Hero Gradient 3 — Mauve", name: "sunset3", widget: "string", default: "#8a5a72"}
+                  - {label: "Hero Gradient 4 — Purple", name: "dusk1", widget: "string", default: "#5b4b6f"}
+                  - {label: "Hero / Footer Dark Purple", name: "dusk2", widget: "string", default: "#362b46"}
+
+                  - {label: "Gold / Main Accent", name: "gold", widget: "string", default: "#e7b854"}
+                  - {label: "Dark Gold / Button Shadow", name: "goldDeep", widget: "string", default: "#b8842c"}
+                  - {label: "Maroon / Secondary Accent", name: "maroon", widget: "string", default: "#7a2e37"}
+                  - {label: "Dark Maroon", name: "maroonDeep", widget: "string", default: "#5c1f27"}
+                  - {label: "Teal Accent", name: "teal", widget: "string", default: "#8fd9c4"}
+
+                  - {label: "Main Background / Cream", name: "cream", widget: "string", default: "#f5ead4"}
+                  - {label: "Alternate Section Background", name: "paper", widget: "string", default: "#efe2c8"}
+                  - {label: "Main Text / Navigation", name: "ink", widget: "string", default: "#2a1c14"}
+                  - {label: "Secondary Text", name: "inkSoft", widget: "string", default: "#4a3527"}
+                  - {label: "White / Card Surface", name: "surface", widget: "string", default: "#ffffff"}
+                  - {label: "Slideshow Empty Background", name: "slideshowBg", widget: "string", default: "#000000"}
+                  - {label: "Keyboard Focus Color", name: "focus", widget: "string", default: "#e7b854"}
+
+                  - {label: "Left Flower Color", name: "flowerLeft", widget: "string", default: "#7d6aa8"}
+                  - {label: "Right Flower Color", name: "flowerRight", widget: "string", default: "#e592b0"}
+                  - {label: "Flower Stem Color", name: "stem", widget: "string", default: "#3c6b4f"}
+
+                  - {label: "Main Shadow (rgba)", name: "shadow", widget: "string", default: "rgba(60,30,20,0.30)"}
+                  - {label: "Soft Shadow (rgba)", name: "shadowSoft", widget: "string", default: "rgba(90,50,30,0.20)"}
+                  - {label: "Dividers / Borders (rgba)", name: "divider", widget: "string", default: "rgba(122,46,55,0.20)"}
+                  - {label: "Hero Text Shadow (rgba)", name: "heroTextShadow", widget: "string", default: "rgba(0,0,0,0.35)"}
+                  - {label: "Slideshow Caption Overlay (rgba)", name: "captionOverlay", widget: "string", default: "rgba(0,0,0,0.75)"}
+                  - {label: "Inactive Slideshow Dot (rgba)", name: "dotInactive", widget: "string", default: "rgba(255,255,255,0.50)"}
+                  - {label: "Cover Photo Overlay — Top (rgba)", name: "heroOverlayTop", widget: "string", default: "rgba(54,43,70,0.38)"}
+                  - {label: "Cover Photo Overlay — Bottom (rgba)", name: "heroOverlayBottom", widget: "string", default: "rgba(54,43,70,0.58)"}
+
+          - label: "Site Text & Buttons"
+            name: "site"
+            widget: "object"
+            collapsed: true
+            hint: "Useful text that used to be hard-coded into index.html."
+            fields:
+              - {label: "Browser / Search Title", name: "metaTitle", widget: "string"}
+              - {label: "Browser / Search Description", name: "metaDescription", widget: "text"}
+
+              - {label: "Hero Primary Button", name: "heroPrimaryButton", widget: "string"}
+              - {label: "Hero Secondary Button", name: "heroSecondaryButton", widget: "string"}
+
+              - {label: "Lineup Small Heading", name: "lineupKicker", widget: "string"}
+              - {label: "Lineup Main Heading", name: "lineupTitle", widget: "string"}
+
+              - {label: "Schedule Small Heading", name: "scheduleKicker", widget: "string", required: false, hint: "Leave blank to automatically use the festival date and venue."}
+              - {label: "Schedule Main Heading", name: "scheduleTitle", widget: "string"}
+
+              - {label: "BBQ Small Heading", name: "bbqKicker", widget: "string"}
+              - {label: "BBQ Main Heading", name: "bbqTitle", widget: "string"}
+
+              - {label: "Tickets Small Heading", name: "ticketsKicker", widget: "string"}
+              - {label: "Tickets Main Heading", name: "ticketsTitle", widget: "string"}
+              - {label: "Checkout Note", name: "checkoutNote", widget: "text"}
+
+              - {label: "FAQ Small Heading", name: "faqKicker", widget: "string"}
+              - {label: "FAQ Main Heading", name: "faqTitle", widget: "string"}
+
+              - {label: "Directions Button Text", name: "directionsButtonText", widget: "string"}
+              - {label: "Footer Festival Name", name: "footerName", widget: "string"}
+
           - label: "Hero (top banner)"
             name: "hero"
             widget: "object"
@@ -60,45 +122,33 @@ collections:
               - {label: "Venue name", name: "venue", widget: "string"}
               - {label: "City/State", name: "city", widget: "string"}
 
-          # =========================
-          # ABOUT
-          # =========================
           - label: "About Section"
             name: "about"
             widget: "object"
             fields:
               - {label: "Small headline above the paragraph", name: "kicker", widget: "string"}
-
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 field: {label: "Paragraph", name: "text", widget: "text"}
-
-              - label: "Stats row (e.g. '20+ BBQ teams')"
+              - label: "Stats row"
                 name: "stats"
                 widget: "list"
                 fields:
                   - {label: "Number/word", name: "value", widget: "string"}
                   - {label: "Label underneath", name: "label", widget: "string"}
-
               - {label: "Photo", name: "photo", widget: "image"}
 
-          # =========================
-          # LINEUP
-          # =========================
           - label: "Lineup Slots"
             name: "lineup"
             widget: "list"
             summary: "{{slot}} — {{name}}"
             fields:
-              - {label: "Slot (e.g. 'Headliner · Main Stage')", name: "slot", widget: "string"}
-              - {label: "Artist name (or 'Announcing Soon')", name: "name", widget: "string"}
+              - {label: "Slot", name: "slot", widget: "string"}
+              - {label: "Artist name", name: "name", widget: "string"}
 
           - {label: "Note under the lineup grid", name: "lineupNote", widget: "string"}
 
-          # =========================
-          # SCHEDULE
-          # =========================
           - label: "Day-Of Schedule"
             name: "schedule"
             widget: "list"
@@ -108,9 +158,6 @@ collections:
               - {label: "What's happening", name: "title", widget: "string"}
               - {label: "Details", name: "desc", widget: "string"}
 
-          # =========================
-          # BBQ
-          # =========================
           - label: "BBQ Cook-Off Section"
             name: "bbq"
             widget: "object"
@@ -119,32 +166,26 @@ collections:
                 name: "slides"
                 widget: "list"
                 summary: "{{caption}}"
+                hint: "The live website now shows exactly the photos in this list — deleted photos will no longer linger."
                 fields:
                   - {label: "Photo", name: "img", widget: "image"}
                   - {label: "Caption", name: "caption", widget: "string"}
-
-              - {label: "YouTube video ID (the part after 'watch?v=')", name: "videoId", widget: "string"}
+              - {label: "YouTube video ID (the part after watch?v=)", name: "videoId", widget: "string"}
               - {label: "Cook-off box title", name: "cookoffTitle", widget: "string"}
               - {label: "Cook-off box text", name: "cookoffText", widget: "text"}
 
-          # =========================
-          # TICKETS
-          # =========================
           - label: "Tickets"
             name: "tickets"
             widget: "list"
             summary: "{{name}} — {{price}}"
             fields:
               - {label: "Ticket name", name: "name", widget: "string"}
-              - {label: "Price (e.g. '$45' or 'Free')", name: "price", widget: "string"}
-              - {label: "Unit (e.g. '/person', leave blank if none)", name: "unit", widget: "string", required: false}
+              - {label: "Price", name: "price", widget: "string"}
+              - {label: "Unit", name: "unit", widget: "string", required: false}
               - {label: "Description", name: "desc", widget: "text"}
               - {label: "Button text", name: "cta", widget: "string"}
               - {label: "Highlight this card (VIP-style)?", name: "featured", widget: "boolean", default: false}
 
-          # =========================
-          # UNIVERSE CHECKOUT
-          # =========================
           - label: "Ticket Checkout (Universe)"
             name: "universe"
             widget: "object"
@@ -153,38 +194,28 @@ collections:
                 name: "embedCode"
                 widget: "text"
                 required: false
-                hint: "In Universe: My Events → your event → Embeddable Widgets → pick the Ticket Widget → click Copy. Paste the whole block of code here."
-
+                hint: "Paste the full Universe ticket widget embed code here."
               - label: "Universe event page link (backup)"
                 name: "eventUrl"
                 widget: "string"
                 required: false
-                hint: "Your public universe.com event link."
-
+                hint: "Used when no widget embed code is entered."
               - label: "Fee note under the checkout"
                 name: "feeNote"
                 widget: "text"
                 required: false
 
-          # =========================
-          # LOCATION
-          # =========================
           - label: "Location"
             name: "location"
             widget: "object"
             fields:
               - {label: "Venue name", name: "title", widget: "string"}
-
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 field: {label: "Paragraph", name: "text", widget: "text"}
+              - {label: "Map address / search text", name: "mapQuery", widget: "string", hint: "This now controls both the map and the Get Directions button."}
 
-              - {label: "Map search text (e.g. 'Maxwell, TX')", name: "mapQuery", widget: "string"}
-
-          # =========================
-          # FAQ
-          # =========================
           - label: "FAQ"
             name: "faq"
             widget: "list"
@@ -193,9 +224,16 @@ collections:
               - {label: "Question", name: "q", widget: "string"}
               - {label: "Answer", name: "a", widget: "text"}
 
-          # =========================
-          # FOOTER
-          # =========================
+          - label: "Social Media Links"
+            name: "socials"
+            widget: "list"
+            required: false
+            summary: "{{label}}"
+            hint: "Add, delete, and reorder links. Only links with both a name and URL appear in the footer."
+            fields:
+              - {label: "Platform / Link Name", name: "label", widget: "string", hint: "Examples: Instagram, Facebook, TikTok, YouTube"}
+              - {label: "Full URL", name: "url", widget: "string", hint: "Example: https://instagram.com/yourpage"}
+
           - label: "Footer"
             name: "footer"
             widget: "object"
