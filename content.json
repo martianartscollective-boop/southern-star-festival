@@ -1,95 +1,103 @@
 {
+  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
-    "coverImage": "",
-    "shareImage": "/images/ssf.png",
-    "slideshowSeconds": 5,
+    "coverImage": "/images/7fc8fdca-ce45-415f-8a40-fb0dea93ccb0.jpeg",
+    "shareImage": "/images/7fc8fdca-ce45-415f-8a40-fb0dea93ccb0.jpeg",
+    "slideshowSeconds": 4,
     "colors": {
-      "sunset1": "#e8a25a",
-      "sunset2": "#c9713f",
-      "sunset3": "#8a5a72",
+      "gold": "#e7b854",
+      "shadow": "rgba(60,30,20,0.30)",
+      "flowerRight": "#e592b0",
+      "heroOverlayBottom": "rgba(54,43,70,0.58)",
+      "cream": "#f5ead4",
+      "flowerLeft": "#7d6aa8",
+      "ink": "#2a1c14",
+      "heroTextShadow": "rgba(0,0,0,0.35)",
       "dusk1": "#5b4b6f",
       "dusk2": "#362b46",
-      "gold": "#e7b854",
+      "stem": "#3c6b4f",
+      "shadowSoft": "rgba(90,50,30,0.20)",
+      "captionOverlay": "rgba(0,0,0,0.75)",
       "goldDeep": "#b8842c",
-      "cream": "#f5ead4",
       "paper": "#efe2c8",
+      "surface": "#ffffff",
       "maroon": "#7a2e37",
+      "inkSoft": "#4a3527",
+      "slideshowBg": "#000000",
+      "dotInactive": "rgba(255,255,255,0.50)",
+      "focus": "#e7b854",
+      "divider": "rgba(122,46,55,0.20)",
+      "sunset1": "#e8a25a",
+      "sunset2": "#c9713f",
       "maroonDeep": "#5c1f27",
       "teal": "#8fd9c4",
-      "ink": "#2a1c14",
-      "inkSoft": "#4a3527",
-      "focus": "#e7b854",
-      "surface": "#ffffff",
-      "slideshowBg": "#000000",
-      "flowerLeft": "#7d6aa8",
-      "flowerRight": "#e592b0",
-      "stem": "#3c6b4f",
-      "shadow": "rgba(60,30,20,0.30)",
-      "shadowSoft": "rgba(90,50,30,0.20)",
-      "divider": "rgba(122,46,55,0.20)",
-      "heroTextShadow": "rgba(0,0,0,0.35)",
-      "captionOverlay": "rgba(0,0,0,0.75)",
-      "dotInactive": "rgba(255,255,255,0.50)",
-      "heroOverlayTop": "rgba(54,43,70,0.38)",
-      "heroOverlayBottom": "rgba(54,43,70,0.58)"
+      "sunset3": "#8a5a72",
+      "heroOverlayTop": "rgba(54,43,70,0.38)"
     }
   },
-  "site": {
-    "metaTitle": "Southern Star Festival — Texas Country Festival & BBQ Cook-Off",
-    "metaDescription": "Southern Star Festival — Texas Country Festival & BBQ Cook-Off at Southern Star Farms in Maxwell, TX.",
-    "heroPrimaryButton": "Get Tickets",
-    "heroSecondaryButton": "See Lineup",
-    "lineupKicker": "Music all day",
-    "lineupTitle": "The Lineup",
-    "scheduleKicker": "May 15 · Southern Star Farms",
-    "scheduleTitle": "Day-Of Schedule",
-    "bbqKicker": "Brisket. Ribs. Bragging rights.",
-    "bbqTitle": "The BBQ Cook-Off",
-    "ticketsKicker": "Choose your ticket and join us in Maxwell",
-    "ticketsTitle": "Tickets",
-    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
-    "faqKicker": "Good to know",
-    "faqTitle": "Frequently Asked Questions",
-    "directionsButtonText": "Get Directions",
-    "footerName": "Southern Star Festival"
-  },
-  "socials": [],
-  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "universe": {
     "embedCode": "",
     "eventUrl": "",
     "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
   },
+  "socials": [],
   "tickets": [
     {
-      "name": "General Admission",
-      "price": "$45",
+      "name": "Early Bird: General Admission",
+      "price": "$30",
       "unit": "/person",
-      "desc": "All-day access to every stage, the cook-off tasting area, and vendor row. Lawn seating — bring a chair or blanket.",
+      "desc": "All-day access. Lawn seating — bring a chair or blanket.",
       "cta": "Buy Tickets",
       "featured": false
     },
     {
       "name": "VIP",
-      "price": "$120",
+      "price": "$150",
       "unit": "/person",
-      "desc": "Everything in GA, plus shaded viewing near Main Stage, a dedicated bar, early entry, and a BBQ tasting flight from the cook-off judges' table.",
+      "desc": "Skip the line, early entry, placement near the stage with: FREE massages, private bar, complimentary snack and beverages, and a BBQ tasting flight from the cookout.",
       "cta": "Buy Tickets",
       "featured": true
+    },
+    {
+      "featured": true,
+      "name": "BBQ Tasting",
+      "price": "$30",
+      "unit": "/person",
+      "cta": "Buy Tickets",
+      "desc": "BBQ tasting flight from the cookout + complimentary beverage. "
     },
     {
       "name": "Kids (12 & Under)",
       "price": "Free",
       "unit": "",
-      "desc": "Free with a paying adult. Kids' area open all day with games and shade near the Porch Stage.",
+      "desc": "Free with a paying adult. Kids' area open all day with games and shade near the stage.",
       "cta": "Reserve Spot",
       "featured": false
     }
   ],
+  "site": {
+    "scheduleTitle": "Day-Of Schedule",
+    "faqTitle": "Frequently Asked Questions",
+    "lineupKicker": "Music all day",
+    "bbqKicker": "Brisket. Ribs. Bragging rights.",
+    "footerName": "Southern Star Festival",
+    "bbqTitle": "The BBQ Cookout",
+    "faqKicker": "Good to know",
+    "lineupTitle": "The Lineup",
+    "scheduleKicker": "May 15 · Southern Star Farms",
+    "heroSecondaryButton": "See Lineup",
+    "ticketsTitle": "Tickets",
+    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
+    "directionsButtonText": "Get Directions",
+    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
+    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
+    "heroPrimaryButton": "Get Tickets",
+    "ticketsKicker": "Choose your ticket and join us in Maxwell"
+  },
   "about": {
     "kicker": "A day built around good music and good smoke",
     "paragraphs": [
-      "Southern Star Festival brings live country music and a full-blown BBQ cook-off together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of bands, a backyard-to-blue-ribbon smoker competition, and food and drink from local vendors all day long.",
+      "Southern Star Festival brings live country music and a full-blown BBQ cookout together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of Grammy award-winning and local artists, a finer-lickin' selection of BBQ, and local vendors all day long.",
       "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."
     ],
     "stats": [
@@ -158,22 +166,18 @@
       }
     ],
     "videoId": "9F2c-vZKVls",
-    "cookoffTitle": "Want to compete?",
-    "cookoffText": "Team entries are open through April 24. Entry includes your cook site, water, and a shot at grand champion. Categories: brisket, ribs, sausage, and chicken. Email SouthernStarEventsTx@gmail.com if interested!"
+    "cookoffTitle": "You're invited to the cookout!",
+    "cookoffText": "We welcome all people, no discrimination. Who doesn't enjoy the best BBQ and music in Texas? "
   },
   "location": {
     "title": "Southern Star Farms",
     "paragraphs": [
-      "Maxwell, TX : about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. $10 parking on-site, with free shuttle service running from the overflow lot every 30 minutes from at 2PM-6PM and shuttle back from 6PM-10PM.",
+      "Maxwell, TX : about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. Parking on-site.",
       "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
     ],
     "mapQuery": "480 Mill Rd, Maxwell, TX 78656"
   },
   "faq": [
-    {
-      "q": "Is this a rain-or-shine event?",
-      "a": "Yes. The festival runs rain or shine; the cook-off tents and Barn Stage are covered, and Main Stage has a canopy roof."
-    },
     {
       "q": "Can I bring my own cooler or drinks?",
       "a": "Outside food, drinks, and coolers aren't allowed, but there's plenty of food and drink from vendors and the cook-off tasting area all day."
@@ -183,34 +187,20 @@
       "a": "Of course! Bring the paw-friends. You're completely responsible for cleaning, feeding, and making sure their safe!"
     },
     {
-      "q": "How do I enter the BBQ cook-off?",
-      "a": "Head to the BBQ Cook-Off section above for entry details, or email SouthernStarEventsTx@gmail.com to reserve your team's spot."
-    },
-    {
-      "q": "How much is parking?",
-      "a": "On-site parking is $10, with a free shuttle running from the overflow lot starting at 2 PM."
+      "q": "Is there parking!",
+      "a": "There will be free on-site parking!"
     }
   ],
   "schedule": [
     {
-      "time": "3:00 PM",
-      "title": "Gates open",
-      "desc": "Cook-off teams fire up smokers, vendor row opens"
+      "time": "12:00 PM",
+      "title": "Gates open & BBQ is ready",
+      "desc": "BBQ is ready to be tasted as soon as you walk in"
     },
     {
-      "time": "4:00 PM",
+      "time": "1:30 PM",
       "title": "Music kicks off",
       "desc": "Local talent leading the way"
-    },
-    {
-      "time": "5:00 PM",
-      "title": "BBQ cook-off judging begins",
-      "desc": "Categories: brisket, ribs, sausage, chicken"
-    },
-    {
-      "time": "5:30 PM",
-      "title": "Cook-off awards",
-      "desc": "Grand champion announced on Main Stage"
     },
     {
       "time": "6:30 PM",
@@ -225,14 +215,14 @@
   ],
   "hero": {
     "presents": "Cheatham Street Music Foundation Presents",
-    "title": "SOUTHERN STAR",
-    "subtitle": "Texas Country Festival & BBQ Cook-Off",
-    "date": "May 15",
+    "title": "SOUTHERN STAR FESTIVAL",
+    "subtitle": "Texas Music & BBQ Cookout",
+    "date": "May 8",
     "venue": "Southern Star Farms",
     "city": "Maxwell, TX"
   },
   "footer": {
-    "tagline": "Maxwell, TX · May 15",
+    "tagline": "Maxwell, TX · May 8",
     "note": "A Cheatham Street Music Foundation event."
   }
 }
