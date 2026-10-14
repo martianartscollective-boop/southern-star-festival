@@ -52,7 +52,12 @@
     "eventUrl": "",
     "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
   },
-  "socials": [],
+  "socials": [
+    {
+      "url": "https://www.instagram.com/southernstarfestival/",
+      "label": "Instagram"
+    }
+  ],
   "tickets": [
     {
       "name": "Early Bird: General Admission",
