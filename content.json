@@ -1,40 +1,41 @@
 {
+  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
     "coverImage": "",
     "shareImage": "/images/southern-star-logo.png",
     "slideshowSeconds": 4,
     "colors": {
-      "sunset1": "#e7b854",
-      "sunset2": "#e7b854",
-      "sunset3": "#4AC1DB",
+      "gold": "#e7b854",
+      "shadow": "rgba(60,30,20,0.30)",
+      "flowerRight": "#00000000",
+      "heroOverlayBottom": "rgba(54,43,70,0.58)",
+      "cream": "#f5ead4",
+      "flowerLeft": "#00000000",
+      "ink": "#2a1c14",
+      "heroTextShadow": "rgba(0,0,0,0.35)",
       "dusk1": "#3EA1B7",
       "dusk2": "#3EA1B7",
-      "gold": "#e7b854",
+      "stem": "#00000000",
+      "shadowSoft": "rgba(90,50,30,0.20)",
+      "captionOverlay": "rgba(0,0,0,0.75)",
       "goldDeep": "#b8842c",
-      "cream": "#f5ead4",
       "paper": "#efe2c8",
+      "surface": "#ffffff",
       "maroon": "#3EA1B7",
+      "slideshowBg": "#000000",
+      "dotInactive": "rgba(255,255,255,0.50)",
+      "focus": "#e7b854",
+      "divider": "rgba(122,46,55,0.20)",
+      "sunset1": "#e7b854",
+      "sunset2": "#e7b854",
       "maroonDeep": "#3EA1B7",
       "teal": "#8fd9c4",
-      "ink": "#2a1c14",
-      "focus": "#e7b854",
-      "surface": "#ffffff",
-      "slideshowBg": "#000000",
-      "flowerLeft": "#00000000",
-      "flowerRight": "#00000000",
-      "stem": "#00000000",
-      "shadow": "rgba(60,30,20,0.30)",
-      "shadowSoft": "rgba(90,50,30,0.20)",
-      "divider": "rgba(122,46,55,0.20)",
-      "heroTextShadow": "rgba(0,0,0,0.35)",
-      "captionOverlay": "rgba(0,0,0,0.75)",
-      "dotInactive": "rgba(255,255,255,0.50)",
-      "heroOverlayTop": "rgba(54,43,70,0.38)",
-      "heroOverlayBottom": "rgba(54,43,70,0.58)"
+      "sunset3": "#4AC1DB",
+      "heroOverlayTop": "rgba(54,43,70,0.38)"
     },
     "heroLogo": "/images/southern-star-logo.png",
     "heroAnimation": "pop",
-    "heroAnimationSeconds": 1.1,
+    "heroAnimationSeconds": 1.2,
     "typography": {
       "titleFont": "Lobster",
       "titleSize": 100,
@@ -46,33 +47,12 @@
       "baseSize": 100
     }
   },
-  "site": {
-    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
-    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
-    "heroPrimaryButton": "Get Tickets",
-    "heroSecondaryButton": "See Lineup",
-    "lineupKicker": "Music all day",
-    "lineupTitle": "The Lineup",
-    "scheduleKicker": "May 8 · Southern Star Farms",
-    "scheduleTitle": "Day-Of Schedule",
-    "bbqKicker": "Bringing the backyard vibes to you.",
-    "bbqTitle": "The BBQ Cookout",
-    "ticketsKicker": "Choose your ticket and join us in Maxwell",
-    "ticketsTitle": "Tickets",
-    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
-    "faqKicker": "Good to know",
-    "faqTitle": "Frequently Asked Questions",
-    "directionsButtonText": "Get Directions",
-    "footerName": "Southern Star Festival",
-    "homeNavLabel": "Home"
-  },
-  "socials": [],
-  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "universe": {
     "embedCode": "",
     "eventUrl": "",
     "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
   },
+  "socials": [],
   "tickets": [
     {
       "name": "Early Bird: General Admission",
@@ -107,6 +87,26 @@
       "featured": false
     }
   ],
+  "site": {
+    "scheduleTitle": "Day-Of Schedule",
+    "faqTitle": "Frequently Asked Questions",
+    "lineupKicker": "Music all day",
+    "bbqKicker": "Bringing the backyard vibes to you.",
+    "footerName": "Southern Star Festival",
+    "bbqTitle": "The BBQ Cookout",
+    "faqKicker": "Good to know",
+    "lineupTitle": "The Lineup",
+    "scheduleKicker": "May 8 · Southern Star Farms",
+    "heroSecondaryButton": "See Lineup",
+    "homeNavLabel": "Home",
+    "ticketsTitle": "Tickets",
+    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
+    "directionsButtonText": "Get Directions",
+    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
+    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
+    "heroPrimaryButton": "Get Tickets",
+    "ticketsKicker": "Choose your ticket and join us in Maxwell"
+  },
   "about": {
     "kicker": "A day built around good music and good smoke",
     "paragraphs": [
@@ -247,18 +247,7 @@
       "visible": true
     },
     {
-      "type": "info",
-      "navLabel": "Who We Support",
-      "showInNav": true,
-      "visible": true,
-      "background": "auto",
-      "kicker": "Who We Support",
-      "heading": "The Cheatham Street Music Foundation",
-      "paragraphs": [
-        "The Cheatham Street Music Foundation is a nonprofit dedicated to preserving and promoting Texas music by nurturing the art, business, and craft of songwriting. Continuing Kent Finlay's legacy, the Foundation offers classes, workshops, and concerts that educate and inspire new generations of artists.",
-        "Building on the historic Cheatham Street Warehouse, where legends like George Strait and Stevie Ray Vaughan began, the organization fosters community connections and celebrates music's vital role in Texas culture."
-      ],
-      "photoSide": "right",
+      "footnote": "Southern Star Festival 2027 · Benefiting Cheatham Street Music Foundation, a 501(c)(3) nonprofit",
       "photos": [
         {
           "img": "/images/who-we-support-1.jpg",
@@ -269,7 +258,18 @@
           "alt": "A musician with a guitar in front of a Texas flag"
         }
       ],
-      "footnote": "Southern Star Festival 2027 · Benefiting Cheatham Street Music Foundation, a 501(c)(3) nonprofit"
+      "showInNav": true,
+      "heading": "The Cheatham Street Music Foundation",
+      "paragraphs": [
+        "The Cheatham Street Music Foundation is a nonprofit dedicated to preserving and promoting Texas music by nurturing the art, business, and craft of songwriting. Continuing Kent Finlay's legacy, the Foundation offers classes, workshops, and concerts that educate and inspire new generations of artists.",
+        "Building on the historic Cheatham Street Warehouse, where legends like George Strait and Stevie Ray Vaughan began, the organization fosters community connections and celebrates music's vital role in Texas culture."
+      ],
+      "photoSide": "right",
+      "background": "auto",
+      "navLabel": "Who We Support",
+      "visible": true,
+      "kicker": "Who We Support",
+      "type": "info"
     },
     {
       "type": "builtin",
