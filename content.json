@@ -1,46 +1,78 @@
 {
-  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
-    "coverImage": "/images/7fc8fdca-ce45-415f-8a40-fb0dea93ccb0.jpeg",
-    "shareImage": "/images/7fc8fdca-ce45-415f-8a40-fb0dea93ccb0.jpeg",
+    "coverImage": "",
+    "shareImage": "/images/southern-star-logo.png",
     "slideshowSeconds": 4,
     "colors": {
-      "gold": "#e7b854",
-      "shadow": "rgba(60,30,20,0.30)",
-      "flowerRight": "#00000000",
-      "heroOverlayBottom": "rgba(54,43,70,0.58)",
-      "cream": "#f5ead4",
-      "flowerLeft": "#00000000",
-      "ink": "#2a1c14",
-      "heroTextShadow": "rgba(0,0,0,0.35)",
-      "dusk1": "#3EA1B7",
-      "dusk2": "#3EA1B7",
-      "stem": "#00000000",
-      "shadowSoft": "rgba(90,50,30,0.20)",
-      "captionOverlay": "rgba(0,0,0,0.75)",
-      "goldDeep": "#b8842c",
-      "paper": "#efe2c8",
-      "surface": "#ffffff",
-      "maroon": "#3EA1B7",
-      "inkSoft": "#4a3527",
-      "slideshowBg": "#000000",
-      "dotInactive": "rgba(255,255,255,0.50)",
-      "focus": "#e7b854",
-      "divider": "rgba(122,46,55,0.20)",
       "sunset1": "#e7b854",
       "sunset2": "#e7b854",
+      "sunset3": "#4AC1DB",
+      "dusk1": "#3EA1B7",
+      "dusk2": "#3EA1B7",
+      "gold": "#e7b854",
+      "goldDeep": "#b8842c",
+      "cream": "#f5ead4",
+      "paper": "#efe2c8",
+      "maroon": "#3EA1B7",
       "maroonDeep": "#3EA1B7",
       "teal": "#8fd9c4",
-      "sunset3": " #4AC1DB",
-      "heroOverlayTop": "rgba(54,43,70,0.38)"
+      "ink": "#2a1c14",
+      "focus": "#e7b854",
+      "surface": "#ffffff",
+      "slideshowBg": "#000000",
+      "flowerLeft": "#00000000",
+      "flowerRight": "#00000000",
+      "stem": "#00000000",
+      "shadow": "rgba(60,30,20,0.30)",
+      "shadowSoft": "rgba(90,50,30,0.20)",
+      "divider": "rgba(122,46,55,0.20)",
+      "heroTextShadow": "rgba(0,0,0,0.35)",
+      "captionOverlay": "rgba(0,0,0,0.75)",
+      "dotInactive": "rgba(255,255,255,0.50)",
+      "heroOverlayTop": "rgba(54,43,70,0.38)",
+      "heroOverlayBottom": "rgba(54,43,70,0.58)"
+    },
+    "heroLogo": "/images/southern-star-logo.png",
+    "heroAnimation": "pop",
+    "heroAnimationSeconds": 1.1,
+    "typography": {
+      "titleFont": "Lobster",
+      "titleSize": 100,
+      "titleColor": "#e7b854",
+      "bodyFont": "Patrick Hand",
+      "bodySize": 100,
+      "bodyColor": "#4a3527",
+      "baseFont": "Jost",
+      "baseSize": 100
     }
   },
+  "site": {
+    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
+    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
+    "heroPrimaryButton": "Get Tickets",
+    "heroSecondaryButton": "See Lineup",
+    "lineupKicker": "Music all day",
+    "lineupTitle": "The Lineup",
+    "scheduleKicker": "May 8 · Southern Star Farms",
+    "scheduleTitle": "Day-Of Schedule",
+    "bbqKicker": "Bringing the backyard vibes to you.",
+    "bbqTitle": "The BBQ Cookout",
+    "ticketsKicker": "Choose your ticket and join us in Maxwell",
+    "ticketsTitle": "Tickets",
+    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
+    "faqKicker": "Good to know",
+    "faqTitle": "Frequently Asked Questions",
+    "directionsButtonText": "Get Directions",
+    "footerName": "Southern Star Festival",
+    "homeNavLabel": "Home"
+  },
+  "socials": [],
+  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "universe": {
     "embedCode": "",
     "eventUrl": "",
     "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
   },
-  "socials": [],
   "tickets": [
     {
       "name": "Early Bird: General Admission",
@@ -59,12 +91,12 @@
       "featured": true
     },
     {
-      "featured": true,
       "name": "BBQ Tasting",
       "price": "$30",
       "unit": "/person",
+      "desc": "BBQ tasting flight from the cookout + complimentary beverage.",
       "cta": "Buy Tickets",
-      "desc": "BBQ tasting flight from the cookout + complimentary beverage. "
+      "featured": false
     },
     {
       "name": "Kids (12 & Under)",
@@ -75,25 +107,6 @@
       "featured": false
     }
   ],
-  "site": {
-    "scheduleTitle": "Day-Of Schedule",
-    "faqTitle": "Frequently Asked Questions",
-    "lineupKicker": "Music all day",
-    "bbqKicker": "Bringing the backyard vibes to you.",
-    "footerName": "Southern Star Festival",
-    "bbqTitle": "The BBQ Cookout",
-    "faqKicker": "Good to know",
-    "lineupTitle": "The Lineup",
-    "scheduleKicker": "May 8 · Southern Star Farms",
-    "heroSecondaryButton": "See Lineup",
-    "ticketsTitle": "Tickets",
-    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
-    "directionsButtonText": "Get Directions",
-    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
-    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
-    "heroPrimaryButton": "Get Tickets",
-    "ticketsKicker": "Choose your ticket and join us in Maxwell"
-  },
   "about": {
     "kicker": "A day built around good music and good smoke",
     "paragraphs": [
@@ -110,7 +123,7 @@
         "label": "BBQ teams competing"
       },
       {
-        "value": "10+ ",
+        "value": "10+",
         "label": "Vendors"
       },
       {
@@ -167,7 +180,7 @@
     ],
     "videoId": "9F2c-vZKVls",
     "cookoffTitle": "You're invited to the cookout!",
-    "cookoffText": "We welcome all people, no discrimination. Who doesn't enjoy the best BBQ and music in Texas? "
+    "cookoffText": "We welcome all people, no discrimination. Who doesn't enjoy the best BBQ and music in Texas?"
   },
   "location": {
     "title": "Southern Star Farms",
@@ -224,5 +237,81 @@
   "footer": {
     "tagline": "Maxwell, TX · May 8",
     "note": "A Cheatham Street Music Foundation event."
-  }
+  },
+  "pageSections": [
+    {
+      "type": "builtin",
+      "section": "about",
+      "navLabel": "About",
+      "showInNav": true,
+      "visible": true
+    },
+    {
+      "type": "info",
+      "navLabel": "Who We Support",
+      "showInNav": true,
+      "visible": true,
+      "background": "auto",
+      "kicker": "Who We Support",
+      "heading": "The Cheatham Street Music Foundation",
+      "paragraphs": [
+        "The Cheatham Street Music Foundation is a nonprofit dedicated to preserving and promoting Texas music by nurturing the art, business, and craft of songwriting. Continuing Kent Finlay's legacy, the Foundation offers classes, workshops, and concerts that educate and inspire new generations of artists.",
+        "Building on the historic Cheatham Street Warehouse, where legends like George Strait and Stevie Ray Vaughan began, the organization fosters community connections and celebrates music's vital role in Texas culture."
+      ],
+      "photoSide": "right",
+      "photos": [
+        {
+          "img": "/images/who-we-support-1.jpg",
+          "alt": "The Cheatham Street Warehouse building"
+        },
+        {
+          "img": "/images/who-we-support-2.jpg",
+          "alt": "A musician with a guitar in front of a Texas flag"
+        }
+      ],
+      "footnote": "Southern Star Festival 2027 · Benefiting Cheatham Street Music Foundation, a 501(c)(3) nonprofit"
+    },
+    {
+      "type": "builtin",
+      "section": "lineup",
+      "navLabel": "Lineup",
+      "showInNav": true,
+      "visible": true
+    },
+    {
+      "type": "builtin",
+      "section": "schedule",
+      "navLabel": "Schedule",
+      "showInNav": true,
+      "visible": true
+    },
+    {
+      "type": "builtin",
+      "section": "bbq",
+      "navLabel": "BBQ Cookout",
+      "showInNav": true,
+      "visible": true
+    },
+    {
+      "type": "builtin",
+      "section": "tickets",
+      "navLabel": "Tickets",
+      "showInNav": true,
+      "visible": true
+    },
+    {
+      "type": "builtin",
+      "section": "location",
+      "navLabel": "Location",
+      "showInNav": true,
+      "visible": true
+    },
+    {
+      "type": "builtin",
+      "section": "faq",
+      "navLabel": "FAQ",
+      "showInNav": true,
+      "visible": true
+    }
+  ]
 }
