@@ -56,6 +56,18 @@
     {
       "url": "https://www.instagram.com/southernstarfestival/",
       "label": "Instagram"
+    },
+    {
+      "url": "https://www.tiktok.com/@southernstarfestival",
+      "label": "Tiktok"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/sstarfestival"
+    },
+    {
+      "label": "Linktree",
+      "url": "https://linktr.ee/southernstarfestival"
     }
   ],
   "tickets": [
