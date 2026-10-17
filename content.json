@@ -93,7 +93,7 @@
       "unit": "/person",
       "desc": "BBQ tasting flight from the cookout + complimentary beverage.",
       "cta": "Buy Tickets",
-      "featured": false
+      "featured": true
     },
     {
       "name": "Kids (12 & Under)",
