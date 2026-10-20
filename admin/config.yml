@@ -59,15 +59,6 @@ collections:
                 required: false
                 hint: "Optional. Used as the browser-side sharing image. Some social apps cache link previews."
 
-              - label: "Slideshow Time (seconds)"
-                name: "slideshowSeconds"
-                widget: "number"
-                value_type: "int"
-                min: 1
-                max: 60
-                default: 5
-                hint: "How many seconds each BBQ slideshow picture stays on screen."
-
               - label: "Google / SEO (helps your event show up in search results)"
                 name: "seo"
                 widget: "object"
@@ -117,7 +108,6 @@ collections:
                   - {label: "Alternate Section Background", name: "paper", widget: "color", default: "#efe2c8", colorPresets: ["#e7b854", "#b8842c", "#3EA1B7", "#4AC1DB", "#f5ead4", "#efe2c8", "#2a1c14", "#8fd9c4"], allowInput: true}
                   - {label: "Main Text / Navigation", name: "ink", widget: "color", default: "#2a1c14", colorPresets: ["#e7b854", "#b8842c", "#3EA1B7", "#4AC1DB", "#f5ead4", "#efe2c8", "#2a1c14", "#8fd9c4"], allowInput: true}
                   - {label: "White / Card Surface", name: "surface", widget: "color", default: "#ffffff", colorPresets: ["#e7b854", "#b8842c", "#3EA1B7", "#4AC1DB", "#f5ead4", "#efe2c8", "#2a1c14", "#8fd9c4"], allowInput: true}
-                  - {label: "Slideshow Empty Background", name: "slideshowBg", widget: "color", default: "#000000", colorPresets: ["#e7b854", "#b8842c", "#3EA1B7", "#4AC1DB", "#f5ead4", "#efe2c8", "#2a1c14", "#8fd9c4"], allowInput: true}
                   - {label: "Keyboard Focus Color", name: "focus", widget: "color", default: "#e7b854", colorPresets: ["#e7b854", "#b8842c", "#3EA1B7", "#4AC1DB", "#f5ead4", "#efe2c8", "#2a1c14", "#8fd9c4"], allowInput: true}
 
                   - {label: "Left Flower Color", name: "flowerLeft", widget: "color", default: "#00000000", enableAlpha: true, allowInput: true, hint: "Slide opacity to 0 to hide this completely."}
@@ -128,8 +118,6 @@ collections:
                   - {label: "Soft Shadow", name: "shadowSoft", widget: "color", default: "rgba(90,50,30,0.20)", enableAlpha: true}
                   - {label: "Dividers / Borders", name: "divider", widget: "color", default: "rgba(122,46,55,0.20)", enableAlpha: true}
                   - {label: "Hero Text Shadow", name: "heroTextShadow", widget: "color", default: "rgba(0,0,0,0.35)", enableAlpha: true}
-                  - {label: "Slideshow Caption Overlay", name: "captionOverlay", widget: "color", default: "rgba(0,0,0,0.75)", enableAlpha: true}
-                  - {label: "Inactive Slideshow Dot", name: "dotInactive", widget: "color", default: "rgba(255,255,255,0.50)", enableAlpha: true}
                   - {label: "Cover Photo Overlay — Top", name: "heroOverlayTop", widget: "color", default: "rgba(54,43,70,0.38)", enableAlpha: true}
                   - {label: "Cover Photo Overlay — Bottom", name: "heroOverlayBottom", widget: "color", default: "rgba(54,43,70,0.58)", enableAlpha: true}
 
@@ -138,7 +126,7 @@ collections:
             widget: "list"
             hint: "This list IS your website's order, top to bottom (below the logo banner). DRAG a row's handle to move it. Use the X to delete it, or switch 'Show this section' off to hide it without deleting. Use 'Add' to create a brand-new section. Each row also controls the tab name in the top menu. The text inside Lineup, Tickets, FAQ, etc. is still edited in their own panels further down."
             types:
-              - label: "Built-in section (About, Lineup, Schedule, BBQ, Tickets, Location, FAQ, Contact)"
+              - label: "Built-in section (About, Lineup, Schedule, Tickets, Location, FAQ, Contact)"
                 name: "builtin"
                 widget: "object"
                 summary: "{{fields.navLabel}}"
@@ -151,7 +139,6 @@ collections:
                       - {label: "About", value: "about"}
                       - {label: "Lineup", value: "lineup"}
                       - {label: "Day-Of Schedule", value: "schedule"}
-                      - {label: "BBQ Cookout (slideshow + video)", value: "bbq"}
                       - {label: "Tickets", value: "tickets"}
                       - {label: "Location & Map", value: "location"}
                       - {label: "FAQ", value: "faq"}
@@ -276,8 +263,6 @@ collections:
               - {label: "Schedule Small Heading", name: "scheduleKicker", widget: "string", required: false, hint: "Leave blank to automatically use the festival date and venue."}
               - {label: "Schedule Main Heading", name: "scheduleTitle", widget: "string"}
 
-              - {label: "BBQ Small Heading", name: "bbqKicker", widget: "string"}
-              - {label: "BBQ Main Heading", name: "bbqTitle", widget: "string"}
 
               - {label: "Tickets Small Heading", name: "ticketsKicker", widget: "string"}
               - {label: "Tickets Main Heading", name: "ticketsTitle", widget: "string"}
@@ -323,7 +308,8 @@ collections:
                 fields:
                   - {label: "Number/word", name: "value", widget: "string"}
                   - {label: "Label underneath", name: "label", widget: "string"}
-              - {label: "Photo", name: "photo", widget: "image"}
+              - {label: "YouTube video (paste the link or the video ID)", name: "videoId", widget: "string", required: false, hint: "Shows in the spot next to the About text. Example: https://www.youtube.com/watch?v=XcH922iwvKs"}
+              - {label: "Photo (only used if there is no video)", name: "photo", widget: "image", required: false}
 
           - label: "Lineup Slots"
             name: "lineup"
@@ -343,22 +329,6 @@ collections:
               - {label: "Time", name: "time", widget: "string"}
               - {label: "What's happening", name: "title", widget: "string"}
               - {label: "Details", name: "desc", widget: "string"}
-
-          - label: "BBQ Cook-Off Section"
-            name: "bbq"
-            widget: "object"
-            fields:
-              - label: "Slideshow photos"
-                name: "slides"
-                widget: "list"
-                summary: "{{caption}}"
-                hint: "The live website now shows exactly the photos in this list — deleted photos will no longer linger."
-                fields:
-                  - {label: "Photo", name: "img", widget: "image"}
-                  - {label: "Caption", name: "caption", widget: "string"}
-              - {label: "YouTube video ID (the part after watch?v=)", name: "videoId", widget: "string"}
-              - {label: "Cook-off box title", name: "cookoffTitle", widget: "string"}
-              - {label: "Cook-off box text", name: "cookoffText", widget: "text"}
 
           - label: "Tickets"
             name: "tickets"
