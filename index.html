@@ -8,10 +8,22 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Southern Star Festival — Texas Music &amp; BBQ Cookout">
 <meta property="og:description" content="Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.">
-<meta property="og:image" content="https://southernstarfest.netlify.app/images/southern-star-logo.png">
-<meta property="og:url" content="https://southernstarfest.netlify.app/">
+<meta property="og:image" content="https://www.southernstarfestival.com/images/southern-star-logo.png">
+<meta property="og:url" content="https://www.southernstarfestival.com/">
+<meta property="og:site_name" content="Southern Star Festival">
+<meta property="og:image:alt" content="Southern Star Festival logo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://southernstarfest.netlify.app/images/southern-star-logo.png">
+<meta name="twitter:title" content="Southern Star Festival — Texas Music &amp; BBQ Cookout">
+<meta name="twitter:description" content="Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#e7b854">
+<!-- Canonical = "the official address of this page". The page updates this automatically to the
+     address it is being viewed on (or the one you type in admin → SEO), so it normally needs no edits. -->
+<link rel="canonical" href="https://www.southernstarfestival.com/">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="twitter:image" content="https://www.southernstarfestival.com/images/southern-star-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rye&family=Bungee&family=Playfair+Display:wght@400;700&family=Oswald:wght@400;600;700&family=Abril+Fatface&family=Patrick+Hand&family=Kalam:wght@400;700&family=Caveat:wght@400;700&family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -90,7 +102,7 @@
   .hero-meta .dot{color:var(--gold);margin:0 10px;}
   .btn{display:inline-block;font-family:var(--font-base);font-weight:600;font-size:calc(1rem * var(--base-scale));padding:15px 34px;border-radius:3px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;}
   .btn:hover{transform:translateY(-2px);}
-  .btn-primary{background:var(--gold);color:var(--maroon-deep);box-shadow:0 6px 0 var(--gold-deep);}
+  .btn-primary{background:var(--gold);color:var(--ink);box-shadow:0 6px 0 var(--gold-deep);}
   .btn-primary:hover{box-shadow:0 8px 0 var(--gold-deep);}
   .btn-primary:active{transform:translateY(2px);box-shadow:0 3px 0 var(--gold-deep);}
   .btn-outline{background:transparent;border-color:var(--cream);color:var(--cream);}
@@ -142,17 +154,44 @@
   .cookoff-badge b{display:block;font-family:var(--font-title);font-size:calc(1.2rem * var(--title-scale));margin-bottom:6px;color:var(--gold);}
   .cookoff-badge p{color:var(--cream);font-family:var(--font-body);opacity:0.95;font-size:calc(1.05rem * var(--body-scale));line-height:1.6;}
 
-  .ticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;}
-  .ticket-card{background:var(--surface);border-radius:8px;padding:30px 26px;box-shadow:0 10px 26px var(--shadow-soft);border-top:5px solid var(--gold);display:flex;flex-direction:column;}
-  .ticket-card.featured{border-top-color:var(--maroon);background:var(--ink);color:var(--cream);}
-  .ticket-card.featured .ticket-price{color:var(--gold);}
-  .ticket-card.featured .ticket-desc{color:rgba(245,234,212,0.85);}
-  .ticket-name{font-family:var(--font-title);font-size:calc(1.3rem * var(--title-scale));color:var(--maroon);margin-bottom:6px;}
+  #tickets{--notch-bg:var(--cream);}
+  #tickets.section-alt{--notch-bg:var(--paper);}
+  .ticket-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;align-items:stretch;margin-bottom:46px;}
+  .ticket-card{position:relative;background:var(--surface);border-radius:12px;box-shadow:0 12px 28px var(--shadow-soft);display:flex;flex-direction:column;border-top:6px solid var(--gold);transition:transform .2s ease, box-shadow .2s ease;}
+  .ticket-card:hover{transform:translateY(-4px);box-shadow:0 18px 34px var(--shadow-soft);}
+  .ticket-card.featured{background:var(--ink);color:var(--cream);border-top-color:var(--maroon);transform:translateY(-8px);box-shadow:0 18px 38px var(--shadow);}
+  .ticket-card.featured:hover{transform:translateY(-12px);}
+  .ticket-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-family:var(--font-base);font-weight:700;font-size:calc(0.78rem * var(--base-scale));letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:999px;box-shadow:0 3px 0 var(--gold-deep);white-space:nowrap;}
+  .ticket-main{padding:30px 26px 22px;flex-grow:1;}
+  .ticket-name{font-family:var(--font-title);font-size:calc(1.4rem * var(--title-scale));color:var(--maroon);margin-bottom:10px;line-height:1.2;}
   .ticket-card.featured .ticket-name{color:var(--gold);}
-  .ticket-price{font-family:var(--font-base);font-size:calc(2.1rem * var(--base-scale));font-weight:700;color:var(--maroon);margin-bottom:14px;}
-  .ticket-price span{font-size:calc(0.95rem * var(--base-scale));font-weight:400;}
-  .ticket-desc{font-family:var(--font-body);color:var(--ink-soft);font-size:calc(1.05rem * var(--body-scale));line-height:1.6;margin-bottom:22px;flex-grow:1;}
-  .ticket-card .btn{align-self:flex-start;}
+  .ticket-desc{font-family:var(--font-body);color:var(--ink-soft);font-size:calc(1.05rem * var(--body-scale));line-height:1.6;}
+  .ticket-card.featured .ticket-desc{color:rgba(245,234,212,0.88);}
+  .ticket-stub{position:relative;border-top:2px dashed var(--divider);padding:24px 26px 26px;text-align:center;}
+  .ticket-card.featured .ticket-stub{border-top-color:rgba(231,184,84,.5);}
+  .ticket-stub::before,.ticket-stub::after{content:"";position:absolute;top:-13px;width:24px;height:24px;border-radius:50%;background:var(--notch-bg);}
+  .ticket-stub::before{left:-12px;}
+  .ticket-stub::after{right:-12px;}
+  .ticket-price{font-family:var(--font-base);font-size:calc(2.6rem * var(--base-scale));font-weight:700;color:var(--maroon);line-height:1;margin-bottom:16px;}
+  .ticket-price span{font-size:calc(0.95rem * var(--base-scale));font-weight:400;opacity:.8;}
+  .ticket-card.featured .ticket-price{color:var(--gold);}
+  .ticket-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;box-sizing:border-box;background:var(--gold);color:var(--ink);font-family:var(--font-base);font-weight:700;font-size:calc(1.05rem * var(--base-scale));text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 5px 0 var(--gold-deep);transition:transform .15s ease, box-shadow .15s ease;}
+  .ticket-btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--gold-deep);}
+  .ticket-btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--gold-deep);}
+  .ticket-btn.disabled,.btn-buy.disabled{opacity:.55;pointer-events:none;}
+  .ticket-btn svg,.btn-buy svg{width:1.3em;height:1.3em;flex:none;}
+
+  .buy-band{position:relative;overflow:hidden;background:var(--ink);color:var(--cream);border-radius:16px;padding:54px 28px 40px;text-align:center;box-shadow:0 18px 40px var(--shadow);background-image:repeating-conic-gradient(from 0deg at 50% 120%, rgba(231,184,84,.10) 0deg 6deg, transparent 6deg 14deg);}
+  .buy-band h3{font-family:var(--font-title);font-weight:400;font-size:calc(2.4rem * var(--title-scale));color:var(--gold);margin:0 0 10px;line-height:1.15;}
+  .buy-band p.buy-text{font-family:var(--font-body);font-size:calc(1.2rem * var(--body-scale));line-height:1.6;max-width:560px;margin:0 auto 28px;color:rgba(245,234,212,.92);}
+  .btn-buy{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--gold);color:var(--ink);font-family:var(--font-base);font-weight:700;font-size:calc(1.35rem * var(--base-scale));text-decoration:none;padding:20px 46px;border-radius:999px;box-shadow:0 8px 0 var(--gold-deep), 0 16px 30px rgba(0,0,0,.35);transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-buy:hover{transform:translateY(-3px);box-shadow:0 11px 0 var(--gold-deep), 0 20px 34px rgba(0,0,0,.4);}
+  .btn-buy:active{transform:translateY(4px);box-shadow:0 3px 0 var(--gold-deep);}
+  .buy-perks{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px 30px;font-family:var(--font-base);font-size:calc(.95rem * var(--base-scale));color:rgba(245,234,212,.9);}
+  .buy-perks li{display:flex;align-items:center;gap:8px;}
+  .buy-perks svg{width:1.25em;height:1.25em;color:var(--gold);flex:none;}
+  .buy-band .powered-by{color:var(--cream);margin-top:24px;}
+  @media (max-width:600px){.buy-band{padding:40px 18px 30px;}.btn-buy{width:100%;box-sizing:border-box;padding:18px 20px;}.ticket-card.featured{transform:none;}}
   .checkout-note{text-align:center;max-width:640px;margin:0 auto 30px;font-family:var(--font-body);color:var(--ink-soft);font-size:calc(1rem * var(--body-scale));line-height:1.6;}
   .checkout-note a{color:var(--maroon);font-weight:600;text-decoration:underline;}
   .checkout-wrap{max-width:720px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 14px 30px var(--shadow-soft);border:1px solid var(--divider);}
@@ -182,6 +221,11 @@
   footer .foot-links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin:18px 0;font-family:var(--font-base);font-size:calc(0.9rem * var(--base-scale));}
   footer .foot-links a{text-decoration:none;opacity:0.85;}
   footer .foot-links a:hover{opacity:1;color:var(--gold);}
+  footer .social-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:6px 0 14px;}
+  footer .social-links a{width:44px;height:44px;border-radius:50%;display:inline-grid;place-items:center;border:2px solid var(--gold);color:var(--gold);text-decoration:none;font-family:var(--font-base);font-size:calc(0.8rem * var(--base-scale));font-weight:600;transition:background .15s ease, color .15s ease, transform .15s ease;}
+  footer .social-links a:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px);}
+  footer .social-links a svg{width:22px;height:22px;fill:currentColor;display:block;}
+  footer .social-links a.social-text{width:auto;padding:0 16px;border-radius:22px;}
   footer .fine{font-family:var(--font-body);font-size:calc(0.85rem * var(--body-scale));opacity:0.65;margin-top:18px;}
 
 
@@ -245,7 +289,13 @@
     <g fill="var(--flower-right)" opacity="0.9"><ellipse cx="30" cy="20" rx="9" ry="14"/><ellipse cx="45" cy="10" rx="9" ry="14"/><ellipse cx="20" cy="40" rx="9" ry="14"/><ellipse cx="38" cy="35" rx="9" ry="14"/><ellipse cx="55" cy="30" rx="9" ry="14"/></g>
     <path d="M40 55 L40 160" stroke="var(--stem)" stroke-width="4" fill="none"/>
   </svg>
-  <div class="hero-content" id="heroContent"></div>
+  <div class="hero-content" id="heroContent">
+    <noscript>
+      <h1>Southern Star Festival — Texas Music &amp; BBQ Cookout</h1>
+      <p class="hero-meta">Southern Star Farms · Maxwell, TX</p>
+      <p>Live Texas music, BBQ and local vendors on one Hill Country farm. Presented by the Cheatham Street Music Foundation.</p>
+    </noscript>
+  </div>
 </header>
 
 <main id="sections">
@@ -283,9 +333,14 @@
   <div class="section-inner">
     <div class="section-head"><span class="kicker" id="ticketsKicker">Choose your ticket and join us in Maxwell</span><h2 class="display" id="ticketsTitle">Tickets</h2></div>
     <div class="ticket-grid" id="ticketGrid"></div>
-    <p class="checkout-note" id="checkoutNote">Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.</p>
-    <div class="checkout-wrap" id="universeCheckout"></div>
-    <p class="powered-by" id="feeNote"></p>
+    <div class="buy-band" id="buyBand">
+      <h3 id="buyHeading">Ready to join us?</h3>
+      <p class="buy-text" id="buyText"></p>
+      <a class="btn-buy" id="buyButton" href="#tickets"></a>
+      <ul class="buy-perks" id="buyPerks"></ul>
+      <p class="powered-by" id="feeNote"></p>
+    </div>
+    <div class="checkout-wrap" id="universeCheckout" hidden></div>
   </div>
 </section>
 
@@ -462,6 +517,131 @@
     return { tabs, visible: new Set(visibleNodes.map(v => v.node.id)) };
   }
 
+
+  // ---------- Social icons: picked automatically from the link's web address or name ----------
+  const SOCIAL_ICONS = {"linktree":"m13.73635 5.85251 4.00467-4.11665 2.3248 2.3808-4.20064 4.00466h5.9085v3.30473h-5.9365l4.22865 4.10766-2.3248 2.3338L12.0005 12.099l-5.74052 5.76852-2.3248-2.3248 4.22864-4.10766h-5.9375V8.12132h5.9085L3.93417 4.11666l2.3248-2.3808 4.00468 4.11665V0h3.4727zm-3.4727 10.30614h3.4727V24h-3.4727z","instagram":"M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077","facebook":"M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z","tiktok":"M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z","youtube":"M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z","x":"M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z","spotify":"M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z","threads":"M18.263 11.097c-.03-3.486-1.92-5.586-5.111-5.586-2.13 0-3.922.963-4.863 2.499l2.062 1.438c.535-.843 1.272-1.543 2.628-1.543 1.528 0 2.318.85 2.544 2.431a15 15 0 0 0-2.236-.173c-4.125 0-6.068 1.867-6.068 4.336s1.943 3.99 4.804 3.99c3.139 0 5.013-2.115 5.781-4.735.798.361 1.348 1.204 1.348 2.47 0 3.387-3.907 5.232-7.22 5.232-4.885 0-8.077-3.207-8.077-8.424 0-6.392 4.223-10.487 9.9-10.487 3.808 0 5.69 1.671 6.97 3.914l2.108-1.475C21.44 2.078 18.331 0 13.663 0 6.227 0 1.168 5.277 1.168 12.934c0 7 4.953 11.066 10.856 11.066 4.878 0 9.809-2.846 9.809-7.716 0-2.545-1.46-4.231-3.569-5.187m-6.33 4.855c-1.077 0-2.026-.512-2.026-1.453 0-1.483 1.822-1.934 3.606-1.934.678 0 1.34.045 1.927.173-.422 1.927-1.671 3.215-3.508 3.214Z","bluesky":"M5.202 2.857C7.954 4.922 10.913 9.11 12 11.358c1.087-2.247 4.046-6.436 6.798-8.501C20.783 1.366 24 .213 24 3.883c0 .732-.42 6.156-.667 7.037-.856 3.061-3.978 3.842-6.755 3.37 4.854.826 6.089 3.562 3.422 6.299-5.065 5.196-7.28-1.304-7.847-2.97-.104-.305-.152-.448-.153-.327 0-.121-.05.022-.153.327-.568 1.666-2.782 8.166-7.847 2.97-2.667-2.737-1.432-5.473 3.422-6.3-2.777.473-5.899-.308-6.755-3.369C.42 10.04 0 4.615 0 3.883c0-3.67 3.217-2.517 5.202-1.026","applemusic":"M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z","soundcloud":"M23.999 14.165c-.052 1.796-1.612 3.169-3.4 3.169h-8.18a.68.68 0 0 1-.675-.683V7.862a.747.747 0 0 1 .452-.724s.75-.513 2.333-.513a5.364 5.364 0 0 1 2.763.755 5.433 5.433 0 0 1 2.57 3.54c.282-.08.574-.121.868-.12.884 0 1.73.358 2.347.992s.948 1.49.922 2.373ZM10.721 8.421c.247 2.98.427 5.697 0 8.672a.264.264 0 0 1-.53 0c-.395-2.946-.22-5.718 0-8.672a.264.264 0 0 1 .53 0ZM9.072 9.448c.285 2.659.37 4.986-.006 7.655a.277.277 0 0 1-.55 0c-.331-2.63-.256-5.02 0-7.655a.277.277 0 0 1 .556 0Zm-1.663-.257c.27 2.726.39 5.171 0 7.904a.266.266 0 0 1-.532 0c-.38-2.69-.257-5.21 0-7.904a.266.266 0 0 1 .532 0Zm-1.647.77a26.108 26.108 0 0 1-.008 7.147.272.272 0 0 1-.542 0 27.955 27.955 0 0 1 0-7.147.275.275 0 0 1 .55 0Zm-1.67 1.769c.421 1.865.228 3.5-.029 5.388a.257.257 0 0 1-.514 0c-.21-1.858-.398-3.549 0-5.389a.272.272 0 0 1 .543 0Zm-1.655-.273c.388 1.897.26 3.508-.01 5.412-.026.28-.514.283-.54 0-.244-1.878-.347-3.54-.01-5.412a.283.283 0 0 1 .56 0Zm-1.668.911c.4 1.268.257 2.292-.026 3.572a.257.257 0 0 1-.514 0c-.241-1.262-.354-2.312-.023-3.572a.283.283 0 0 1 .563 0Z","pinterest":"M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"};
+  const SOCIAL_HOSTS = {
+    'instagram.com':'instagram', 'facebook.com':'facebook', 'fb.com':'facebook', 'fb.me':'facebook',
+    'tiktok.com':'tiktok', 'youtube.com':'youtube', 'youtu.be':'youtube', 'x.com':'x', 'twitter.com':'x',
+    'spotify.com':'spotify', 'threads.net':'threads', 'threads.com':'threads', 'bsky.app':'bluesky',
+    'music.apple.com':'applemusic', 'soundcloud.com':'soundcloud', 'pinterest.com':'pinterest', 'linktr.ee':'linktree'
+  };
+  const SOCIAL_NAMES = {
+    instagram:'instagram', insta:'instagram', ig:'instagram', facebook:'facebook', fb:'facebook', tiktok:'tiktok',
+    youtube:'youtube', x:'x', twitter:'x', spotify:'spotify', threads:'threads', bluesky:'bluesky',
+    'apple music':'applemusic', soundcloud:'soundcloud', pinterest:'pinterest', linktree:'linktree'
+  };
+  // Simple outline icons for email + generic website links (drawn by hand, not a brand).
+  const SOCIAL_FALLBACK_SVG = {
+    email:'<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.6 2L12 12.4 19.4 7H4.6zM4 9.1V17h16V9.1l-8 5.8-8-5.8z"/></svg>'
+  };
+  function socialKey(link){
+    const url = (link.url || '').trim();
+    if(/^mailto:/i.test(url)) return 'email';
+    try{
+      const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+      for(const h in SOCIAL_HOSTS){ if(host === h || host.endsWith('.' + h)) return SOCIAL_HOSTS[h]; }
+    }catch(e){}
+    return SOCIAL_NAMES[(link.label || '').trim().toLowerCase()] || null;
+  }
+  function socialLinkHtml(link){
+    const key = socialKey(link);
+    const href = esc(safeExternalUrl(link.url));
+    const name = esc(link.label);
+    const isMail = /^mailto:/i.test((link.url || '').trim());
+    const target = isMail ? '' : ' target="_blank" rel="noopener noreferrer"';
+    if(key && SOCIAL_ICONS[key]){
+      return `<a href="${href}"${target} aria-label="${name}" title="${name}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${SOCIAL_ICONS[key]}"/></svg><span class="sr-only">${name}</span></a>`;
+    }
+    if(key === 'email'){
+      return `<a href="${href}" aria-label="${name}" title="${name}">${SOCIAL_FALLBACK_SVG.email}<span class="sr-only">${name}</span></a>`;
+    }
+    return `<a class="social-text" href="${href}"${target}>${name}</a>`;   // unknown site -> text pill
+  }
+
+  // ---------- Universe ticket link ----------
+  const DEFAULT_UNIVERSE_URL = 'https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2';
+  function universeTicketLink(uni, colors){
+    uni = uni || {};
+    const raw = (uni.eventUrl || '').trim() || DEFAULT_UNIVERSE_URL;
+    let u;
+    try { u = new URL(raw); } catch(e){ return { href:'', base:'', isUniverse:false }; }
+    if(!/^https?:$/.test(u.protocol)) return { href:'', base:'', isUniverse:false };
+    if(/(^|\.)universe\.com$/i.test(u.hostname)){
+      const base = 'https://www.universe.com' + u.pathname.replace(/\/+$/, '');
+      const color = /^#[0-9a-f]{6}$/i.test(uni.checkoutColor || '') ? uni.checkoutColor : '#237486';
+      const href = base + '?buttonColor=' + encodeURIComponent(color) + '&buttonText=' + encodeURIComponent('Get Tickets');
+      return { href, base, isUniverse:true };
+    }
+    return { href:u.href, base:u.href, isUniverse:false };
+  }
+
+  // ---------- SEO: structured "Event" data so Google can show date, place & tickets ----------
+  function to24(str){
+    const m = /(\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i.exec(str || '');
+    if(!m) return null;
+    let hr = (+m[1]) % 12;
+    if(/pm/i.test(m[3])) hr += 12;
+    return String(hr).padStart(2, '0') + ':' + (m[2] || '00');
+  }
+  function centralOffset(dateStr){
+    try{
+      const part = new Intl.DateTimeFormat('en-US', {timeZone:'America/Chicago', timeZoneName:'shortOffset'})
+        .formatToParts(new Date(dateStr + 'T18:00:00Z')).find(p => p.type === 'timeZoneName');
+      const m = /GMT([+-])(\d+)/.exec(part && part.value);
+      if(m) return m[1] + String(m[2]).padStart(2, '0') + ':00';
+    }catch(e){}
+    return '-05:00';
+  }
+  function buildStructuredData(data, pageUrl, imageUrl){
+    const settings = data.settings || {};
+    const seo = settings.seo || {};
+    const site = data.site || {};
+    const date = /^\d{4}-\d{2}-\d{2}$/.test(seo.eventDate || '') ? seo.eventDate : null;
+    if(!date) return null;                                  // Google needs a real date, so skip until one is set
+
+    const sched = data.schedule || [];
+    const t1 = to24(sched.length ? sched[0].time : '');
+    const t2 = to24(sched.length ? sched[sched.length - 1].time : '');
+    const off = centralOffset(date);
+    const loc = data.location || {};
+
+    const place = { '@type':'Place', name: loc.title || data.hero.venue };
+    const am = /^(.*?),\s*([^,]+),\s*([A-Z]{2})\s+(\d{5})/.exec(loc.mapQuery || '');
+    place.address = am
+      ? { '@type':'PostalAddress', streetAddress: am[1], addressLocality: am[2], addressRegion: am[3], postalCode: am[4], addressCountry:'US' }
+      : (loc.mapQuery || data.hero.city);
+
+    const uni = data.universe || {};
+    const ticketUrl = universeTicketLink(uni, {}).base || pageUrl + '#tickets';
+    const offers = (data.tickets || []).map(t => {
+      const free = /free/i.test(t.price || '');
+      const m = /(\d+(?:\.\d{1,2})?)/.exec(t.price || '');
+      if(!free && !m) return null;
+      return { '@type':'Offer', name:t.name, price: free ? '0' : m[1], priceCurrency:'USD',
+               availability:'https://schema.org/InStock', url: ticketUrl };
+    }).filter(Boolean);
+
+    const organizerName = (seo.organizerName || '').trim() ||
+      (data.hero.presents || '').replace(/\s*presents:?\s*$/i, '').trim();
+
+    return {
+      '@context':'https://schema.org',
+      '@type':'Festival',
+      name: site.footerName || data.hero.title,
+      description: site.metaDescription || undefined,
+      startDate: t1 ? `${date}T${t1}:00${off}` : date,
+      endDate: t2 ? `${date}T${t2}:00${off}` : undefined,
+      eventStatus:'https://schema.org/EventScheduled',
+      eventAttendanceMode:'https://schema.org/OfflineEventAttendanceMode',
+      location: place,
+      image: [imageUrl],
+      url: pageUrl,
+      organizer: organizerName ? { '@type':'Organization', name: organizerName } : undefined,
+      offers: offers.length ? offers : undefined
+    };
+  }
+
   function render(data){
     const settings = data.settings || {};
     const site = data.site || {};
@@ -523,12 +703,28 @@
 
     // Browser-side share image setting. Social apps can cache previews, so the static
     // <head> value remains the fallback for crawlers that do not execute JavaScript.
+    const seo = settings.seo || {};
+    const siteUrl = ((seo.siteUrl || '').trim().replace(/\/+$/, '')) || window.location.origin;
+    const pageUrl = siteUrl + '/';
     const shareImage = settings.shareImage || '/images/southern-star-logo.png';
-    const absoluteShareImage = new URL(shareImage, window.location.origin).href;
+    const absoluteShareImage = new URL(shareImage, pageUrl).href;
     const ogImage = document.querySelector('meta[property="og:image"]');
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if(ogImage) ogImage.setAttribute('content', absoluteShareImage);
     if(twitterImage) twitterImage.setAttribute('content', absoluteShareImage);
+
+    // Canonical address, share-card title/description, and Google's structured Event data.
+    const setMeta = (sel, attr, value) => { const el = document.querySelector(sel); if(el && value) el.setAttribute(attr, value); };
+    setMeta('link[rel="canonical"]', 'href', pageUrl);
+    setMeta('meta[property="og:url"]', 'content', pageUrl);
+    setMeta('meta[name="twitter:title"]', 'content', site.metaTitle);
+    setMeta('meta[name="twitter:description"]', 'content', site.metaDescription);
+    const eventData = buildStructuredData(data, pageUrl, absoluteShareImage);
+    let ld = document.getElementById('structuredData');
+    if(eventData){
+      if(!ld){ ld = document.createElement('script'); ld.type = 'application/ld+json'; ld.id = 'structuredData'; document.head.appendChild(ld); }
+      ld.textContent = JSON.stringify(eventData);
+    }else if(ld){ ld.remove(); }
 
     // Admin-editable section headings and buttons.
     const text = (id, value) => {
@@ -543,7 +739,6 @@
     text('bbqTitle', site.bbqTitle);
     text('ticketsKicker', site.ticketsKicker);
     text('ticketsTitle', site.ticketsTitle);
-    text('checkoutNote', site.checkoutNote);
     text('faqKicker', site.faqKicker);
     text('faqTitle', site.faqTitle);
 
@@ -599,45 +794,63 @@
     document.getElementById('bbqVideo').innerHTML = `<iframe src="https://www.youtube.com/embed/${esc(data.bbq.videoId)}" title="BBQ festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
     document.getElementById('cookoffBadge').innerHTML = `<b>${esc(data.bbq.cookoffTitle)}</b><p>${esc(data.bbq.cookoffText)}</p>`;
 
-    // Tickets
+    // Tickets — our own styled buttons; Universe's script turns the click into a pop-up checkout
+    const uni = data.universe || {};
+    const link = universeTicketLink(uni, data.settings && data.settings.colors);
+    const ICON_TICKET = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v2.5a2.5 2.5 0 0 0 0 5V17a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2.5a2.5 2.5 0 0 0 0-5V7zm13 .5h-2v2h2v-2zm0 4h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>';
+    const ICONS = {
+      lock:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2zm-7-2a2 2 0 0 1 4 0v2h-4V7z"/></svg>',
+      qr:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm8-2h3v3h-3v-3zm5 0h3v3h-3v-3zm-5 5h3v3h-3v-3zm5 0h3v3h-3v-3z"/></svg>',
+      phone:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM8 5v11h8V5H8z"/></svg>'
+    };
+    const ticketAttrs = link.href ? `href="${esc(link.href)}" target="_blank" rel="noopener noreferrer"` : 'href="#tickets" class="disabled" aria-disabled="true"';
     document.getElementById('ticketGrid').innerHTML = data.tickets.map(t => `
       <div class="ticket-card${t.featured ? ' featured' : ''}">
-        <div class="ticket-name">${esc(t.name)}</div>
-        <div class="ticket-price">${esc(t.price)}<span> ${esc(t.unit)}</span></div>
-        <div class="ticket-desc">${esc(t.desc)}</div>
-        <a href="#universeCheckout" class="btn btn-primary">${esc(t.cta)}</a>
+        ${t.badge ? `<span class="ticket-badge">${esc(t.badge)}</span>` : ''}
+        <div class="ticket-main">
+          <div class="ticket-name">${esc(t.name)}</div>
+          <div class="ticket-desc">${esc(t.desc)}</div>
+        </div>
+        <div class="ticket-stub">
+          <div class="ticket-price">${esc(t.price)}<span> ${esc(t.unit)}</span></div>
+          <a class="ticket-btn${link.href ? '' : ' disabled'}" ${link.href ? ticketAttrs : 'href="#tickets" aria-disabled="true"'}>${ICON_TICKET}<span>${esc(link.href ? (t.cta || 'Get Tickets') : 'Coming soon')}</span></a>
+        </div>
       </div>
     `).join('');
 
-    // Universe checkout — accepts the full widget embed code (which includes a <script>)
-    const uni = data.universe || {};
+    // Big buy band
+    const buyBtn = document.getElementById('buyButton');
+    text('buyHeading', site.buyHeading || 'Ready to join us?');
+    text('buyText', site.buyText || 'Grab your tickets and get ready for a day of music and BBQ.');
+    buyBtn.innerHTML = ICON_TICKET + '<span></span>';
+    buyBtn.lastChild.textContent = link.href ? (site.buyButton || 'Get Tickets') : 'Tickets coming soon';
+    if(link.href){
+      buyBtn.href = link.href; buyBtn.target = '_blank'; buyBtn.rel = 'noopener noreferrer'; buyBtn.classList.remove('disabled');
+    } else { buyBtn.classList.add('disabled'); buyBtn.setAttribute('aria-disabled','true'); }
+    const perks = (Array.isArray(site.buyPerks) && site.buyPerks.length) ? site.buyPerks
+      : ['Secure checkout','QR tickets sent by email','Just show your phone at the gate'];
+    const perkIcons = [ICONS.lock, ICONS.qr, ICONS.phone];
+    document.getElementById('buyPerks').innerHTML = perks.map((p,i) => `<li>${perkIcons[i % 3]}<span>${esc(typeof p === 'string' ? p : (p.text || p.perk || ''))}</span></li>`).join('');
+
+    // Load Universe's script once so clicks open the checkout pop-up on this page
+    if(link.isUniverse && !window.$u && !document.getElementById('universeEmbed')){
+      const sc = document.createElement('script');
+      sc.id = 'universeEmbed'; sc.async = true; sc.src = 'https://www.universe.com/embed2.js';
+      document.body.appendChild(sc);
+    }
+
+    // Advanced: show a pasted embed instead (only if "useEmbed" is switched on)
     const checkoutEl = document.getElementById('universeCheckout');
-    if(uni.embedCode && uni.embedCode.trim()){
-      // Universe's widget embed includes a <script> tag. innerHTML won't execute scripts,
-      // so we inject the markup then re-create each script node so the browser runs it.
+    if(uni.useEmbed && uni.embedCode && uni.embedCode.trim()){
+      checkoutEl.hidden = false;
       checkoutEl.innerHTML = uni.embedCode;
       Array.from(checkoutEl.querySelectorAll('script')).forEach(old => {
-        const s = document.createElement('script');
-        Array.from(old.attributes).forEach(a => s.setAttribute(a.name, a.value));
-        s.textContent = old.textContent;
-        old.parentNode.replaceChild(s, old);
+        const s2 = document.createElement('script');
+        Array.from(old.attributes).forEach(a => s2.setAttribute(a.name, a.value));
+        s2.textContent = old.textContent;
+        old.parentNode.replaceChild(s2, old);
       });
-    } else if(uni.eventUrl && uni.eventUrl.trim()){
-      // No embed code yet, but we have the public event link — send buyers straight there.
-      checkoutEl.innerHTML = `
-        <div class="checkout-fallback">
-          <b>Tickets are on sale now</b>
-          <p>Grab your Southern Star Festival tickets on our Universe event page — digital tickets arrive by email right after checkout.</p>
-          <a class="btn btn-primary" href="${esc(safeExternalUrl(uni.eventUrl))}" target="_blank" rel="noopener">Buy Tickets on Universe</a>
-        </div>`;
-    } else {
-      checkoutEl.innerHTML = `
-        <div class="checkout-fallback">
-          <b>Ticket checkout goes here</b>
-          <p>Once your Southern Star Festival event is live on Universe, paste its widget embed code into the "Universe widget embed code" field in the admin panel — this box updates automatically.</p>
-          <a class="btn btn-primary" href="https://www.universe.com/" target="_blank" rel="noopener">Set Up Your Universe Event</a>
-        </div>`;
-    }
+    } else { checkoutEl.hidden = true; checkoutEl.innerHTML = ''; }
     document.getElementById('feeNote').textContent = uni.feeNote || 'Ticketing powered by Universe';
 
     // Location
@@ -664,11 +877,10 @@
       <p style="opacity:0.85;">${esc(data.footer.tagline)}</p>
       <div class="foot-links">
         ${layout.tabs.filter(t => t.id !== 'home').map(t => `<a href="#${esc(t.id)}">${esc(t.label)}</a>`).join('')}
-        ${(data.socials || [])
-          .filter(link => link.label && link.url)
-          .map(link => `<a href="${esc(safeExternalUrl(link.url))}" target="_blank" rel="noopener noreferrer">${esc(link.label)}</a>`)
-          .join('')}
       </div>
+      ${(data.socials || []).filter(link => link.label && link.url).length ? `<div class="social-links">
+        ${(data.socials || []).filter(link => link.label && link.url).map(socialLinkHtml).join('')}
+      </div>` : ''}
       <p class="fine">${esc(data.footer.note)}</p>
     `;
 
