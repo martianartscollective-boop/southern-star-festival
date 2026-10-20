@@ -1,30 +1,4 @@
 {
-  "contact": {
-    "kicker": "Join the family",
-    "title": "Contact Us",
-    "emailLabel": "Questions? Email us anytime",
-    "email": "southernstarfestival@gmail.com",
-    "cards": [
-      {
-        "title": "Sponsorship Opportunities",
-        "desc": "Partner with us and put your brand in front of a crowd of up to 2,000. See our sponsor pitch deck.",
-        "button": "View Pitch Deck",
-        "link": "/sponsor-deck.pdf"
-      },
-      {
-        "title": "Market Vendor Application",
-        "desc": "Sell your crafts, goods and treats at the festival marketplace.",
-        "button": "Apply Now",
-        "link": "https://tally.so/r/zxlGlq"
-      },
-      {
-        "title": "BBQ Vendor Application",
-        "desc": "Bring your smoker and your best recipe to the cookout.",
-        "button": "Apply Now",
-        "link": "https://tally.so/r/Ek9ZRX"
-      }
-    ]
-  },
   "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
     "coverImage": "",
@@ -53,13 +27,10 @@
       "dusk2": "#3EA1B7",
       "stem": "#00000000",
       "shadowSoft": "rgba(90,50,30,0.20)",
-      "captionOverlay": "rgba(0,0,0,0.75)",
       "goldDeep": "#b8842c",
       "paper": "#efe2c8",
       "surface": "#ffffff",
       "maroon": "#3EA1B7",
-      "slideshowBg": "#000000",
-      "dotInactive": "rgba(255,255,255,0.50)",
       "focus": "#e7b854",
       "divider": "rgba(122,46,55,0.20)",
       "sunset1": "#e7b854",
@@ -69,7 +40,6 @@
       "sunset3": "#4AC1DB",
       "heroOverlayTop": "rgba(54,43,70,0.38)"
     },
-    "slideshowSeconds": 4,
     "heroAnimationSeconds": 1.3,
     "shareImage": "/images/southern-star-logo.png",
     "seo": {
@@ -149,9 +119,7 @@
     "scheduleTitle": "Day-Of Schedule",
     "faqTitle": "Frequently Asked Questions",
     "lineupKicker": "Music all day",
-    "bbqKicker": "Bringing the backyard vibes to you.",
     "footerName": "Southern Star Festival",
-    "bbqTitle": "The BBQ Cookout",
     "faqKicker": "Good to know",
     "lineupTitle": "The Lineup",
     "scheduleKicker": "May 8 · Southern Star Farms",
@@ -201,7 +169,8 @@
         "label": "Ages welcome"
       }
     ],
-    "photo": "/images/eat.png"
+    "photo": "/images/eat.png",
+    "videoId": "XcH922iwvKs"
   },
   "lineup": [
     {
@@ -229,12 +198,6 @@
       "slot": "-"
     }
   ],
-  "bbq": {
-    "slides": [],
-    "videoId": "XcH922iwvKs",
-    "cookoffTitle": "You're invited to the cookout!",
-    "cookoffText": "We welcome all people, no discrimination. Who doesn't enjoy the best BBQ and music in Texas?"
-  },
   "location": {
     "title": "Southern Star Farms",
     "paragraphs": [
@@ -281,7 +244,7 @@
     {
       "time": "11:00 PM",
       "desc": "Safe travels, y'all",
-      "title": "Event concludes"
+      "title": "Event Concludes"
     }
   ],
   "hero": {
@@ -345,13 +308,6 @@
     },
     {
       "type": "builtin",
-      "section": "bbq",
-      "navLabel": "BBQ Cookout",
-      "showInNav": true,
-      "visible": true
-    },
-    {
-      "type": "builtin",
       "section": "tickets",
       "navLabel": "Tickets",
       "showInNav": true,
@@ -366,17 +322,43 @@
     },
     {
       "type": "builtin",
-      "section": "contact",
-      "navLabel": "Contact",
+      "section": "faq",
+      "navLabel": "FAQ",
       "showInNav": true,
       "visible": true
     },
     {
       "type": "builtin",
-      "section": "faq",
-      "navLabel": "FAQ",
+      "section": "contact",
+      "navLabel": "Contact",
       "showInNav": true,
       "visible": true
     }
-  ]
+  ],
+  "contact": {
+    "kicker": "Join the family",
+    "title": "Contact Us",
+    "emailLabel": "Questions? Email us anytime",
+    "email": "southernstarfestival@gmail.com",
+    "cards": [
+      {
+        "title": "Sponsorship Opportunities",
+        "desc": "Partner with us and put your brand in front of a crowd of up to 2,000. See our sponsor pitch deck.",
+        "button": "View Pitch Deck",
+        "link": "/sponsor-deck.pdf"
+      },
+      {
+        "title": "Market Vendor Application",
+        "desc": "Sell your crafts, goods and treats at the festival marketplace.",
+        "button": "Apply Now",
+        "link": "https://tally.so/r/zxlGlq"
+      },
+      {
+        "title": "BBQ Vendor Application",
+        "desc": "Bring your smoker and your best recipe to the cookout.",
+        "button": "Apply Now",
+        "link": "https://tally.so/r/Ek9ZRX"
+      }
+    ]
+  }
 }
