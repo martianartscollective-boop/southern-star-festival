@@ -1,41 +1,40 @@
 {
-  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
     "coverImage": "",
     "shareImage": "/images/southern-star-logo.png",
     "slideshowSeconds": 4,
     "colors": {
-      "gold": "#e7b854",
-      "shadow": "rgba(60,30,20,0.30)",
-      "flowerRight": "#00000000",
-      "heroOverlayBottom": "rgba(54,43,70,0.58)",
-      "cream": "#f5ead4",
-      "flowerLeft": "#00000000",
-      "ink": "#2a1c14",
-      "heroTextShadow": "rgba(0,0,0,0.35)",
-      "dusk1": "#3EA1B7",
-      "dusk2": "#3EA1B7",
-      "stem": "#00000000",
-      "shadowSoft": "rgba(90,50,30,0.20)",
-      "captionOverlay": "rgba(0,0,0,0.75)",
-      "goldDeep": "#b8842c",
-      "paper": "#efe2c8",
-      "surface": "#ffffff",
-      "maroon": "#3EA1B7",
-      "slideshowBg": "#000000",
-      "dotInactive": "rgba(255,255,255,0.50)",
-      "focus": "#e7b854",
-      "divider": "rgba(122,46,55,0.20)",
       "sunset1": "#e7b854",
       "sunset2": "#e7b854",
+      "sunset3": "#4AC1DB",
+      "dusk1": "#3EA1B7",
+      "dusk2": "#3EA1B7",
+      "gold": "#e7b854",
+      "goldDeep": "#b8842c",
+      "cream": "#f5ead4",
+      "paper": "#efe2c8",
+      "maroon": "#3EA1B7",
       "maroonDeep": "#3EA1B7",
       "teal": "#8fd9c4",
-      "sunset3": "#4AC1DB",
-      "heroOverlayTop": "rgba(54,43,70,0.38)"
+      "ink": "#2a1c14",
+      "focus": "#e7b854",
+      "surface": "#ffffff",
+      "slideshowBg": "#000000",
+      "flowerLeft": "#00000000",
+      "flowerRight": "#00000000",
+      "stem": "#00000000",
+      "shadow": "rgba(60,30,20,0.30)",
+      "shadowSoft": "rgba(90,50,30,0.20)",
+      "divider": "rgba(122,46,55,0.20)",
+      "heroTextShadow": "rgba(0,0,0,0.35)",
+      "captionOverlay": "rgba(0,0,0,0.75)",
+      "dotInactive": "rgba(255,255,255,0.50)",
+      "heroOverlayTop": "rgba(54,43,70,0.38)",
+      "heroOverlayBottom": "rgba(54,43,70,0.58)"
     },
     "heroLogo": "/images/southern-star-logo.png",
     "heroAnimation": "pop",
-    "heroAnimationSeconds": 1.2,
+    "heroAnimationSeconds": 1.1,
     "typography": {
       "titleFont": "Lobster",
       "titleSize": 100,
@@ -45,21 +44,52 @@
       "bodyColor": "#4a3527",
       "baseFont": "Jost",
       "baseSize": 100
+    },
+    "seo": {
+      "siteUrl": "https://www.southernstarfestival.com",
+      "eventDate": "2027-05-08",
+      "organizerName": "Cheatham Street Music Foundation"
     }
   },
-  "universe": {
-    "embedCode": "<script src=\"https://www.universe.com/embed2.js\" data-state=\"\"></script>\n<style>\na.unii-listing-button {\n  display: inline-block;\n  margin-bottom: 0;\n  text-align: center;\n  vertical-align: middle;\n  box-sizing: border-box;\n  text-decoration: none;\n  font-family: sans-serif;\n}\na.unii-medium {\n  padding: 11px 19px;\n  font-size: 17.5px;\n  border-radius: 6px;\n  line-height: 20px;\n}\na.unii-small {\n  padding: 6px 10px;\n  font-size: 13px;\n  border-radius: 3px;\n  line-height: 16px;\n}\na.unii-custom {\n  cursor: pointer;\n  box-shadow:\n    inset 0 1px 0 rgba(255,255,255,0.2),\n    0 1px 2px rgba(0,0,0,0.05);\n  color: #fff;\n  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);\n  background-color: #3A66E5;\n  background-repeat: repeat-x;\n  border-color:\n    rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);\n}\na.Light { color: #FFF; } a.Light:hover { color: #FFF; }\na.Dark { color: #000; } a.Dark:hover { color: #000; }\n</style>\n<a class=\"unii-listing-button unii-custom unii-medium Light\" href=\"https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2?buttonColor=%233A66E5&buttonText=Get%20Tickets\" style=\"background-color: #3A66E5;\">\nGet Tickets\n</a>",
-    "eventUrl": "https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2?unii-trigger-open=RH9MZ2",
-    "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
+  "site": {
+    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
+    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
+    "heroPrimaryButton": "Get Tickets",
+    "heroSecondaryButton": "See Lineup",
+    "lineupKicker": "Music all day",
+    "lineupTitle": "The Lineup",
+    "scheduleKicker": "May 8 · Southern Star Farms",
+    "scheduleTitle": "Day-Of Schedule",
+    "bbqKicker": "Bringing the backyard vibes to you.",
+    "bbqTitle": "The BBQ Cookout",
+    "ticketsKicker": "Choose your ticket and join us in Maxwell",
+    "ticketsTitle": "Tickets",
+    "faqKicker": "Good to know",
+    "faqTitle": "Frequently Asked Questions",
+    "directionsButtonText": "Get Directions",
+    "footerName": "Southern Star Festival",
+    "homeNavLabel": "Home",
+    "buyHeading": "Ready to join us?",
+    "buyText": "Grab your tickets now — music, BBQ and good company all day in Maxwell.",
+    "buyButton": "Get Tickets",
+    "buyPerks": [
+      "Secure checkout",
+      "QR tickets sent by email",
+      "Just show your phone at the gate"
+    ]
   },
   "socials": [
     {
-      "url": "https://www.instagram.com/southernstarfestival/",
-      "label": "Instagram"
+      "label": "Instagram",
+      "url": "https://www.instagram.com/southernstarfestival/"
     },
     {
-      "url": "https://www.tiktok.com/@southernstarfestival",
-      "label": "Tiktok"
+      "label": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61595297443120"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@southernstarfestival"
     },
     {
       "label": "X",
@@ -70,30 +100,41 @@
       "url": "https://linktr.ee/southernstarfestival"
     }
   ],
+  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
+  "universe": {
+    "embedCode": "",
+    "eventUrl": "https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2",
+    "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee.",
+    "checkoutColor": "#237486",
+    "useEmbed": false
+  },
   "tickets": [
     {
       "name": "Early Bird: General Admission",
       "price": "$30",
       "unit": "/person",
       "desc": "All-day access. Lawn seating — bring a chair or blanket.",
-      "cta": "Buy Tickets",
-      "featured": false
+      "cta": "Get Tickets",
+      "featured": false,
+      "badge": ""
     },
     {
       "name": "VIP",
       "price": "$150",
       "unit": "/person",
       "desc": "Skip the line, early entry, placement near the stage with: FREE massages, private bar, complimentary snack and beverages, and a BBQ tasting flight from the cookout.",
-      "cta": "Buy Tickets",
-      "featured": true
+      "cta": "Get Tickets",
+      "featured": true,
+      "badge": "Most Popular"
     },
     {
       "name": "BBQ Tasting",
       "price": "$30",
       "unit": "/person",
       "desc": "BBQ tasting flight from the cookout + complimentary beverage.",
-      "cta": "Buy Tickets",
-      "featured": true
+      "cta": "Get Tickets",
+      "featured": false,
+      "badge": ""
     },
     {
       "name": "Kids (12 & Under)",
@@ -101,33 +142,14 @@
       "unit": "",
       "desc": "Free with a paying adult. Kids' area open all day with games and shade near the stage.",
       "cta": "Reserve Spot",
-      "featured": false
+      "featured": false,
+      "badge": ""
     }
   ],
-  "site": {
-    "scheduleTitle": "Day-Of Schedule",
-    "faqTitle": "Frequently Asked Questions",
-    "lineupKicker": "Music all day",
-    "bbqKicker": "Bringing the backyard vibes to you.",
-    "footerName": "Southern Star Festival",
-    "bbqTitle": "The BBQ Cookout",
-    "faqKicker": "Good to know",
-    "lineupTitle": "The Lineup",
-    "scheduleKicker": "May 8 · Southern Star Farms",
-    "heroSecondaryButton": "See Lineup",
-    "homeNavLabel": "Home",
-    "ticketsTitle": "Tickets",
-    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
-    "directionsButtonText": "Get Directions",
-    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
-    "checkoutNote": "Checkout below is powered by Universe — buyers get QR-coded digital tickets by email.",
-    "heroPrimaryButton": "Get Tickets",
-    "ticketsKicker": "Choose your ticket and join us in Maxwell"
-  },
   "about": {
-    "kicker": "A day built around good music and good food",
+    "kicker": "A day built around good music and good smoke",
     "paragraphs": [
-      "Southern Star Festival brings live country music and a full-blown BBQ cookout together at the beautiful Southern Star Farm, for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of Grammy award-winning and local artists, a finer-lickin' selection of BBQ, and local vendors all day long.",
+      "Southern Star Festival brings live country music and a full-blown BBQ cookout together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of Grammy award-winning and local artists, a finer-lickin' selection of BBQ, and local vendors all day long.",
       "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."
     ],
     "stats": [
@@ -136,8 +158,8 @@
         "label": "Day of music"
       },
       {
-        "value": "Many",
-        "label": "BBQ Restaurants & Cooks "
+        "value": "4+",
+        "label": "BBQ teams competing"
       },
       {
         "value": "10+",
@@ -156,28 +178,20 @@
   },
   "lineup": [
     {
-      "slot": "-",
+      "slot": "Local Showcase",
       "name": "Announcing Soon"
     },
     {
-      "slot": "-",
+      "slot": "Local Showcase",
       "name": "Announcing Soon"
     },
     {
-      "slot": "-",
+      "slot": "Headliner",
       "name": "Announcing Soon"
     },
     {
-      "slot": "-",
+      "slot": "Headliner",
       "name": "Announcing Soon"
-    },
-    {
-      "name": "Announcing Soon",
-      "slot": "-"
-    },
-    {
-      "name": "Announcing Soon",
-      "slot": "-"
     }
   ],
   "bbq": {
@@ -210,7 +224,7 @@
   "location": {
     "title": "Southern Star Farms",
     "paragraphs": [
-      "Maxwell, TX : about 15 minutes from the San Marcos Square and 45 minutes from both Austin and San Antonio. Parking on-site.",
+      "Maxwell, TX : about 20 minutes south of San Marcos and 45 minutes from both Austin and San Antonio. Parking on-site.",
       "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
     ],
     "mapQuery": "480 Mill Rd, Maxwell, TX 78656"
@@ -232,7 +246,7 @@
   "schedule": [
     {
       "time": "12:00 PM",
-      "title": "Gates open & BBQ tasting commences ",
+      "title": "Gates open & BBQ is ready",
       "desc": "BBQ is ready to be tasted as soon as you walk in"
     },
     {
@@ -241,19 +255,14 @@
       "desc": "Local talent leading the way"
     },
     {
-      "time": "4:00 PM",
-      "title": "BBQ tasting ends",
-      "desc": "BBQ tasting ends or until supplies run out"
+      "time": "6:30 PM",
+      "title": "Headliners perform",
+      "desc": "Sunset sets through closing"
     },
     {
       "time": "10:00 PM",
       "title": "Gates close",
-      "desc": "All ticket holders must arrive before 10pm"
-    },
-    {
-      "desc": "Safe travels, y'all",
-      "time": "11:00 PM",
-      "title": "Event Concludes"
+      "desc": "Safe travels, y'all"
     }
   ],
   "hero": {
@@ -277,7 +286,18 @@
       "visible": true
     },
     {
-      "footnote": "Southern Star Festival 2027 · Benefiting Cheatham Street Music Foundation, a 501(c)(3) nonprofit",
+      "type": "info",
+      "navLabel": "Who We Support",
+      "showInNav": true,
+      "visible": true,
+      "background": "auto",
+      "kicker": "Who We Support",
+      "heading": "The Cheatham Street Music Foundation",
+      "paragraphs": [
+        "The Cheatham Street Music Foundation is a nonprofit dedicated to preserving and promoting Texas music by nurturing the art, business, and craft of songwriting. Continuing Kent Finlay's legacy, the Foundation offers classes, workshops, and concerts that educate and inspire new generations of artists.",
+        "Building on the historic Cheatham Street Warehouse, where legends like George Strait and Stevie Ray Vaughan began, the organization fosters community connections and celebrates music's vital role in Texas culture."
+      ],
+      "photoSide": "right",
       "photos": [
         {
           "img": "/images/who-we-support-1.jpg",
@@ -288,18 +308,7 @@
           "alt": "A musician with a guitar in front of a Texas flag"
         }
       ],
-      "showInNav": true,
-      "heading": "The Cheatham Street Music Foundation",
-      "paragraphs": [
-        "The Cheatham Street Music Foundation is a nonprofit dedicated to preserving and promoting Texas music by nurturing the art, business, and craft of songwriting. Continuing Kent Finlay's legacy, the Foundation offers classes, workshops, and concerts that educate and inspire new generations of artists.",
-        "Building on the historic Cheatham Street Warehouse, where legends like George Strait and Stevie Ray Vaughan began, the organization fosters community connections and celebrates music's vital role in Texas culture."
-      ],
-      "photoSide": "right",
-      "background": "auto",
-      "navLabel": "Who We Support",
-      "visible": true,
-      "kicker": "Who We Support",
-      "type": "info"
+      "footnote": "Southern Star Festival 2027 · Benefiting Cheatham Street Music Foundation, a 501(c)(3) nonprofit"
     },
     {
       "type": "builtin",
