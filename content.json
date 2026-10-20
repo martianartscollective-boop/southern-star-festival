@@ -48,7 +48,7 @@
     }
   },
   "universe": {
-    "embedCode": "<script\n  src=\"https://www.universe.com/embed2.js\"\n  data-widget-type=\"universe-ticket\"\n  data-target-type=\"time-slots\"\n  data-target-id=\"RH9MZ2\"\n  data-state=\"buttonColor=%233A66E5&buttonText=Get%20Tickets\" >\n</script>",
+    "embedCode": "<script src=\"https://www.universe.com/embed2.js\" data-state=\"\"></script>\n<style>\na.unii-listing-button {\n  display: inline-block;\n  margin-bottom: 0;\n  text-align: center;\n  vertical-align: middle;\n  box-sizing: border-box;\n  text-decoration: none;\n  font-family: sans-serif;\n}\na.unii-medium {\n  padding: 11px 19px;\n  font-size: 17.5px;\n  border-radius: 6px;\n  line-height: 20px;\n}\na.unii-small {\n  padding: 6px 10px;\n  font-size: 13px;\n  border-radius: 3px;\n  line-height: 16px;\n}\na.unii-custom {\n  cursor: pointer;\n  box-shadow:\n    inset 0 1px 0 rgba(255,255,255,0.2),\n    0 1px 2px rgba(0,0,0,0.05);\n  color: #fff;\n  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);\n  background-color: #3A66E5;\n  background-repeat: repeat-x;\n  border-color:\n    rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);\n}\na.Light { color: #FFF; } a.Light:hover { color: #FFF; }\na.Dark { color: #000; } a.Dark:hover { color: #000; }\n</style>\n<a class=\"unii-listing-button unii-custom unii-medium Light\" href=\"https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2?buttonColor=%233A66E5&buttonText=Get%20Tickets\" style=\"background-color: #3A66E5;\">\nGet Tickets\n</a>",
     "eventUrl": "https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2?unii-trigger-open=RH9MZ2",
     "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee."
   },
