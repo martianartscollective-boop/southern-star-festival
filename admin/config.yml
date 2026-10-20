@@ -68,6 +68,16 @@ collections:
                 default: 5
                 hint: "How many seconds each BBQ slideshow picture stays on screen."
 
+              - label: "Google / SEO (helps your event show up in search results)"
+                name: "seo"
+                widget: "object"
+                collapsed: true
+                hint: "Google can show your event with its date, place and ticket prices right in the search results — if it knows the date. Fill in the date below and the site does the rest automatically."
+                fields:
+                  - {label: "Event date", name: "eventDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", picker_utc: false, required: false, hint: "Pick the day of the festival, including the YEAR. Gates-open / gates-close times are read automatically from your first and last Day-Of Schedule entries. Update this every year."}
+                  - {label: "Your website address", name: "siteUrl", widget: "string", required: false, hint: "Example: https://southernstarfestival.com — no slash at the end. Leave blank to use whatever address the site is being viewed at."}
+                  - {label: "Organizer name", name: "organizerName", widget: "string", required: false, hint: "Shown to Google as who is putting on the event."}
+
               - label: "Typography (fonts, sizes & text colors)"
                 name: "typography"
                 widget: "object"
@@ -128,7 +138,7 @@ collections:
             widget: "list"
             hint: "This list IS your website's order, top to bottom (below the logo banner). DRAG a row's handle to move it. Use the X to delete it, or switch 'Show this section' off to hide it without deleting. Use 'Add' to create a brand-new section. Each row also controls the tab name in the top menu. The text inside Lineup, Tickets, FAQ, etc. is still edited in their own panels further down."
             types:
-              - label: "Built-in section (About, Lineup, Schedule, BBQ, Tickets, Location, FAQ)"
+              - label: "Built-in section (About, Lineup, Schedule, BBQ, Tickets, Location, FAQ, Contact)"
                 name: "builtin"
                 widget: "object"
                 summary: "{{fields.navLabel}}"
@@ -145,6 +155,7 @@ collections:
                       - {label: "Tickets", value: "tickets"}
                       - {label: "Location & Map", value: "location"}
                       - {label: "FAQ", value: "faq"}
+                      - {label: "Contact Us", value: "contact"}
                     hint: "Its words, photos and prices are edited in the matching panel below."
                   - {label: "Tab name (what shows in the top menu)", name: "navLabel", widget: "string"}
                   - {label: "Show a tab for it in the top menu?", name: "showInNav", widget: "boolean", default: true}
@@ -252,8 +263,8 @@ collections:
             collapsed: true
             hint: "Useful text that used to be hard-coded into index.html."
             fields:
-              - {label: "Browser / Search Title", name: "metaTitle", widget: "string"}
-              - {label: "Browser / Search Description", name: "metaDescription", widget: "text"}
+              - {label: "Browser / Search Title", name: "metaTitle", widget: "string", hint: "This is the big blue headline people see on Google. Keep it under about 60 characters and put the festival name first."}
+              - {label: "Browser / Search Description", name: "metaDescription", widget: "text", hint: "The gray text under your Google listing. Aim for 120-155 characters: say what it is, the date, the town, and that tickets are available."}
               - {label: "Home Tab Name (first tab in the top menu)", name: "homeNavLabel", widget: "string", required: false}
 
               - {label: "Hero Primary Button", name: "heroPrimaryButton", widget: "string"}
@@ -270,7 +281,15 @@ collections:
 
               - {label: "Tickets Small Heading", name: "ticketsKicker", widget: "string"}
               - {label: "Tickets Main Heading", name: "ticketsTitle", widget: "string"}
-              - {label: "Checkout Note", name: "checkoutNote", widget: "text"}
+              - {label: "Note under the Big Ticket Box (e.g. ID reminder)", name: "checkoutNote", widget: "string", required: false}
+              - {label: "Big Ticket Box: Heading", name: "buyHeading", widget: "string", required: false, default: "Ready to join us?"}
+              - {label: "Big Ticket Box: Message", name: "buyText", widget: "text", required: false}
+              - {label: "Big Ticket Box: Button Text", name: "buyButton", widget: "string", required: false, default: "Get Tickets"}
+              - label: "Big Ticket Box: Little Selling Points (3 look best)"
+                name: "buyPerks"
+                widget: "list"
+                required: false
+                field: {label: "Selling point", name: "perk", widget: "string"}
 
               - {label: "FAQ Small Heading", name: "faqKicker", widget: "string"}
               - {label: "FAQ Main Heading", name: "faqTitle", widget: "string"}
@@ -351,22 +370,34 @@ collections:
               - {label: "Unit", name: "unit", widget: "string", required: false}
               - {label: "Description", name: "desc", widget: "text"}
               - {label: "Button text", name: "cta", widget: "string"}
+              - {label: "Ribbon on top (e.g. Most Popular)", name: "badge", widget: "string", required: false}
               - {label: "Highlight this card (VIP-style)?", name: "featured", widget: "boolean", default: false}
 
           - label: "Ticket Checkout (Universe)"
             name: "universe"
             widget: "object"
             fields:
-              - label: "Universe widget embed code"
-                name: "embedCode"
-                widget: "text"
-                required: false
-                hint: "Paste the full Universe ticket widget embed code here."
-              - label: "Universe event page link (backup)"
+              - label: "Universe event link"
                 name: "eventUrl"
                 widget: "string"
                 required: false
-                hint: "Used when no widget embed code is entered."
+                hint: "Your Universe event page link. Leave blank to use the built-in Southern Star link. Every ticket button opens checkout for this event."
+              - label: "Ticket button color (inside the checkout pop-up)"
+                name: "checkoutColor"
+                widget: "color"
+                required: false
+                default: "#237486"
+              - label: "Advanced: show a pasted Universe widget instead?"
+                name: "useEmbed"
+                widget: "boolean"
+                default: false
+                required: false
+                hint: "Leave OFF for the pretty ticket cards. Only turn on if you want the plain Universe widget shown too."
+              - label: "Advanced: Universe widget embed code"
+                name: "embedCode"
+                widget: "text"
+                required: false
+                hint: "Only used when the switch above is ON."
               - label: "Fee note under the checkout"
                 name: "feeNote"
                 widget: "text"
@@ -396,10 +427,28 @@ collections:
             widget: "list"
             required: false
             summary: "{{label}}"
-            hint: "Add, delete, and reorder links. Only links with both a name and URL appear in the footer."
+            hint: "Add, delete, and reorder links. Only links with both a name and a web address appear in the footer. ICONS APPEAR AUTOMATICALLY for Instagram, Facebook, TikTok, YouTube, X/Twitter, Spotify, Threads, Bluesky, Apple Music, SoundCloud and Pinterest — just paste the link. For an email icon use mailto:you@example.com. Any other site shows as a text button."
             fields:
               - {label: "Platform / Link Name", name: "label", widget: "string", hint: "Examples: Instagram, Facebook, TikTok, YouTube"}
               - {label: "Full URL", name: "url", widget: "string", hint: "Example: https://instagram.com/yourpage"}
+
+          - label: "Contact Us"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Small heading", name: "kicker", widget: "string", required: false}
+              - {label: "Main heading", name: "title", widget: "string"}
+              - {label: "Line above the email", name: "emailLabel", widget: "string", required: false}
+              - {label: "Email address", name: "email", widget: "string", required: false}
+              - label: "Contact buttons (add, remove, reorder)"
+                name: "cards"
+                widget: "list"
+                summary: "{{title}}"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Short description", name: "desc", widget: "text", required: false}
+                  - {label: "Button text", name: "button", widget: "string"}
+                  - {label: "Link", name: "link", widget: "string", hint: "A web address (https://...), or mailto:you@example.com. For a file on this site use /sponsor-deck.pdf"}
 
           - label: "Footer"
             name: "footer"
