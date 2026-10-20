@@ -1,4 +1,30 @@
 {
+  "contact": {
+    "kicker": "Join the family",
+    "title": "Contact Us",
+    "emailLabel": "Questions? Email us anytime",
+    "email": "southernstarfestival@gmail.com",
+    "cards": [
+      {
+        "title": "Sponsorship Opportunities",
+        "desc": "Partner with us and put your brand in front of a crowd of up to 2,000. See our sponsor pitch deck.",
+        "button": "View Pitch Deck",
+        "link": "/sponsor-deck.pdf"
+      },
+      {
+        "title": "Market Vendor Application",
+        "desc": "Sell your crafts, goods and treats at the festival marketplace.",
+        "button": "Apply Now",
+        "link": "https://tally.so/r/zxlGlq"
+      },
+      {
+        "title": "BBQ Vendor Application",
+        "desc": "Bring your smoker and your best recipe to the cookout.",
+        "button": "Apply Now",
+        "link": "https://tally.so/r/Ek9ZRX"
+      }
+    ]
+  },
   "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
     "coverImage": "",
@@ -361,43 +387,17 @@
     },
     {
       "type": "builtin",
-      "section": "faq",
-      "navLabel": "FAQ",
+      "section": "contact",
+      "navLabel": "Contact",
       "showInNav": true,
       "visible": true
     },
     {
       "type": "builtin",
-      "section": "contact",
-      "navLabel": "Contact",
+      "section": "faq",
+      "navLabel": "FAQ",
       "showInNav": true,
       "visible": true
     }
-  ],
-  "contact": {
-    "kicker": "Join the family",
-    "title": "Contact Us",
-    "emailLabel": "Questions? Email us anytime",
-    "email": "southernstarfestival@gmail.com",
-    "cards": [
-      {
-        "title": "Sponsorship Opportunities",
-        "desc": "Partner with us and put your brand in front of a crowd of up to 2,000. See our sponsor pitch deck.",
-        "button": "View Pitch Deck",
-        "link": "/sponsor-deck.pdf"
-      },
-      {
-        "title": "Market Vendor Application",
-        "desc": "Sell your crafts, goods and treats at the festival marketplace.",
-        "button": "Apply Now",
-        "link": "https://tally.so/r/zxlGlq"
-      },
-      {
-        "title": "BBQ Vendor Application",
-        "desc": "Bring your smoker and your best recipe to the cookout.",
-        "button": "Apply Now",
-        "link": "https://tally.so/r/Ek9ZRX"
-      }
-    ]
-  }
+  ]
 }
