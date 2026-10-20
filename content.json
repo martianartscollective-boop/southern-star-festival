@@ -230,28 +230,7 @@
     }
   ],
   "bbq": {
-    "slides": [
-      {
-        "img": "/images/eat.png",
-        "caption": "Friends eating together"
-      },
-      {
-        "img": "/images/ssf.png",
-        "caption": "The Farm"
-      },
-      {
-        "img": "/images/martian.png",
-        "caption": "The whole crowd shows up for this"
-      },
-      {
-        "img": "https://images.pexels.com/photos/8250732/pexels-photo-8250732.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "caption": "Ribs going low and slow"
-      },
-      {
-        "img": "https://images.pexels.com/photos/94440/pexels-photo-94440.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "caption": "Straight off the grill"
-      }
-    ],
+    "slides": [],
     "videoId": "XcH922iwvKs",
     "cookoffTitle": "You're invited to the cookout!",
     "cookoffText": "We welcome all people, no discrimination. Who doesn't enjoy the best BBQ and music in Texas?"
@@ -302,7 +281,7 @@
     {
       "time": "11:00 PM",
       "desc": "Safe travels, y'all",
-      "title": "Event Concludes"
+      "title": "Event concludes"
     }
   ],
   "hero": {
