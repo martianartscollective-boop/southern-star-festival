@@ -138,18 +138,8 @@
   .schedule-what b{display:block;margin-bottom:2px;font-family:var(--font-base);font-size:calc(1rem * var(--base-scale));}
   .schedule-what span{font-family:var(--font-body);color:var(--ink-soft);font-size:calc(1rem * var(--body-scale));}
 
-  .bbq-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:36px;align-items:stretch;}
-  .slideshow{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 16px 34px var(--shadow);background:var(--slideshow-bg);}
-  .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;}
-  .slide.active{opacity:1;}
-  .slide img{width:100%;height:100%;object-fit:cover;}
-  .slide-caption{position:absolute;left:0;right:0;bottom:0;padding:14px 18px;background:linear-gradient(to top, var(--caption-overlay), transparent);color:var(--cream);font-family:var(--font-body);font-size:calc(0.95rem * var(--body-scale));}
-  .slide-dots{position:absolute;bottom:12px;right:16px;display:flex;gap:6px;z-index:3;}
-  .slide-dots button{width:9px;height:9px;border-radius:50%;background:var(--dot-inactive);border:none;cursor:pointer;padding:0;}
-  .slide-dots button.active{background:var(--gold);}
-  .bbq-video{border-radius:8px;overflow:hidden;box-shadow:0 16px 34px var(--shadow);aspect-ratio:16/9;}
-  .bbq-video iframe{width:100%;height:100%;border:0;display:block;}
-  .bbq-side{display:flex;flex-direction:column;gap:20px;}
+  .about-video{border-radius:8px;overflow:hidden;box-shadow:0 16px 34px var(--shadow);aspect-ratio:16/9;border:6px solid var(--cream);background:#000;}
+  .about-video iframe{width:100%;height:100%;border:0;display:block;}
   .cookoff-badge{background:var(--maroon);color:var(--cream);border-radius:6px;padding:20px 22px;}
   .cookoff-badge b{display:block;font-family:var(--font-title);font-size:calc(1.2rem * var(--title-scale));margin-bottom:6px;color:var(--gold);}
   .cookoff-badge p{color:var(--cream);font-family:var(--font-body);opacity:0.95;font-size:calc(1.05rem * var(--body-scale));line-height:1.6;}
@@ -269,12 +259,13 @@
   .cs-dark .cs-photos img, .cs-dark .cs-gallery img{border-color:var(--cream);}
 
   @media (max-width:760px){
-    .about-grid, .bbq-grid, .location-grid, .cs-info{grid-template-columns:1fr;}
+    .about-grid, .location-grid, .cs-info{grid-template-columns:1fr;}
     .cs-info.photos-left .cs-photos{order:0;}
     .about-photo{order:-1;transform:none;}
+    .about-video{order:-1;}
   }
   @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;} .slide{transition:none;} .hero-logo{animation:none !important;} *{animation-duration:0.01ms !important;}
+    html{scroll-behavior:auto;} .hero-logo{animation:none !important;} *{animation-duration:0.01ms !important;}
   }
 </style>
 </head>
@@ -286,7 +277,6 @@
     <a href="#about">About</a>
     <a href="#lineup">Lineup</a>
     <a href="#schedule">Schedule</a>
-    <a href="#bbq">BBQ Cookout</a>
     <a href="#tickets">Tickets</a>
     <a href="#location">Location</a>
     <a href="#faq">FAQ</a>
@@ -327,19 +317,6 @@
   <div class="section-inner">
     <div class="section-head"><span class="kicker" id="scheduleKicker">May 8 · Southern Star Farms</span><h2 class="display" id="scheduleTitle">Day-Of Schedule</h2></div>
     <div class="schedule-list" id="scheduleList"></div>
-  </div>
-</section>
-
-<section class="section-alt" id="bbq">
-  <div class="section-inner">
-    <div class="section-head"><span class="kicker" id="bbqKicker">Bringing the backyard vibes to you.</span><h2 class="display" id="bbqTitle">The BBQ Cookout</h2></div>
-    <div class="bbq-grid">
-      <div><div class="slideshow" id="slideshow"><div class="slide-dots" id="slideDots"></div></div></div>
-      <div class="bbq-side">
-        <div class="bbq-video" id="bbqVideo"></div>
-        <div class="cookoff-badge" id="cookoffBadge"></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -420,7 +397,7 @@
 
   // ---------- Page layout: the ordered list of sections/tabs, controlled from /admin ----------
   const BUILTIN_LABELS = {
-    about:'About', lineup:'Lineup', schedule:'Schedule', bbq:'BBQ Cookout',
+    about:'About', lineup:'Lineup', schedule:'Schedule',
     tickets:'Tickets', location:'Location', faq:'FAQ', contact:'Contact'
   };
   const DEFAULT_LAYOUT = Object.keys(BUILTIN_LABELS).map(k => (
@@ -758,8 +735,6 @@
     text('lineupTitle', site.lineupTitle);
     text('scheduleKicker', site.scheduleKicker || `${data.hero.date} · ${data.hero.venue}`);
     text('scheduleTitle', site.scheduleTitle);
-    text('bbqKicker', site.bbqKicker);
-    text('bbqTitle', site.bbqTitle);
     text('ticketsKicker', site.ticketsKicker);
     text('ticketsTitle', site.ticketsTitle);
     text('faqKicker', site.faqKicker);
@@ -783,13 +758,16 @@
     // About
     const stats = data.about.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join('');
     const paras = data.about.paragraphs.map(p => `<p>${esc(p)}</p>`).join('');
+    const vraw = String(data.about.videoId || '').trim();
+    const vm = /(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{11})/.exec(vraw);
+    const aboutVid = vm ? vm[1] : (/^[A-Za-z0-9_-]{11}$/.test(vraw) ? vraw : '');
     document.getElementById('aboutContent').innerHTML = `
       <div class="about-text">
         <span class="about-kicker">${esc(data.about.kicker)}</span>
         ${paras}
         <div class="stat-row">${stats}</div>
       </div>
-      <div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>
+      ${aboutVid ? `<div class="about-video"><iframe src="https://www.youtube.com/embed/${esc(aboutVid)}" title="Southern Star Festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : (data.about.photo ? `<div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>` : '')}
     `;
 
     // Lineup
@@ -802,20 +780,6 @@
     document.getElementById('scheduleList').innerHTML = data.schedule.map(s => `
       <div class="schedule-item"><div class="schedule-time">${esc(s.time)}</div><div class="schedule-what"><b>${esc(s.title)}</b><span>${esc(s.desc)}</span></div></div>
     `).join('');
-
-    // BBQ slideshow
-    const slideshow = document.getElementById('slideshow');
-    const dotsWrap = document.getElementById('slideDots');
-    slideshow.querySelectorAll('.slide').forEach(slide => slide.remove());
-
-    (data.bbq.slides || []).forEach((s, i) => {
-      const div = document.createElement('div');
-      div.className = 'slide' + (i === 0 ? ' active' : '');
-      div.innerHTML = `<img src="${esc(s.img)}" alt="${esc(s.caption)}"><div class="slide-caption">${esc(s.caption)}</div>`;
-      slideshow.insertBefore(div, dotsWrap);
-    });
-    document.getElementById('bbqVideo').innerHTML = `<iframe src="https://www.youtube.com/embed/${esc(data.bbq.videoId)}" title="BBQ festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-    document.getElementById('cookoffBadge').innerHTML = `<b>${esc(data.bbq.cookoffTitle)}</b><p>${esc(data.bbq.cookoffText)}</p>`;
 
     // Tickets — our own styled buttons; Universe's script turns the click into a pop-up checkout
     const uni = data.universe || {};
@@ -931,10 +895,10 @@
       <p class="fine">${esc(data.footer.note)}</p>
     `;
 
-    initInteractions(data.settings?.slideshowSeconds || 5);
+    initInteractions();
   }
 
-  function initInteractions(slideshowSeconds){
+  function initInteractions(){
     // Scrollspy
     const navLinks = Array.from(document.querySelectorAll('.tabnav a'));
     const sections = navLinks.map(l => document.getElementById((l.getAttribute('href') || '').slice(1)));
@@ -946,35 +910,6 @@
     }
     window.addEventListener('scroll', onScroll, {passive:true});
     onScroll();
-
-    // Slideshow
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const dotsWrap = document.getElementById('slideDots');
-    dotsWrap.innerHTML = '';
-    let current = 0;
-    slides.forEach((_, i) => {
-      const b = document.createElement('button');
-      if(i === 0) b.classList.add('active');
-      b.setAttribute('aria-label', 'Show photo ' + (i+1));
-      b.addEventListener('click', () => showSlide(i));
-      dotsWrap.appendChild(b);
-    });
-    const dots = Array.from(dotsWrap.children);
-    function showSlide(i){
-      if(!slides.length) return;
-      if(slides[current]) slides[current].classList.remove('active');
-      if(dots[current]) dots[current].classList.remove('active');
-      current = i;
-      if(slides[current]) slides[current].classList.add('active');
-      if(dots[current]) dots[current].classList.add('active');
-    }
-    if(slides.length > 1){
-      const slideDelay = Math.max(1, Number(slideshowSeconds) || 5) * 1000;
-      let auto = setInterval(() => showSlide((current + 1) % slides.length), slideDelay);
-      const sw = document.getElementById('slideshow');
-      sw.addEventListener('mouseenter', () => clearInterval(auto));
-      sw.addEventListener('mouseleave', () => { auto = setInterval(() => showSlide((current + 1) % slides.length), slideDelay); });
-    }
 
     // FAQ accordion
     document.querySelectorAll('.faq-item').forEach(item => {
