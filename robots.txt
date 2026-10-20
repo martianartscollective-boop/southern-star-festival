@@ -1,0 +1,6 @@
+# Tells search engines what they may look at.
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+Sitemap: https://www.southernstarfestival.com/sitemap.xml
