@@ -125,9 +125,9 @@
     "ticketsKicker": "Choose your ticket and join us in Maxwell"
   },
   "about": {
-    "kicker": "A day built around good music and good smoke",
+    "kicker": "A day built around good music and good food",
     "paragraphs": [
-      "Southern Star Festival brings live country music and a full-blown BBQ cookout together on one Hill Country farm for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of Grammy award-winning and local artists, a finer-lickin' selection of BBQ, and local vendors all day long.",
+      "Southern Star Festival brings live country music and a full-blown BBQ cookout together at the beautiful Southern Star Farm, for one day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of Grammy award-winning and local artists, a finer-lickin' selection of BBQ, and local vendors all day long.",
       "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."
     ],
     "stats": [
@@ -170,6 +170,14 @@
     {
       "slot": "-",
       "name": "Announcing Soon"
+    },
+    {
+      "name": "Announcing Soon",
+      "slot": "-"
+    },
+    {
+      "name": "Announcing Soon",
+      "slot": "-"
     }
   ],
   "bbq": {
@@ -240,7 +248,12 @@
     {
       "time": "10:00 PM",
       "title": "Gates close",
-      "desc": "Safe travels, y'all"
+      "desc": "All ticket holders must arrive before 10pm"
+    },
+    {
+      "desc": "Safe travels, y'all",
+      "time": "11:00 PM",
+      "title": "Event Concludes"
     }
   ],
   "hero": {
