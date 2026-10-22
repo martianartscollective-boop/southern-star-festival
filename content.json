@@ -249,7 +249,7 @@
   "schedule": [
     {
       "time": "12:00 PM",
-      "title": "Gates open & BBQ is ready",
+      "title": "Gates open & BBQ tasting commences",
       "desc": "BBQ is ready to be tasted as soon as you walk in"
     },
     {
@@ -258,9 +258,9 @@
       "desc": "Local talent leading the way"
     },
     {
-      "time": "6:30 PM",
-      "title": "Headliners perform",
-      "desc": "Sunset sets through closing"
+      "time": "4:00 PM",
+      "title": "Tasting ends",
+      "desc": "BBQ tasting ends or until supplies run out"
     },
     {
       "time": "10:00 PM",
