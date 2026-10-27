@@ -139,7 +139,8 @@
   .schedule-what span{font-family:var(--font-body);color:var(--ink-soft);font-size:calc(1rem * var(--body-scale));}
 
   .about-video{border-radius:8px;overflow:hidden;box-shadow:0 16px 34px var(--shadow);aspect-ratio:16/9;border:6px solid var(--cream);background:#000;}
-  .about-video iframe{width:100%;height:100%;border:0;display:block;}
+  .about-video iframe,.about-video video{width:100%;height:100%;border:0;display:block;}
+  .about-video video{object-fit:contain;background:#000;}
   .cookoff-badge{background:var(--maroon);color:var(--cream);border-radius:6px;padding:20px 22px;}
   .cookoff-badge b{display:block;font-family:var(--font-title);font-size:calc(1.2rem * var(--title-scale));margin-bottom:6px;color:var(--gold);}
   .cookoff-badge p{color:var(--cream);font-family:var(--font-body);opacity:0.95;font-size:calc(1.05rem * var(--body-scale));line-height:1.6;}
@@ -559,6 +560,24 @@
     return `<a class="social-text" href="${href}"${target}>${name}</a>`;   // unknown site -> text pill
   }
 
+  // ---------- Meta (Facebook/Instagram) Pixel: only runs if an ID is entered in admin ----------
+  let trackingStarted = false;
+  function initTracking(data){
+    const id = String(((data.tracking || {}).metaPixelId) || '').trim();
+    if(trackingStarted || !/^\d{8,20}$/.test(id)) return;
+    trackingStarted = true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', id);
+    fbq('track', 'PageView');
+    // Count the important clicks so Meta can show which ads lead to ticket interest
+    document.addEventListener('click', function(ev){
+      const a = ev.target.closest && ev.target.closest('a');
+      if(!a || !window.fbq) return;
+      if(a.id === 'buyButton' || a.closest('.ticket-card')) fbq('track', 'InitiateCheckout');
+      else if(a.closest('.contact-card') || /^mailto:/i.test(a.getAttribute('href') || '')) fbq('track', 'Lead');
+    });
+  }
+
   // ---------- Universe ticket link ----------
   const DEFAULT_UNIVERSE_URL = 'https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2';
   function universeTicketLink(uni, colors){
@@ -708,6 +727,14 @@
     const pageUrl = siteUrl + '/';
     const shareImage = settings.shareImage || '/images/southern-star-logo.png';
     const absoluteShareImage = new URL(shareImage, pageUrl).href;
+    // Browser-tab / home-screen icon: swap in the picture chosen in admin (if any)
+    if(settings.siteIcon){
+      const iconUrl = new URL(settings.siteIcon, pageUrl).href;
+      document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]').forEach(l => l.remove());
+      [['icon', null], ['apple-touch-icon', null], ['shortcut icon', null]].forEach(([rel]) => {
+        const l = document.createElement('link'); l.rel = rel; l.href = iconUrl; document.head.appendChild(l);
+      });
+    }
     const ogImage = document.querySelector('meta[property="og:image"]');
     const twitterImage = document.querySelector('meta[name="twitter:image"]');
     if(ogImage) ogImage.setAttribute('content', absoluteShareImage);
@@ -760,6 +787,10 @@
     const paras = data.about.paragraphs.map(p => `<p>${esc(p)}</p>`).join('');
     const vraw = String(data.about.videoId || '').trim();
     const vm = /(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{11})/.exec(vraw);
+    const vfRaw = String(data.about.videoFile || '').trim();
+    const aboutFile = (/^(\/|https?:\/\/)/i.test(vfRaw) && /\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(vfRaw)) ? vfRaw : '';
+    const posterRaw = String(data.about.videoPoster || '').trim();
+    const aboutPoster = /^(\/|https?:\/\/)/i.test(posterRaw) ? posterRaw : '';
     const aboutVid = vm ? vm[1] : (/^[A-Za-z0-9_-]{11}$/.test(vraw) ? vraw : '');
     document.getElementById('aboutContent').innerHTML = `
       <div class="about-text">
@@ -767,7 +798,7 @@
         ${paras}
         <div class="stat-row">${stats}</div>
       </div>
-      ${aboutVid ? `<div class="about-video"><iframe src="https://www.youtube.com/embed/${esc(aboutVid)}" title="Southern Star Festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : (data.about.photo ? `<div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>` : '')}
+      ${aboutFile ? `<div class="about-video"><video controls playsinline preload="metadata"${aboutPoster ? ` poster="${esc(aboutPoster)}"` : ''} src="${esc(aboutFile)}">Your browser can't play this video.</video></div>` : aboutVid ? `<div class="about-video"><iframe src="https://www.youtube.com/embed/${esc(aboutVid)}" title="Southern Star Festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : (data.about.photo ? `<div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>` : '')}
     `;
 
     // Lineup
@@ -895,6 +926,7 @@
       <p class="fine">${esc(data.footer.note)}</p>
     `;
 
+    initTracking(data);
     initInteractions();
   }
 
