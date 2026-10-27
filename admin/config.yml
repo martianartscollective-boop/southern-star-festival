@@ -53,6 +53,12 @@ collections:
                 default: 1.1
                 hint: "Lower = snappier/faster. Higher = slower and more dramatic."
 
+              - label: "Browser Tab Icon (the tiny picture on the Chrome tab, bookmarks and phone home screens)"
+                name: "siteIcon"
+                widget: "image"
+                required: false
+                hint: "Upload a SQUARE picture, at least 512 x 512 pixels (a simple logo works best — small details disappear). Leave blank to keep the current icon."
+
               - label: "Mobile / Social Sharing Picture"
                 name: "shareImage"
                 widget: "image"
@@ -308,6 +314,8 @@ collections:
                 fields:
                   - {label: "Number/word", name: "value", widget: "string"}
                   - {label: "Label underneath", name: "label", widget: "string"}
+              - {label: "Upload your own video (mp4)", name: "videoFile", widget: "file", required: false, hint: "Click to upload a video from your computer (.mp4 works best, ideally under 25 MB so it loads fast). If you upload one, it shows instead of the YouTube link below. Clear it to go back to YouTube."}
+              - {label: "Video cover picture (optional)", name: "videoPoster", widget: "image", required: false, hint: "The still picture shown before someone presses play."}
               - {label: "YouTube video (paste the link or the video ID)", name: "videoId", widget: "string", required: false, hint: "Shows in the spot next to the About text. Example: https://www.youtube.com/watch?v=XcH922iwvKs"}
               - {label: "Photo (only used if there is no video)", name: "photo", widget: "image", required: false}
 
@@ -342,6 +350,13 @@ collections:
               - {label: "Button text", name: "cta", widget: "string"}
               - {label: "Ribbon on top (e.g. Most Popular)", name: "badge", widget: "string", required: false}
               - {label: "Highlight this card (VIP-style)?", name: "featured", widget: "boolean", default: false}
+
+          - label: "Ad Tracking (Meta / Facebook / Instagram Pixel)"
+            name: "tracking"
+            widget: "object"
+            collapsed: true
+            fields:
+              - {label: "Meta Pixel ID", name: "metaPixelId", widget: "string", required: false, hint: "Just the number, like 123456789012345. Leave blank to keep tracking OFF. Find it in Meta Events Manager."}
 
           - label: "Ticket Checkout (Universe)"
             name: "universe"
