@@ -27,6 +27,7 @@
   },
   "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
   "settings": {
+    "siteIcon": "/images/site-icon.png",
     "coverImage": "",
     "heroLogo": "/images/southern-star-logo.png",
     "heroAnimation": "pop",
@@ -72,8 +73,7 @@
       "siteUrl": "https://www.southernstarfestival.com",
       "eventDate": "2027-05-08",
       "organizerName": "Cheatham Street Music Foundation"
-    },
-    "siteIcon": "/images/site-icon.png"
+    }
   },
   "universe": {
     "embedCode": "",
@@ -197,7 +197,8 @@
       }
     ],
     "photo": "/images/eat.png",
-    "videoId": "SIk2BoeAmgQ"
+    "videoId": "",
+    "videoFile": "/images/southern_star_promo_16x9_1.mp4"
   },
   "lineup": [
     {
@@ -274,6 +275,9 @@
       "title": "Event Concludes"
     }
   ],
+  "tracking": {
+    "metaPixelId": ""
+  },
   "hero": {
     "presents": "Cheatham Street Music Foundation Presents",
     "title": "SOUTHERN STAR FESTIVAL",
@@ -361,8 +365,5 @@
       "showInNav": true,
       "visible": true
     }
-  ],
-  "tracking": {
-    "metaPixelId": ""
-  }
+  ]
 }
