@@ -72,7 +72,8 @@
       "siteUrl": "https://www.southernstarfestival.com",
       "eventDate": "2027-05-08",
       "organizerName": "Cheatham Street Music Foundation"
-    }
+    },
+    "siteIcon": "/images/site-icon.png"
   },
   "universe": {
     "embedCode": "",
@@ -360,5 +361,8 @@
       "showInNav": true,
       "visible": true
     }
-  ]
+  ],
+  "tracking": {
+    "metaPixelId": ""
+  }
 }
