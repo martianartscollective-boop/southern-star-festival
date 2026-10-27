@@ -798,7 +798,7 @@
         ${paras}
         <div class="stat-row">${stats}</div>
       </div>
-      ${aboutFile ? `<div class="about-video"><video controls playsinline preload="metadata"${aboutPoster ? ` poster="${esc(aboutPoster)}"` : ''} src="${esc(aboutFile)}">Your browser can't play this video.</video></div>` : aboutVid ? `<div class="about-video"><iframe src="https://www.youtube.com/embed/${esc(aboutVid)}" title="Southern Star Festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : (data.about.photo ? `<div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>` : '')}
+      ${aboutFile ? `<div class="about-video"><video controls playsinline webkit-playsinline preload="metadata"${aboutPoster ? ` poster="${esc(aboutPoster)}"` : ''} src="${esc(aboutFile.indexOf('#') < 0 ? aboutFile + '#t=0.1' : aboutFile)}">Your browser can't play this video.</video></div>` : aboutVid ? `<div class="about-video"><iframe src="https://www.youtube.com/embed/${esc(aboutVid)}" title="Southern Star Festival video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>` : (data.about.photo ? `<div class="about-photo"><img src="${esc(data.about.photo)}" alt="Festival photo"></div>` : '')}
     `;
 
     // Lineup
