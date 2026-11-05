@@ -111,8 +111,8 @@
       "unit": "/person",
       "desc": "All-day access. Lawn seating — bring a chair or blanket.",
       "cta": "Get Tickets",
-      "featured": false,
-      "badge": ""
+      "featured": true,
+      "badge": "Most Popular"
     },
     {
       "name": "VIP",
@@ -120,8 +120,8 @@
       "unit": "/person",
       "desc": "Access to a private lounge near the stage with: FREE massages, private bar, complimentary snacks and beverages, and a BBQ tasting flight from the cookout!",
       "cta": "Get Tickets",
-      "featured": true,
-      "badge": "Most Popular"
+      "featured": false,
+      "badge": ""
     },
     {
       "name": "BBQ Tasting",
@@ -230,7 +230,7 @@
   "location": {
     "title": "Southern Star Farms",
     "paragraphs": [
-      "Maxwell, TX : about 15 minutes from San Marcos Square and 45 minutes from both Austin and San Antonio. Parking on-site.",
+      "Maxwell, TX : 12 minutes from San Marcos Square, 40 minutes from Austin, and 55 minutes from San Antonio. Parking on-site.",
       "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
     ],
     "mapQuery": "480 Mill Rd, Maxwell, TX 78656"
