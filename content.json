@@ -1,32 +1,6 @@
 {
-  "contact": {
-    "kicker": "Join the family",
-    "title": "Contact Us",
-    "emailLabel": "Questions? Email us anytime",
-    "email": "southernstarfestival@gmail.com",
-    "cards": [
-      {
-        "title": "Sponsorship Opportunities",
-        "desc": "Partner with us and put your brand in front of a crowd of up to 2,000. See our sponsor pitch deck.",
-        "button": "View Pitch Deck",
-        "link": "/sponsor-deck.pdf"
-      },
-      {
-        "title": "Market Vendor Application",
-        "desc": "Sell your crafts, goods and treats at the festival marketplace.",
-        "button": "Apply Now",
-        "link": "https://tally.so/r/zxlGlq"
-      },
-      {
-        "title": "BBQ Vendor Application",
-        "desc": "Bring your smoker and your best recipe to the cookout.",
-        "button": "Apply Now",
-        "link": "https://tally.so/r/Ek9ZRX"
-      }
-    ]
-  },
-  "lineupNote": "Tap an artist to hear their music.",
   "settings": {
+    "siteIcon": "/images/site-icon.png",
     "coverImage": "",
     "heroLogo": "/images/southern-star-logo.png",
     "heroAnimation": "pop",
@@ -72,251 +46,7 @@
       "siteUrl": "https://www.southernstarfestival.com",
       "eventDate": "2027-05-08",
       "organizerName": "Cheatham Street Music Foundation"
-    },
-    "siteIcon": "/images/site-icon.png"
-  },
-  "universe": {
-    "embedCode": "",
-    "eventUrl": "https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2",
-    "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee.",
-    "checkoutColor": "#237486",
-    "useEmbed": false
-  },
-  "socials": [
-    {
-      "label": "Instagram",
-      "url": "https://www.instagram.com/southernstarfestival/"
-    },
-    {
-      "label": "Facebook",
-      "url": "https://www.facebook.com/profile.php?id=61595297443120"
-    },
-    {
-      "label": "TikTok",
-      "url": "https://www.tiktok.com/@southernstarfestival"
-    },
-    {
-      "label": "X",
-      "url": "https://x.com/sstarfestival"
-    },
-    {
-      "label": "Linktree",
-      "url": "https://linktr.ee/southernstarfestival"
     }
-  ],
-  "tickets": [
-    {
-      "name": "Early Bird: General Admission",
-      "price": "$30",
-      "unit": "/person",
-      "desc": "All-day access. Lawn seating — bring a chair or blanket.",
-      "cta": "Get Tickets",
-      "featured": false,
-      "badge": ""
-    },
-    {
-      "name": "VIP",
-      "price": "$150",
-      "unit": "/person",
-      "desc": "Access to a private lounge near the stage with: FREE massages, private bar, complimentary snacks and beverages, and a BBQ tasting flight from the cookout!",
-      "cta": "Get Tickets",
-      "featured": true,
-      "badge": "Most Popular"
-    },
-    {
-      "name": "BBQ Tasting",
-      "price": "$30",
-      "unit": "/person",
-      "desc": "BBQ tasting flights from all of the participants of the cookout!\n\n*Tasting from 12pm-4pm",
-      "cta": "Get Tickets",
-      "featured": false,
-      "badge": ""
-    },
-    {
-      "name": "Kids (12 & Under)",
-      "price": "Free",
-      "unit": "",
-      "desc": "Free with a paying adult. Kids' area open all day with games and shade near the stage.",
-      "cta": "Reserve Spot",
-      "featured": false,
-      "badge": ""
-    }
-  ],
-  "site": {
-    "scheduleTitle": "Day-Of Schedule",
-    "faqTitle": "Frequently Asked Questions",
-    "lineupKicker": "Music all day",
-    "footerName": "Southern Star Festival",
-    "faqKicker": "Good to know",
-    "lineupTitle": "The Lineup",
-    "scheduleKicker": "May 8 · Southern Star Farms",
-    "heroSecondaryButton": "See Lineup",
-    "homeNavLabel": "Home",
-    "ticketsTitle": "Tickets",
-    "buyText": "Grab your tickets now — music, BBQ and good company all day in Maxwell.",
-    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
-    "directionsButtonText": "Get Directions",
-    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
-    "buyButton": "Get Tickets",
-    "checkoutNote": "Please bring valid ID for check-in!",
-    "heroPrimaryButton": "Get Tickets",
-    "ticketsKicker": "Choose your ticket and join us in Maxwell",
-    "buyHeading": "Ready to join us?",
-    "buyPerks": [
-      "Secure checkout",
-      "QR tickets sent by email",
-      "Just show your phone at the gate"
-    ]
-  },
-  "about": {
-    "kicker": "A day built around good music and good food",
-    "paragraphs": [
-      "Southern Star Festival brings live music and a full-blown BBQ cookout together at the beautiful Southern Star Farms, for one special day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of award-winning and local artists, a finger-lickin' selection of BBQ, and local vendors all day long.",
-      "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."
-    ],
-    "stats": [
-      {
-        "value": "1",
-        "label": "Day of music"
-      },
-      {
-        "value": "Many",
-        "label": "BBQ teams competing"
-      },
-      {
-        "value": "10+",
-        "label": "Vendors"
-      },
-      {
-        "value": "1",
-        "label": "Stages"
-      },
-      {
-        "value": "All",
-        "label": "Ages welcome"
-      }
-    ],
-    "photo": "/images/eat.png",
-    "videoId": "SIk2BoeAmgQ"
-  },
-  "lineup": [
-    {
-      "name": "Chaparelle",
-      "stage": "Stage A",
-      "slot": "10:00 PM – 11:00 PM",
-      "image": "/images/artists/chaparelle.jpg",
-      "spotify": "https://open.spotify.com/artist/48c9PKsgH8QMkAN6pg6Xz8",
-      "note": ""
-    },
-    {
-      "name": "Silverada",
-      "stage": "Stage A",
-      "slot": "8:30 PM – 9:30 PM",
-      "image": "/images/artists/silverada.jpg",
-      "spotify": "https://open.spotify.com/artist/5fTJlk4f1YRh4ObYssJo44",
-      "note": ""
-    },
-    {
-      "name": "Nether Hour",
-      "stage": "Stage A",
-      "slot": "7:00 PM – 8:00 PM",
-      "image": "/images/artists/nether-hour.jpg",
-      "spotify": "https://open.spotify.com/artist/7xFkiQ9B6WA6932TniPRGr",
-      "note": ""
-    },
-    {
-      "name": "Los Texmaniacs",
-      "stage": "Stage A",
-      "slot": "5:30 PM – 6:30 PM",
-      "image": "/images/artists/los-texmaniacs.jpg",
-      "spotify": "https://open.spotify.com/artist/1CMRsisCxvV0fXDzxUbiwV",
-      "note": ""
-    },
-    {
-      "name": "Dallas Burrow",
-      "stage": "Stage A",
-      "slot": "4:00 PM – 5:00 PM",
-      "image": "/images/artists/dallas-burrow.jpg",
-      "spotify": "https://open.spotify.com/artist/27SwV2DSetjyUzQPv5L2Fv",
-      "note": ""
-    },
-    {
-      "name": "Georgia Parker",
-      "stage": "Stage A",
-      "slot": "2:30 PM – 3:30 PM",
-      "image": "/images/artists/georgia-parker.jpg",
-      "spotify": "https://open.spotify.com/artist/1I34cUj5AgrBrPAOqSXeiC",
-      "note": ""
-    },
-    {
-      "name": "CSMF – Singer Songwriter Swap",
-      "stage": "Stage B",
-      "slot": "1:00 PM – 4:00 PM",
-      "image": "",
-      "spotify": "",
-      "note": ""
-    }
-  ],
-  "location": {
-    "title": "Southern Star Farms",
-    "paragraphs": [
-      "Maxwell, TX : about 15 minutes from San Marcos Square, 45 minutes from Austin and about an hour from San Antonio. Parking on-site.",
-      "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
-    ],
-    "mapQuery": "480 Mill Rd, Maxwell, TX 78656"
-  },
-  "faq": [
-    {
-      "q": "Can I bring my own cooler or drinks?",
-      "a": "Outside food, drinks, and coolers aren't allowed, but there's plenty of food and drink from vendors and the cook-off tasting area all day."
-    },
-    {
-      "q": "Are pets allowed?",
-      "a": "Of course! Bring the paw-friends. You're completely responsible for cleaning, feeding, and making sure their safe!"
-    },
-    {
-      "q": "Is there parking!",
-      "a": "There will be free on-site parking!"
-    }
-  ],
-  "schedule": [
-    {
-      "time": "12:00 PM",
-      "title": "Gates open & BBQ tasting commences",
-      "desc": "BBQ is ready to be tasted as soon as you walk in"
-    },
-    {
-      "time": "1:30 PM",
-      "title": "Music kicks off",
-      "desc": "Local talent leading the way"
-    },
-    {
-      "time": "4:00 PM",
-      "title": "Tasting ends",
-      "desc": "BBQ tasting ends or until supplies run out"
-    },
-    {
-      "time": "10:00 PM",
-      "title": "Gates close",
-      "desc": "All ticket holders must arrive before 10pm"
-    },
-    {
-      "time": "11:00 PM",
-      "desc": "Safe travels, y'all",
-      "title": "Event Concludes"
-    }
-  ],
-  "hero": {
-    "presents": "Cheatham Street Music Foundation Presents",
-    "title": "SOUTHERN STAR FESTIVAL",
-    "subtitle": "Texas Music & BBQ Cookout",
-    "date": "May 8",
-    "venue": "Southern Star Farms",
-    "city": "Maxwell, TX"
-  },
-  "footer": {
-    "tagline": "Maxwell, TX · May 8",
-    "note": "A Cheatham Street Music Foundation event."
   },
   "pageSections": [
     {
@@ -394,7 +124,278 @@
       "visible": true
     }
   ],
+  "site": {
+    "scheduleTitle": "Day-Of Schedule",
+    "faqTitle": "Frequently Asked Questions",
+    "lineupKicker": "Music all day",
+    "footerName": "Southern Star Festival",
+    "faqKicker": "Good to know",
+    "lineupTitle": "The Lineup",
+    "scheduleKicker": "May 8 · Southern Star Farms",
+    "heroSecondaryButton": "See Lineup",
+    "homeNavLabel": "Home",
+    "ticketsTitle": "Tickets",
+    "buyText": "Grab your tickets now — music, BBQ and good company all day in Maxwell.",
+    "metaTitle": "Southern Star Festival — Texas Music & BBQ Cookout",
+    "directionsButtonText": "Get Directions",
+    "metaDescription": "Southern Star Festival — Texas Music & BBQ Cookout at Southern Star Farms in Maxwell, TX.",
+    "buyButton": "Get Tickets",
+    "checkoutNote": "Please bring valid ID for check-in!",
+    "heroPrimaryButton": "Get Tickets",
+    "ticketsKicker": "Choose your ticket and join us in Maxwell",
+    "buyHeading": "Ready to join us?",
+    "buyPerks": [
+      "Secure checkout",
+      "QR tickets sent by email",
+      "Just show your phone at the gate"
+    ]
+  },
+  "hero": {
+    "presents": "Cheatham Street Music Foundation Presents",
+    "title": "SOUTHERN STAR FESTIVAL",
+    "subtitle": "Texas Music & BBQ Cookout",
+    "date": "May 8",
+    "venue": "Southern Star Farms",
+    "city": "Maxwell, TX"
+  },
+  "about": {
+    "kicker": "A day built around good music and good food",
+    "paragraphs": [
+      "Southern Star Festival brings live music and a full-blown BBQ cookout together at the beautiful Southern Star Farms, for one special day. Bring the family, bring your appetite, and settle in under the Texas sky for a lineup of award-winning and local artists, a finger-lickin' selection of BBQ, and local vendors all day long.",
+      "Whether you're here for the music, the meat, or both, there's shade, seating, and something going on from gates-open to the last encore."
+    ],
+    "stats": [
+      {
+        "value": "1",
+        "label": "Day of music"
+      },
+      {
+        "value": "Many",
+        "label": "BBQ teams competing"
+      },
+      {
+        "value": "10+",
+        "label": "Vendors"
+      },
+      {
+        "value": "1",
+        "label": "Stages"
+      },
+      {
+        "value": "All",
+        "label": "Ages welcome"
+      }
+    ],
+    "photo": "/images/eat.png",
+    "videoId": "SIk2BoeAmgQ",
+    "videoFile": "/images/southern_star_promo_16x9_compressed.mp4"
+  },
+  "lineup": [
+    {
+      "name": "Chaparelle",
+      "stage": "Stage A",
+      "slot": "",
+      "image": "/images/artists/chaparelle.jpg",
+      "spotify": "https://open.spotify.com/artist/48c9PKsgH8QMkAN6pg6Xz8",
+      "note": ""
+    },
+    {
+      "name": "Silverada",
+      "stage": "Stage A",
+      "slot": "",
+      "image": "/images/artists/silverada.jpg",
+      "spotify": "https://open.spotify.com/artist/5fTJlk4f1YRh4ObYssJo44",
+      "note": ""
+    },
+    {
+      "name": "Nether Hour",
+      "stage": "Stage A",
+      "slot": "",
+      "image": "/images/artists/nether-hour.jpg",
+      "spotify": "https://open.spotify.com/artist/7xFkiQ9B6WA6932TniPRGr",
+      "note": ""
+    },
+    {
+      "name": "Los Texmaniacs",
+      "stage": "Stage A",
+      "slot": "",
+      "image": "/images/artists/los-texmaniacs.jpg",
+      "spotify": "https://open.spotify.com/artist/1CMRsisCxvV0fXDzxUbiwV",
+      "note": ""
+    },
+    {
+      "name": "Dallas Burrow",
+      "stage": "Stage A",
+      "slot": "",
+      "image": "/images/artists/dallas-burrow.jpg",
+      "spotify": "https://open.spotify.com/artist/27SwV2DSetjyUzQPv5L2Fv",
+      "note": ""
+    },
+    {
+      "name": "Georgia Parker",
+      "stage": "Stage A",
+      "slot": "",
+      "image": "/images/artists/georgia-parker.jpg",
+      "spotify": "https://open.spotify.com/artist/1I34cUj5AgrBrPAOqSXeiC",
+      "note": ""
+    },
+    {
+      "name": "CSMF – Singer Songwriter Swap",
+      "stage": "Stage B",
+      "slot": "",
+      "image": "",
+      "spotify": "",
+      "note": ""
+    }
+  ],
+  "lineupNote": "Tap an artist to hear their music.",
+  "schedule": [
+    {
+      "time": "12:00 PM",
+      "title": "Gates open & BBQ tasting commences",
+      "desc": "BBQ is ready to be tasted as soon as you walk in"
+    },
+    {
+      "time": "1:30 PM",
+      "title": "Music kicks off",
+      "desc": "Local talent leading the way"
+    },
+    {
+      "time": "4:00 PM",
+      "title": "Tasting ends",
+      "desc": "BBQ tasting ends or until supplies run out"
+    },
+    {
+      "time": "10:00 PM",
+      "title": "Gates close",
+      "desc": "All ticket holders must arrive before 10pm"
+    },
+    {
+      "time": "11:00 PM",
+      "desc": "Safe travels, y'all",
+      "title": "Event Concludes"
+    }
+  ],
+  "tickets": [
+    {
+      "name": "Early Bird: General Admission",
+      "price": "$30",
+      "unit": "/person",
+      "desc": "All-day access. Lawn seating — bring a chair or blanket.",
+      "cta": "Get Tickets",
+      "featured": true,
+      "badge": "Most Popular"
+    },
+    {
+      "name": "VIP",
+      "price": "$150",
+      "unit": "/person",
+      "desc": "Access to a private lounge near the stage with: FREE massages, private bar, complimentary snacks and beverages, and a BBQ tasting flight from the cookout!",
+      "cta": "Get Tickets",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "name": "BBQ Tasting",
+      "price": "$30",
+      "unit": "/person",
+      "desc": "BBQ tasting flights from all of the participants of the cookout!\n\n*Tasting from 12pm-4pm",
+      "cta": "Get Tickets",
+      "featured": false,
+      "badge": ""
+    },
+    {
+      "name": "Kids (12 & Under)",
+      "price": "Free",
+      "unit": "",
+      "desc": "Free with a paying adult. Kids' area open all day with games and shade near the stage.",
+      "cta": "Reserve Spot",
+      "featured": false,
+      "badge": ""
+    }
+  ],
   "tracking": {
     "metaPixelId": ""
+  },
+  "universe": {
+    "embedCode": "",
+    "eventUrl": "https://www.universe.com/events/southern-star-festival-tickets-RH9MZ2",
+    "feeNote": "Ticketing powered by Universe. A small per-ticket service fee applies to paid tickets; kids' free tickets carry no fee.",
+    "checkoutColor": "#237486",
+    "useEmbed": false
+  },
+  "location": {
+    "title": "Southern Star Farms",
+    "paragraphs": [
+      "Maxwell, TX : about 15 minutes from San Marcos Square, 45 minutes from Austin and about an hour from San Antonio. Parking on-site.",
+      "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
+    ],
+    "mapQuery": "480 Mill Rd, Maxwell, TX 78656"
+  },
+  "faq": [
+    {
+      "q": "Can I bring my own cooler or drinks?",
+      "a": "Outside food, drinks, and coolers aren't allowed, but there's plenty of food and drink from vendors and the cook-off tasting area all day."
+    },
+    {
+      "q": "Are pets allowed?",
+      "a": "Of course! Bring the paw-friends. You're completely responsible for cleaning, feeding, and making sure their safe!"
+    },
+    {
+      "q": "Is there parking!",
+      "a": "There will be free on-site parking!"
+    }
+  ],
+  "socials": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/southernstarfestival/"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=61595297443120"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@southernstarfestival"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/sstarfestival"
+    },
+    {
+      "label": "Linktree",
+      "url": "https://linktr.ee/southernstarfestival"
+    }
+  ],
+  "contact": {
+    "kicker": "Join the family",
+    "title": "Contact Us",
+    "emailLabel": "Questions? Email us anytime",
+    "email": "southernstarfestival@gmail.com",
+    "cards": [
+      {
+        "title": "Sponsorship Opportunities",
+        "desc": "Partner with us and put your brand in front of a crowd of up to 2,000. See our sponsor pitch deck.",
+        "button": "View Pitch Deck",
+        "link": "/sponsor-deck.pdf"
+      },
+      {
+        "title": "Market Vendor Application",
+        "desc": "Sell your crafts, goods and treats at the festival marketplace.",
+        "button": "Apply Now",
+        "link": "https://tally.so/r/zxlGlq"
+      },
+      {
+        "title": "BBQ Vendor Application",
+        "desc": "Bring your smoker and your best recipe to the cookout.",
+        "button": "Apply Now",
+        "link": "https://tally.so/r/Ek9ZRX"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Maxwell, TX · May 8",
+    "note": "A Cheatham Street Music Foundation event."
   }
 }
