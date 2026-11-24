@@ -193,7 +193,7 @@
   "lineup": [
     {
       "name": "Chaparelle",
-      "stage": "Stage A",
+      "stage": "",
       "slot": "",
       "image": "/images/artists/chaparelle.jpg",
       "spotify": "https://open.spotify.com/artist/48c9PKsgH8QMkAN6pg6Xz8",
@@ -201,7 +201,7 @@
     },
     {
       "name": "Silverada",
-      "stage": "Stage A",
+      "stage": "",
       "slot": "",
       "image": "/images/artists/silverada.jpg",
       "spotify": "https://open.spotify.com/artist/5fTJlk4f1YRh4ObYssJo44",
@@ -209,7 +209,7 @@
     },
     {
       "name": "Nether Hour",
-      "stage": "Stage A",
+      "stage": "",
       "slot": "",
       "image": "/images/artists/nether-hour.jpg",
       "spotify": "https://open.spotify.com/artist/7xFkiQ9B6WA6932TniPRGr",
@@ -217,7 +217,7 @@
     },
     {
       "name": "Los Texmaniacs",
-      "stage": "Stage A",
+      "stage": "",
       "slot": "",
       "image": "/images/artists/los-texmaniacs.jpg",
       "spotify": "https://open.spotify.com/artist/1CMRsisCxvV0fXDzxUbiwV",
@@ -225,7 +225,7 @@
     },
     {
       "name": "Dallas Burrow",
-      "stage": "Stage A",
+      "stage": "",
       "slot": "",
       "image": "/images/artists/dallas-burrow.jpg",
       "spotify": "https://open.spotify.com/artist/27SwV2DSetjyUzQPv5L2Fv",
@@ -233,18 +233,10 @@
     },
     {
       "name": "Georgia Parker",
-      "stage": "Stage A",
+      "stage": "",
       "slot": "",
       "image": "/images/artists/georgia-parker.jpg",
       "spotify": "https://open.spotify.com/artist/1I34cUj5AgrBrPAOqSXeiC",
-      "note": ""
-    },
-    {
-      "name": "CSMF – Singer Songwriter Swap",
-      "stage": "Stage B",
-      "slot": "",
-      "image": "",
-      "spotify": "",
       "note": ""
     }
   ],
