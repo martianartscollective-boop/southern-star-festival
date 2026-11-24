@@ -25,9 +25,8 @@
       }
     ]
   },
-  "lineupNote": "Full lineup drops soon — follow along on the socials in the footer so you don't miss it.",
+  "lineupNote": "Tap an artist to hear their music.",
   "settings": {
-    "siteIcon": "/images/site-icon.png",
     "coverImage": "",
     "heroLogo": "/images/southern-star-logo.png",
     "heroAnimation": "pop",
@@ -73,7 +72,8 @@
       "siteUrl": "https://www.southernstarfestival.com",
       "eventDate": "2027-05-08",
       "organizerName": "Cheatham Street Music Foundation"
-    }
+    },
+    "siteIcon": "/images/site-icon.png"
   },
   "universe": {
     "embedCode": "",
@@ -111,17 +111,17 @@
       "unit": "/person",
       "desc": "All-day access. Lawn seating — bring a chair or blanket.",
       "cta": "Get Tickets",
-      "featured": true,
-      "badge": "Most Popular"
+      "featured": false,
+      "badge": ""
     },
     {
       "name": "VIP",
       "price": "$150",
       "unit": "/person",
-      "desc": "Access to a private lounge near the stage with: Complimentary massages, private bar, complimentary snacks and beverages, and a BBQ tasting flight from the cookout!",
+      "desc": "Access to a private lounge near the stage with: FREE massages, private bar, complimentary snacks and beverages, and a BBQ tasting flight from the cookout!",
       "cta": "Get Tickets",
-      "featured": false,
-      "badge": ""
+      "featured": true,
+      "badge": "Most Popular"
     },
     {
       "name": "BBQ Tasting",
@@ -197,40 +197,70 @@
       }
     ],
     "photo": "/images/eat.png",
-    "videoId": "",
-    "videoFile": "/images/southern_star_promo_16x9_25mb.mp4",
-    "videoPoster": "/images/cover-photo.png"
+    "videoId": "SIk2BoeAmgQ"
   },
   "lineup": [
     {
-      "slot": "-",
-      "name": "Announcing Soon"
+      "name": "Chaparelle",
+      "stage": "Stage A",
+      "slot": "10:00 PM – 11:00 PM",
+      "image": "/images/artists/chaparelle.jpg",
+      "spotify": "https://open.spotify.com/artist/48c9PKsgH8QMkAN6pg6Xz8",
+      "note": ""
     },
     {
-      "slot": "-",
-      "name": "Announcing Soon"
+      "name": "Silverada",
+      "stage": "Stage A",
+      "slot": "8:30 PM – 9:30 PM",
+      "image": "/images/artists/silverada.jpg",
+      "spotify": "https://open.spotify.com/artist/5fTJlk4f1YRh4ObYssJo44",
+      "note": ""
     },
     {
-      "slot": "-",
-      "name": "Announcing Soon"
+      "name": "Nether Hour",
+      "stage": "Stage A",
+      "slot": "7:00 PM – 8:00 PM",
+      "image": "/images/artists/nether-hour.jpg",
+      "spotify": "https://open.spotify.com/artist/7xFkiQ9B6WA6932TniPRGr",
+      "note": ""
     },
     {
-      "slot": "-",
-      "name": "Announcing Soon"
+      "name": "Los Texmaniacs",
+      "stage": "Stage A",
+      "slot": "5:30 PM – 6:30 PM",
+      "image": "/images/artists/los-texmaniacs.jpg",
+      "spotify": "https://open.spotify.com/artist/1CMRsisCxvV0fXDzxUbiwV",
+      "note": ""
     },
     {
-      "name": "Announcing Soon",
-      "slot": "-"
+      "name": "Dallas Burrow",
+      "stage": "Stage A",
+      "slot": "4:00 PM – 5:00 PM",
+      "image": "/images/artists/dallas-burrow.jpg",
+      "spotify": "https://open.spotify.com/artist/27SwV2DSetjyUzQPv5L2Fv",
+      "note": ""
     },
     {
-      "name": "Announcing Soon",
-      "slot": "-"
+      "name": "Georgia Parker",
+      "stage": "Stage A",
+      "slot": "2:30 PM – 3:30 PM",
+      "image": "/images/artists/georgia-parker.jpg",
+      "spotify": "https://open.spotify.com/artist/1I34cUj5AgrBrPAOqSXeiC",
+      "note": ""
+    },
+    {
+      "name": "CSMF – Singer Songwriter Swap",
+      "stage": "Stage B",
+      "slot": "1:00 PM – 4:00 PM",
+      "image": "",
+      "spotify": "",
+      "note": ""
     }
   ],
   "location": {
     "title": "Southern Star Farms",
     "paragraphs": [
-      "Maxwell, TX : 12 minutes from San Marcos Square, 40 minutes from Austin, and 55 minutes from San Antonio. Parking on-site.",
+      "Maxwell, TX : about 15 minutes from San Marcos Square, 45 minutes from Austin and about an hour from San Antonio. Parking on-site.",
       "Coolers and outside drinks aren't permitted, but plenty of water stations and vendors will be on-site all day."
     ],
     "mapQuery": "480 Mill Rd, Maxwell, TX 78656"
@@ -276,9 +306,6 @@
       "title": "Event Concludes"
     }
   ],
-  "tracking": {
-    "metaPixelId": ""
-  },
   "hero": {
     "presents": "Cheatham Street Music Foundation Presents",
     "title": "SOUTHERN STAR FESTIVAL",
@@ -366,5 +393,8 @@
       "showInNav": true,
       "visible": true
     }
-  ]
+  ],
+  "tracking": {
+    "metaPixelId": ""
+  }
 }
