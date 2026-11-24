@@ -178,7 +178,7 @@
         "label": "Vendors"
       },
       {
-        "value": "1",
+        "value": "2",
         "label": "Stages"
       },
       {
@@ -248,7 +248,7 @@
       "desc": "BBQ is ready to be tasted as soon as you walk in"
     },
     {
-      "time": "1:30 PM",
+      "time": "1:00 PM",
       "title": "Music kicks off",
       "desc": "Local talent leading the way"
     },
@@ -270,8 +270,8 @@
   ],
   "tickets": [
     {
-      "name": "Early Bird: General Admission",
-      "price": "$30",
+      "name": "General Admission",
+      "price": "$50",
       "unit": "/person",
       "desc": "All-day access. Lawn seating — bring a chair or blanket.",
       "cta": "Get Tickets",
