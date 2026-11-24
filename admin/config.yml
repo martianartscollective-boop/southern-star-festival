@@ -322,10 +322,15 @@ collections:
           - label: "Lineup Slots"
             name: "lineup"
             widget: "list"
-            summary: "{{slot}} — {{name}}"
+            summary: "{{stage}} · {{slot}} — {{name}}"
+            hint: "Each row is one square on the website. Visitors tap a square to see the artist's pop-up with their Spotify player. Drag rows to reorder. The squares are grouped under their Stage heading automatically."
             fields:
-              - {label: "Slot", name: "slot", widget: "string"}
               - {label: "Artist name", name: "name", widget: "string"}
+              - {label: "Stage", name: "stage", widget: "string", required: false, hint: "Example: Stage A. Artists with the same stage text are grouped together under that heading."}
+              - {label: "Set time", name: "slot", widget: "string", required: false, hint: "Example: 7:00 PM – 8:00 PM"}
+              - {label: "Artist photo", name: "image", widget: "image", required: false, hint: "Square photos look best (at least 600 x 600). If you leave this empty, the site tries to use their Spotify picture, or shows a star."}
+              - {label: "Spotify link", name: "spotify", widget: "string", required: false, hint: "In Spotify: open the artist, click the three dots, Share, Copy link to artist. Paste it here. Leave empty if they are not on Spotify yet."}
+              - {label: "Short note (optional)", name: "note", widget: "text", required: false, hint: "One or two sentences shown in the pop-up above the player."}
 
           - {label: "Note under the lineup grid", name: "lineupNote", widget: "string"}
 
